@@ -1,2 +1,2 @@
-# Pet-La-os
+# Pet-Laços
 This is a WebSite about Adoption
