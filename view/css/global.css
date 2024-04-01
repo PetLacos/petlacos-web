@@ -1,0 +1,158 @@
+/* Import das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=League+Spartan:wght@100..900&display=swap');
+
+/* Variáveis */
+:root {
+    --rosa: #EA5E6E;
+    --laranja: #F57C00;
+    --cascaLaranja: #FF9800;
+    --joaoCorvino: #FFB74D;
+    --branco: #FFFFFF;
+    --neve: #FFF8E1;
+    --linho: #D2B48C;
+    --verdePersa: #8BC34A;
+    --pigmentoVerde: #4CAF50;
+    --verdeFloresta: #388E3C;
+    --marrom: #3E2723;
+
+    --orangeButtonShadowColor: rgba(196, 118, 0, 0.7);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografia do Site */
+.displayFont {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3.048rem;
+    font-weight: 500;
+}
+
+.titleFont {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.429rem;
+    font-weight: 500;
+}
+
+.sectionTitleFont {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.952rem;
+}
+
+.sectionSubtitleFont {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.571rem;
+}
+
+.paragraphFont {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.238rem;
+}
+
+.legendFont {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+}
+
+.displayFont,
+.titleFont,
+.sectionTitleFont,
+.sectionSubtitleFont,
+.paragraphFont,
+.legendFont {
+    line-height: 1.25;
+    letter-spacing: 0.5;
+}
+
+/* Menu de Navegação */
+
+.menu {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+nav {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    color: var(--marrom);
+    background-color: var(--neve);
+    border-radius: 1rem;
+    /* 8px 16px */
+}
+
+nav>* {
+    margin-right: 24px;
+}
+
+nav>*:last-child {
+    margin-right: 0;
+}
+
+nav .links {
+    /* Estrutura */
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--verdePersa);
+    border-radius: 1.5rem;
+    /* Fontes */
+    font-weight: bold; 
+    color: var(--branco);
+}
+
+nav .links>* {
+    margin-right: 40px;
+}
+
+nav .links>*:last-child {
+    margin-right: 0;
+}
+
+nav button {
+    /* Estrutura */
+    border-radius: 1.5rem;
+    /* Fontes */
+    font-weight: bold;
+}
+
+nav .orangeButton {
+    padding: 0.5rem 2.5rem;
+}
+
+nav .brownButton {
+    padding: 0.5rem 1rem;
+}
+
+nav img {
+    width: 5rem;
+}
+
+/* Buttons */
+.orangeButton {
+    background-color: var(--cascaLaranja);
+    color: var(--branco);
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.orangeButton:hover {
+    transform: scale(1.02);
+}
+
+.brownButton {
+    background-color: var(--marrom);
+    color: var(--branco);
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brownButton:hover {
+    transform: scale(1.02);
+}
