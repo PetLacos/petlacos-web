@@ -65,3 +65,94 @@ body {
     line-height: 1.25;
     letter-spacing: 0.5;
 }
+
+/* Menu de Navegação */
+
+.menu {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+nav {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    color: var(--marrom);
+    background-color: var(--neve);
+    border-radius: 1rem;
+    /* 8px 16px */
+}
+
+nav>* {
+    margin-right: 24px;
+}
+
+nav>*:last-child {
+    margin-right: 0;
+}
+
+nav .links {
+    /* Estrutura */
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--verdePersa);
+    border-radius: 1.5rem;
+    /* Fontes */
+    font-weight: bold; 
+    color: var(--branco);
+}
+
+nav .links>* {
+    margin-right: 40px;
+}
+
+nav .links>*:last-child {
+    margin-right: 0;
+}
+
+nav button {
+    /* Estrutura */
+    border-radius: 1.5rem;
+    /* Fontes */
+    font-weight: bold;
+}
+
+nav .orangeButton {
+    padding: 0.5rem 2.5rem;
+}
+
+nav .brownButton {
+    padding: 0.5rem 1rem;
+}
+
+nav img {
+    width: 5rem;
+}
+
+/* Buttons */
+.orangeButton {
+    background-color: var(--cascaLaranja);
+    color: var(--branco);
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.orangeButton:hover {
+    transform: scale(1.02);
+}
+
+.brownButton {
+    background-color: var(--marrom);
+    color: var(--branco);
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brownButton:hover {
+    transform: scale(1.02);
+}
