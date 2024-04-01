@@ -1,0 +1,67 @@
+/* Import das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=League+Spartan:wght@100..900&display=swap');
+
+/* Variáveis */
+:root {
+    --rosa: #EA5E6E;
+    --laranja: #F57C00;
+    --cascaLaranja: #FF9800;
+    --joaoCorvino: #FFB74D;
+    --branco: #FFFFFF;
+    --neve: #FFF8E1;
+    --linho: #D2B48C;
+    --verdePersa: #8BC34A;
+    --pigmentoVerde: #4CAF50;
+    --verdeFloresta: #388E3C;
+    --marrom: #3E2723;
+
+    --orangeButtonShadowColor: rgba(196, 118, 0, 0.7);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografia do Site */
+.displayFont {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3.048rem;
+    font-weight: 500;
+}
+
+.titleFont {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.429rem;
+    font-weight: 500;
+}
+
+.sectionTitleFont {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.952rem;
+}
+
+.sectionSubtitleFont {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.571rem;
+}
+
+.paragraphFont {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.238rem;
+}
+
+.legendFont {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+}
+
+.displayFont,
+.titleFont,
+.sectionTitleFont,
+.sectionSubtitleFont,
+.paragraphFont,
+.legendFont {
+    line-height: 1.25;
+    letter-spacing: 0.5;
+}
