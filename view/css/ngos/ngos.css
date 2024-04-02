@@ -1,0 +1,18 @@
+.ngoInformation {
+    display: flex;
+    flex-direction: row;
+    width: 90rem;
+    margin: auto;
+}
+
+h1 {
+    margin: auto;
+    width: fit-content;
+}
+
+.ngoInformation button {
+    border-radius: 24px;
+    padding: 10px;
+    height: 4,5rem;
+    float: right;
+}
