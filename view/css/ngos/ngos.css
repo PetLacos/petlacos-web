@@ -15,4 +15,7 @@ h1 {
     padding: 10px;
     height: 4,5rem;
     float: right;
+    background-color: var(--rosa);
+    border: none;
 }
+
