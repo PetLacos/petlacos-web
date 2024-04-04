@@ -1,0 +1,49 @@
+:root {
+    --rosa: #EA5E6E;
+    --laranja: #F57C00;
+    --cascaLaranja: #FF9800;
+    --joaoCorvino: #FFB74D;
+    --branco: #FFFFFF;
+    --neve: #FFF8E1;
+    --linho: #D2B48C;
+    --verdePersa: #8BC34A;
+    --pigmentoVerde: #4CAF50;
+    --verdeFloresta: #388E3C;
+    --marrom: #3E2723;
+
+    --orangeButtonShadowColor: rgba(196, 118, 0, 0.7);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--marrom);
+
+}
+
+.header-nav {
+background-color: var(--rosa);
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95vw;
+    height: 8vh;
+    background-color: var(--neve);
+    margin-top: 10px;
+    border-radius: 15px;
+    
+}
