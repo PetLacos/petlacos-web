@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: row;
     width: 90rem;
-    margin: auto;
 }
 
+
 h1 {
-    margin: auto;
     width: fit-content;
+    margin: auto;
+    margin-bottom: 6rem;
 }
 
 .ngoInformation button {
@@ -19,3 +20,33 @@ h1 {
     border: none;
 }
 
+img {
+    width: 29rem;
+    height: 27.125rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px black;
+}
+
+.ngoList{
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ngoList >* {
+    margin-bottom: 96px;
+}
+
+.ngoInformation .content {
+    margin-left: 40px;
+}
+main {
+    background-color: var(--marrom);
+    padding-top: 6rem;
+}
+body {
+    background-color: var(--rosa);
+    color: var(--branco);
+
+}
