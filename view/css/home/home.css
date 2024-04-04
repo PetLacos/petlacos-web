@@ -1,4 +1,33 @@
-.introduction {
-    width: auto;
-    background-image: url(../../assets/images/girl_home.jpg);
+/* Fundo */
+body {
+    background-image: url("../../assets/images/girl_home.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position-x: 24vw;
+    padding: 15rem;
+}
+
+.diagonalRect {
+    position: absolute;
+    z-index: -2;
+    width: 120vh;
+    left: -38vh;
+    height: 110vh;
+    transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    box-shadow: 1rem 0rem 1rem var(--defaultShadowColor);
+    background-color: var(--linho);
+}
+
+/* Conteúdo */
+.introduction .phraseBox .displayFont {
+    text-transform: uppercase;
+}
+
+.phraseBox {
+    width: 44.25rem;
+    height: 25rem;
+    padding: 2.5rem;
 }

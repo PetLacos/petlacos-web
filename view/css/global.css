@@ -16,9 +16,15 @@
     --marrom: #3E2723;
 
     --orangeButtonShadowColor: rgba(196, 118, 0, 0.7);
+    --defaultShadowColor: rgba(0, 0, 0, 0.15);
 }
 
-body {
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
     margin: 0;
     padding: 0;
 }
@@ -67,8 +73,9 @@ body {
 }
 
 /* Menu de Navegação */
-
 .menu {
+    margin: 0;
+    padding: 0;
     margin-top: 3rem;
     width: 100%;
 }
