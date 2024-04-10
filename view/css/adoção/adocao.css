@@ -27,7 +27,7 @@ body {
 }
 
 .header-nav {
-background-color: var(--rosa);
+    background-color: var(--rosa);
 }
 
 section {
@@ -39,11 +39,106 @@ section {
 .div-search {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 95vw;
+    justify-content: space-around;
+    width: 70vw;
     height: 8vh;
     background-color: var(--neve);
     margin-top: 10px;
     border-radius: 15px;
-    
+}
+
+.title-emphasis {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    align-content: flex-start;
+    border: #388E3C solid 2px;
+}
+
+input {
+    width: 50%;
+    height: 5vh;
+    border-radius: 15px;
+    border: none;
+    padding-left: 10px;
+}
+
+.div-gallery-adoption-emphasis {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: var(--neve);
+    width: 70%;
+    border-radius: 15px;
+}
+
+ul {
+    display: flex;
+    background-color: hsla(0, 0%, 0%, 0.9);
+    border-radius: 15px;
+}
+
+ul li {
+    list-style: none;
+    margin: 10px;
+    color: var(--branco);
+    font-size: 10px;
+
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    height: 8%;
+    margin-top: 10px;
+}
+
+.gallery img {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: #388E3C solid;
+    margin: 10px;
+
+}
+
+.gallery-item {
+    color: var(--branco);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #388E3C solid;
+}
+
+
+.gallery-item  {
+    color: var(--branco);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    width: 325px;
+    height: 307px;
+    background-image: url('../../assets/Card\ \(3\).png');
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+}
+
+
+
+.gallery-item h1 {
+    border: var(--branco) solid 2px;
+    background-color: var(--verdeFloresta);
 }
