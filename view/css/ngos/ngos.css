@@ -40,6 +40,10 @@ img {
 
 .ngoInformation .content {
     margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
 }
 main {
     background-color: var(--marrom);
@@ -48,5 +52,20 @@ main {
 body {
     background-color: var(--rosa);
     color: var(--branco);
-
 }
+
+button {
+    width: 21.375rem;
+    height: 4.501rem;
+}
+
+.sectionSubtitleFont {
+    font-size: 2.063rem;
+    color: #FFFFFF;
+    align-items: center;
+}
+
+.paragraphFont {
+    text-align: justify;
+}
+

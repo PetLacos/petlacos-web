@@ -1,0 +1,39 @@
+body {
+    background-color: var(--marrom);
+}
+
+.ngoPaymentContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--branco);
+    align-items: center;
+}
+
+img {
+    width: 44.25rem;
+    height: 44.25rem;
+    border-radius: 16px;
+}
+
+p {
+    color: var(--branco);
+}
+
+button {
+    width: 27.313rem;
+    height: 7rem;
+    background-color: var(--rosa);
+    border-radius: 16px;
+}
+
+.sectionSubtitleFont{
+    color: var(--branco);
+}
+
+.formDonates{
+
+}
