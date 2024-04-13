@@ -50,6 +50,7 @@ input {
     border-radius: 15px;
     border: none;
     padding-left: 10px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 1, 0.267) ;
 }
 
 select {
@@ -60,15 +61,20 @@ select {
  }
 
 
-.div-gallery-adoption-emphasis {
+.div-gallery-adoption-emphasis, .div-gallery-adoption {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
     background-color: var(--neve);
-    width: 90vw;
+    width: 70vw;
     border-radius: 15px;
+}
+
+.div-gallery-adoption-emphasis {
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 ul {
@@ -101,19 +107,37 @@ ul li {
 .description h1 {
     position: absolute;
     z-index: 1;
-    margin-top: -25px;
-   
+    margin-top: -25px; 
     align-items: center;
-
+    color: var(--verdeFloresta);
+    background-color: var(--branco);
+    border-radius: 16px;
+    width: 200px;
+    padding: 7px;
 }
 
+#animal-one {
+    background-image: url('../../assets/Rectangle\ 17\ \(1\).png');
+}
+
+#animal-two {
+    background-image: url('../../assets/Rectangle\ 17\ \(2\).png');
+}
+
+#animal-three {
+    background-image: url('../../assets/Rectangle\ 17\ \(3\).png');
+}
+
+#animal-four {
+    background-image: url('../../assets/Rectangle\ 17\ \(4\).png');
+}
 .gallery {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 95vw;
     height: 8%;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .gallery img {
@@ -147,7 +171,7 @@ ul li {
     border-radius: 15px;
     width: 315px;
     height: 307px;
-    background-image: url('../../assets/download.jfif');
+    background-image: url('../../assets/Card\ \(3\).png');
     background-size: cover;
     background-position: center;
     justify-content: flex-end;
@@ -159,7 +183,3 @@ ul li {
 }
 
 
-.gallery-item h1 {
-    border: var(--branco) solid 2px;
-    background-color: var(--verdeFloresta);
-}
