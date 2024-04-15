@@ -1,0 +1,105 @@
+/* Fundo */
+body {
+    background-image: url("../../assets/images/home_background/1.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position-x: 24vw;
+    padding: 0rem 15rem;
+
+    animation-name: backgroundSlide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes backgroundSlide {
+    0% {
+        background-image: url("../../assets/images/home_background/1.jpg");
+    }
+
+    34% {
+        background-image: url("../../assets/images/home_background/2.jpg");
+    }
+
+    64% {
+        background-image: url("../../assets/images/home_background/3.jpg");
+    }
+
+    100% {
+        background-image: url("../../assets/images/home_background/4.jpg");
+    }
+}
+
+.diagonalRect {
+    position: absolute;
+    z-index: -2;
+    width: 120vh;
+    top: -3rem;
+    left: -38vh;
+    height: 105vh;
+    transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    box-shadow: 1rem 0rem 1rem var(--defaultShadowColor);
+    background-color: var(--linho);
+}
+
+/* Conteúdo */
+
+nav {
+    margin-top: 3rem;
+}
+
+.phraseBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 44.25rem;
+    height: 25rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background-color: var(--neve);
+    box-shadow: var(--introCardShadow);
+}
+
+.phraseBox .titleFont {
+    width: 90%;
+    margin: 0rem;
+    margin-right: 10%;
+    text-transform: uppercase;
+}
+
+.phraseBox span {
+    font-weight: bold;
+}
+
+.introduction img {
+    z-index: -1;
+    position: absolute;
+}
+
+.ribbonBox {
+    margin-top: 5.5rem;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.phraseBox .titleFont>:first-child {
+    color: var(--laranja);
+}
+
+.phraseBox .titleFont>* {
+    color: var(--verdePersa);
+}
+
+.phraseBox button {
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bold;
+}
