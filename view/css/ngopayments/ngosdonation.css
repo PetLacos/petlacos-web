@@ -6,8 +6,8 @@ body {
 main {
     background-color: var(--marrom);
     padding-top: 6rem;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
 }
 
 h1 {
