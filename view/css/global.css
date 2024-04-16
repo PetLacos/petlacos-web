@@ -15,10 +15,18 @@
     --verdeFloresta: #388E3C;
     --marrom: #3E2723;
 
-    --orangeButtonShadowColor: rgba(196, 118, 0, 0.7);
+    --orangeButtonShadowColor: rgba(196, 117, 0, 0.7);
+    --defaultShadowColor: rgba(0, 0, 0, 0.15);
+    --introCardShadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
 }
 
-body {
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
     margin: 0;
     padding: 0;
 }
@@ -26,34 +34,34 @@ body {
 /* Tipografia do Site */
 .displayFont {
     font-family: 'Fredoka', sans-serif;
-    font-size: 3.048rem;
+    font-size: 4rem;
     font-weight: 500;
 }
 
 .titleFont {
     font-family: 'Fredoka', sans-serif;
-    font-size: 2.429rem;
+    font-size: 3.188rem;
     font-weight: 500;
 }
 
 .sectionTitleFont {
     font-family: 'Fredoka', sans-serif;
-    font-size: 1.952rem;
+    font-size: 2.563rem;
 }
 
 .sectionSubtitleFont {
     font-family: 'League Spartan', sans-serif;
-    font-size: 1.571rem;
+    font-size: 2.063rem;
 }
 
 .paragraphFont {
     font-family: 'League Spartan', sans-serif;
-    font-size: 1.238rem;
+    font-size: 1.625rem;
 }
 
 .legendFont {
     font-family: 'League Spartan', sans-serif;
-    font-size: 1rem;
+    font-size: 1.313rem;
 }
 
 .displayFont,
@@ -67,52 +75,44 @@ body {
 }
 
 /* Menu de Navegação */
-
 .menu {
+    margin: 0;
+    padding: 0;
     margin-top: 3rem;
     width: 100%;
 }
 
 nav {
-    width: fit-content;
-    height: fit-content;
     display: flex;
     margin: auto;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.063rem;
     color: var(--marrom);
     background-color: var(--neve);
     border-radius: 1rem;
+    box-shadow: var(--introCardShadow);
     /* 8px 16px */
 }
 
-nav>* {
-    margin-right: 24px;
-}
-
-nav>*:last-child {
-    margin-right: 0;
+nav .sectionSubtitleFont {
+    width: 16%;
+    font-weight: 600;
+    margin: 0;
 }
 
 nav .links {
     /* Estrutura */
     display: flex;
     padding: 0.5rem 1.5rem;
+    width: 48%;
+    justify-content: space-between;
     background-color: var(--verdePersa);
     border-radius: 1.5rem;
     /* Fontes */
     font-weight: bold; 
     color: var(--branco);
-}
-
-nav .links>* {
-    margin-right: 40px;
-}
-
-nav .links>*:last-child {
-    margin-right: 0;
 }
 
 nav button {
@@ -127,11 +127,11 @@ nav .orangeButton {
 }
 
 nav .brownButton {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
 }
 
 nav img {
-    width: 5rem;
+    margin: 0rem 1rem;
 }
 
 /* Buttons */
@@ -140,6 +140,8 @@ nav img {
     color: var(--branco);
     border: none;
     transition: transform 0.3s ease-in-out;
+    border-radius: 1.5rem;
+    box-shadow: var(--orangeButtonShadow);
 }
 
 .orangeButton:hover {
