@@ -1,14 +1,28 @@
 body {
-    background-color: var(--marrom);
+    background-color: var(--rosa);
+    color: var(--branco);
 }
 
-.ngoPaymentContent {
+main {
+    background-color: var(--marrom);
+    padding-top: 6rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+h1 {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 6rem;
+}
+
+.ngoDonateContent {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1 {
+.ngoDonateContent h1 {
     color: var(--branco);
     align-items: center;
 }
@@ -16,18 +30,29 @@ h1 {
 img {
     width: 44.25rem;
     height: 44.25rem;
-    border-radius: 16px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px black;
 }
+
 
 p {
     color: var(--branco);
+    margin: 4.5rem;
 }
 
-button {
+.buttonContainer button {
     width: 27.313rem;
     height: 7rem;
     background-color: var(--rosa);
     border-radius: 16px;
+    margin: 1.5rem;
+}
+
+.buttonContainer {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .sectionSubtitleFont{
@@ -35,5 +60,23 @@ button {
 }
 
 .formDonates{
+    background-color: var(--fundoBrancoTransparente);
+    width: 46.313rem;
+    height: 4.875rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.25rem;
+    border-radius: 1rem;
+}
 
+button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 1px 1px black;
+    transition: all 0.5s;
+}
+
+button:hover{
+    background-color: palevioletred;
 }
