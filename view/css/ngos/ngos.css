@@ -48,6 +48,8 @@ img {
 main {
     background-color: var(--marrom);
     padding-top: 6rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
 }
 body {
     background-color: var(--rosa);
@@ -57,6 +59,10 @@ body {
 button {
     width: 21.375rem;
     height: 4.501rem;
+}
+
+button:hover {
+    background-color:  palevioletred;
 }
 
 .sectionSubtitleFont {
