@@ -62,7 +62,7 @@ body {
     z-index: -2;
     width: 120vh;
     top: -3rem;
-    left: -38vh;
+    left: -32vh;
     height: 105vh;
     transform: skew(-20deg);
     -webkit-transform: skew(-20deg);
@@ -71,7 +71,7 @@ body {
     box-shadow: 1rem 0rem 1rem var(--defaultShadowColor);
     background-color: var(--linho);
 
-    animation: slideDiagonalRect 2s ease-out 1;
+    animation: slideDiagonalRect 1s ease-in-out 1;
 }
 
 @keyframes slideDiagonalRect {
@@ -80,7 +80,7 @@ body {
     }
 
     100% {
-        left: -28vh;
+        left: -32vh;
     }
 }
 
@@ -90,7 +90,28 @@ body {
 
 nav {
     margin-top: 3rem;
+
+    animation: slideIntroComponents 1.2s ease-in-out 1;
 }
+
+@keyframes slideIntroComponents {
+    0% {
+        position: relative;
+        left: -5rem;
+        opacity: 0;
+    }
+
+    90% {
+        position: relative;
+        left: 0rem;
+        opacity: 1;
+    }
+
+    100% {
+        position: inherit;
+    }
+}
+
 
 .phraseBox {
     display: flex;
@@ -128,6 +149,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    animation: slideIntroComponents 1.2s ease-in-out 1;
 }
 
 .phraseBox .titleFont>:first-child {
