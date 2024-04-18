@@ -26,7 +26,8 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
 }
@@ -85,6 +86,8 @@ body, html {
 nav {
     display: flex;
     margin: auto;
+    margin-left: 15rem;
+    margin-right: 15rem;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
@@ -111,7 +114,7 @@ nav .links {
     background-color: var(--verdePersa);
     border-radius: 1.5rem;
     /* Fontes */
-    font-weight: bold; 
+    font-weight: bold;
     color: var(--branco);
 }
 
