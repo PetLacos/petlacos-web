@@ -29,21 +29,36 @@
                 <button class="orangeButton paragraphFont">Cadastre-se</button>
             </nav>
         </header>
-        <main>
-            <section class="introduction">
-                <div class="ribbonBox">
-                    <img class="ribbon" src="view/assets/images/ribbon.svg">
-                    <div class="phraseBox">
-                        <h1 class="titleFont">
-                            <span>adote</span> e crie <span>laços</span> que
-                            duram
-                            para <span>sempre</span>.
-                        </h1>
-                        <button class="orangeButton sectionSubtitleFont">adote
-                            um laço!</button>
-                    </div>
+        <section class="introduction">
+            <div class="ribbonBox">
+                <img class="ribbon" src="view/assets/images/ribbon.svg">
+                <div class="phraseBox">
+                    <h1 class="titleFont">
+                        <span>adote</span> e crie <span>laços</span> que
+                        duram
+                        para <span>sempre</span>.
+                    </h1>
+                    <button class="orangeButton sectionSubtitleFont">adote
+                        um laço!</button>
                 </div>
+            </div>
+        </section>
+        <main>
+            <div class="scrollIndicatorContainer">
+                <canvas id="scrollIndicator" width="100" height="100"></canvas>
+            </div>
+            <section class="takeALook">
+                <h1 class="titleFont">Dê uma olhada!</h1>
             </section>
         </main>
     </body>
+
+    <script src="https://unpkg.com/rive-js"></script>
+    <script>
+        new rive.Rive({
+            src: '/view/assets/rive/scroll_indicator.riv',
+            canvas: document.getElementById('scrollIndicator'),
+            autoplay: true,
+        });
+    </script>
 </html>

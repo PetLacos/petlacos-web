@@ -1,9 +1,9 @@
 /* Fundo */
 body {
+    background-image: url("../../assets/images/home_background/1.jpg");
     background-size: 100vw;
     background-repeat: no-repeat;
     background-position-x: 24vw;
-    padding: 0rem 15rem;
 
     animation-name: backgroundSlide;
     animation-duration: 10s;
@@ -84,7 +84,11 @@ body {
     }
 }
 
+/* Header */
 
+.introduction {
+    padding: 0rem 15rem;
+}
 
 /* Conteúdo */
 
@@ -111,7 +115,6 @@ nav {
         position: inherit;
     }
 }
-
 
 .phraseBox {
     display: flex;
@@ -167,4 +170,30 @@ nav {
     width: fit-content;
     height: fit-content;
     font-weight: bold;
+}
+
+/* Background */
+main {
+    margin-top: 12rem;
+    width: 100%;
+    background-color: var(--marrom);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0rem 15rem;
+    padding-top: 2rem;
+    padding-bottom: 7rem;
+    color: var(--neve);
+}
+
+main .titleFont {
+    text-align: center;
+}
+
+.scrollIndicatorContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#scrollIndicator {
+    width: 4rem;
 }
