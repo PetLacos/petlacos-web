@@ -1,0 +1,63 @@
+@import url(/view/css/global.css);
+
+footer {
+    background-color: #000;
+    color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 13rem 1.1rem 13rem;
+}
+#petLacos{
+    width: 600px;
+}
+
+#petLacos, #usefulLinks {
+    margin-top: 0.45rem;
+}
+
+#reserve {
+    margin-top: 5rem;
+    position: relative;
+    right: 110px;
+}
+
+#usefulLinks {
+    width: 600px;
+}
+
+#theList {
+    list-style: none;
+    padding: 0;
+}
+
+.listFooter {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.listFooter:hover{
+    color: var(--rosa);
+    transition: 3ms;
+    font-size: 1.20rem;
+    transition: 0.55s;
+}
+
+#logoSenac {
+    width: 160px;
+    height: 120px;
+    background-image: url(/view/assets/logoSenac.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 7.05rem;
+}
+
+#logoPet {
+    width: 98px;
+    height: 87px;
+    background-image: url(/view/assets/Vertical_-_White.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 1rem;
+}
