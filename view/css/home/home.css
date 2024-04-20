@@ -183,6 +183,24 @@ main {
     padding-top: 2rem;
     padding-bottom: 7rem;
     color: var(--neve);
+
+    animation: raiseUp 1.2s ease-in-out 1;
+}
+
+@keyframes raiseUp {
+    0% {
+        position: relative;
+        top: 8rem;
+    }
+
+    90% {
+        position: relative;
+        top: 0rem; /* Change the value to 0rem */
+    }
+
+    100% {
+        position: inherit;
+    }
 }
 
 main .titleFont {
@@ -190,8 +208,16 @@ main .titleFont {
 }
 
 .scrollIndicatorContainer {
-    display: flex;
-    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    margin-top: -0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.scrollIndicatorContainer:hover {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #scrollIndicator {

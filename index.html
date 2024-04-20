@@ -44,21 +44,14 @@
             </div>
         </section>
         <main>
-            <div class="scrollIndicatorContainer">
+            <div class="scrollIndicatorContainer" id="scrollIndicatorContainer">
                 <canvas id="scrollIndicator" width="100" height="100"></canvas>
             </div>
-            <section class="takeALook">
+            <section class="takeALook" id="takeALook">
                 <h1 class="titleFont">Dê uma olhada!</h1>
             </section>
         </main>
     </body>
-
-    <script src="https://unpkg.com/rive-js"></script>
-    <script>
-        new rive.Rive({
-            src: '/view/assets/rive/scroll_indicator.riv',
-            canvas: document.getElementById('scrollIndicator'),
-            autoplay: true,
-        });
-    </script>
 </html>
+<script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+<script src="view/js/home/home.js"></script>
