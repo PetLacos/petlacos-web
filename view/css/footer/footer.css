@@ -30,6 +30,13 @@ footer {
 
 #rightColumn {
     width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#usefullLinks {
+    height: 100%;
 }
 
 #theList {
@@ -52,9 +59,9 @@ footer {
 #logoSenac {
     width: 97px;
     height: 57px;
-    position: relative;
-    left: 80% ;
-    margin-top: 0.45px;
+    /* position: relative;
+    left: 80% ; */
+    /* margin-top: 95px; */
 
 }
 
