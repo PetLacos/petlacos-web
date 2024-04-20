@@ -22,6 +22,9 @@ function setScrollIconHidden(hidden) {
     scrollContainer.hidden = hidden;
 }
 
+
+// Eventos -------------------------------------------------------------------------------------------------
+
 scrollContainer.addEventListener(
     "click",
     () => {
