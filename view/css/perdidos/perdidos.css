@@ -1,0 +1,76 @@
+@import '../global.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--neve);
+}
+
+.displayFont{
+    color: var(--branco);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.paragraphFont{
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.navmenu{
+    color: var(--marrom);
+    text-align: center;
+    margin: 1.2rem 0 0.5rem 0;
+    font-weight: 600;
+}
+
+#main {
+    background-color: var(--marrom);
+    padding: 96px 208px;
+    border-radius: 1rem 1rem 0 0;
+
+}
+
+#content {
+    background-color: rgb(173, 124, 59);
+    background-image: url(../../assets/background.jpeg);
+    background-size: contain;
+    border: solid var(--neve);
+    border-radius: 1rem;
+
+}
+
+#father {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.child{
+    background-color: var(--neve);
+    width: 342px;
+    margin: 24px 12px;
+    border-radius: 16px;
+
+}
+
+.child .img{
+    background-image: url(../../assets/cat.jpg);
+    background-size: cover;
+    background-color: black;
+    width: 342px;
+    height: 338px;
+    border-radius: 16px;
+
+}
+
+footer {
+    background-color: black;
+    height: 10rem;
+    color: var(--neve);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

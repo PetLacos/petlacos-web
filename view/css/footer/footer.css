@@ -6,6 +6,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 3rem 15rem 1.1rem 15rem;
+    height: 296px;
 }
 #leftColumn{
     width: 50%;
@@ -15,8 +16,15 @@ footer {
     display: flex;
 }
 
+#oneHundred {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 #reserve {
-    margin: 95px 0 0 0;
+    display: inline-block;
 }
 
 .legendFont{
@@ -26,6 +34,7 @@ footer {
 
 .paragraph {
     padding-right: 24px;
+    margin: 0;
 }
 
 #rightColumn {
