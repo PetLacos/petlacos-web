@@ -195,7 +195,8 @@ main {
 
     90% {
         position: relative;
-        top: 0rem; /* Change the value to 0rem */
+        top: 0rem;
+        /* Change the value to 0rem */
     }
 
     100% {
