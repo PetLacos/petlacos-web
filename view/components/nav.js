@@ -3,14 +3,12 @@ class Header extends HTMLElement {
         super();
     }
 
-
-
     connectedCallback() {
         this.innerHTML = `
-      <link rel="stylesheet" href="view/css/global.css">
+      <link rel="stylesheet" href="/view/css/global.css">
         <header>
         <nav>
-        <img src="view/assets/logo_padrao.svg" class="navLogo">
+        <img src="/view/assets/logo_padrao.svg" class="navLogo">
         <p class="sectionSubtitleFont" style="font-weight: medium;">Adote Laços.</p>
         <div class="links paragraphFont">
             <a>Home</a>
