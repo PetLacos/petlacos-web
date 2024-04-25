@@ -1,0 +1,9 @@
+body {
+    padding: 0 240px;
+}
+
+#photo{
+    background-color: #c06b6b;
+    width: 100px;
+    height: 200px;
+}
