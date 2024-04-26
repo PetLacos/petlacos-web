@@ -161,3 +161,22 @@ nav img {
 .brownButton:hover {
     transform: scale(1.02);
 }
+
+.pinkButton {
+    background-color: var(--rosa);
+    color: var(--neve);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pinkButton:hover {
+    transform: scale(1.02);
+}
+
+.pinkButton:active {
+    background-color: #ee959f;
+}
