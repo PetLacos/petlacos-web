@@ -1,8 +1,7 @@
 @import '../global.css';
 
-* {
-    margin: 0;
-    padding: 0;
+header nav {
+    box-shadow: none;
 }
 
 body {
@@ -36,7 +35,7 @@ body {
 #content {
     background-image: url(../../assets/bg-perdidos.jpeg);
     background-size: contain;
-    border: solid var(--neve);
+    border: 0.5rem solid var(--neve);
     border-radius: 1rem;
 }
 
