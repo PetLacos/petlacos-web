@@ -11,6 +11,11 @@ body {
     animation-timing-function: linear;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 @keyframes backgroundSlide {
     0% {
         background-image: url("../../assets/images/home/home_background/1.jpg");
@@ -229,7 +234,14 @@ main .titleFont {
 
 /* Slides dê uma olhada */
 
-.slidesContainer {}
+.slidesContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 37rem;
+}
 
 .slidesContainer .slide {
     width: 61.938rem;
@@ -267,21 +279,25 @@ main .titleFont {
 }
 
 .slidesContainer #slide1 {
-    position: relative;
+    position: absolute;
+    z-index: 3;
+    margin-right: 4rem;
     background-image: url("/view/assets/images/home/slides/ongs.jpg");
     background-size: cover;
 }
 
 .slidesContainer #slide2 {
-    position: relative;
-    left: 2rem;
+    position: absolute;
+    margin-right: 2rem;
+    z-index: 2;
     background-image: url("/view/assets/images/home/slides/ongs.jpg");
     background-size: cover;
 }
 
 .slidesContainer #slide3 {
-    position: relative;
-    left: 4rem;
+    position: absolute;
+    margin-right: 0rem;
+    z-index: 1;
     background-image: url("/view/assets/images/home/slides/ongs.jpg");
     background-size: cover;
 }
