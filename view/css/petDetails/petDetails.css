@@ -7,26 +7,50 @@
 
 body {
     background-color: var(--rosa);
-    border-radius: 24px;
 }
 #backgroundMain {
     background-color: var(--marrom);
     padding: 96px 240px 122px;
+    border-radius: 24px 24px 0 0;
 }
 #main{
     background-color: var(--neve);
     height: 807px;
     border-radius: 24px;
+}
+
+#sectionInfo {
     display: flex;
+    justify-content: space-between;
+}
+
+#sectionContact {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 24px;
+}
+
+.microchip h2,
+.localizacao h2,
+.dono h2 {
+    font-weight: 400;
+}
+
+#aboutPet h2 {
+    padding-bottom: 10px;
 }
 #photo {
-    background-color: #000;
-    margin: 24px;
+    background-image: url(/view/assets/neroPet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 24px 0 0 24px;
     width: 684px;
     height: 623px;
-    border-radius: 34px;
+    border-radius: 24px;
     border: 8px solid var(--brancoEsfumado);
 }
+
 .listItens {
     display: flex;
     flex-wrap: wrap;
@@ -35,23 +59,32 @@ body {
     margin: 25.5px;
 }
 
+.contactButton {
+    width: 448px;
+    height: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+}
+
 .listItem {
     list-style: none;
-    width: 33%;
+    width: 33.333%;
+    margin-bottom: 32px;
 }
+
+.listItem p,
+.microchip p,
+.localizacao p,
+.dono p {
+    margin-bottom: 8px;
+} 
 
 .listItem:first-child {
-    width: 66%;
+    width: 66.666%;
 }
-
-.listItem p {
-    font: var(--legendFont);
-}
-.sectionTitleFont{
-    font-weight: 500;
-}
-.paragraphFont{
-    font-weight: 400;
+.listItem:first-child h2{
+color: var(--verdeFloresta);
 }
 
 .microchip{
@@ -60,10 +93,9 @@ body {
 }
 
 .localizacao {
-    width: 66%;    
+    width: 66.666%;
 }
 
 .dono {
-    width: 33%;
+    width: 33.333%;
 }
-

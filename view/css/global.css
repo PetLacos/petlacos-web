@@ -87,7 +87,7 @@ html {
 nav {
     display: flex;
     margin: auto;
-    margin-left: 15rem;
+    margin: 2.5rem 15rem 1.625rem;
     margin-right: 15rem;
     justify-content: space-between;
     align-items: center;
@@ -150,6 +150,7 @@ nav img {
 
 .orangeButton:hover {
     transform: scale(1.02);
+    cursor: pointer;
 }
 
 .brownButton {
