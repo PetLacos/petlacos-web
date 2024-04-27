@@ -1,9 +1,69 @@
-body {
-    padding: 0 240px;
+@import url(/view/css/global.css);
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-#photo{
-    background-color: #c06b6b;
-    width: 100px;
-    height: 200px;
+body {
+    background-color: var(--rosa);
+    border-radius: 24px;
 }
+#backgroundMain {
+    background-color: var(--marrom);
+    padding: 96px 240px 122px;
+}
+#main{
+    background-color: var(--neve);
+    height: 807px;
+    border-radius: 24px;
+    display: flex;
+}
+#photo {
+    background-color: #000;
+    margin: 24px;
+    width: 684px;
+    height: 623px;
+    border-radius: 34px;
+    border: 8px solid var(--brancoEsfumado);
+}
+.listItens {
+    display: flex;
+    flex-wrap: wrap;
+    width: 684px;
+    height: 623px;
+    margin: 25.5px;
+}
+
+.listItem {
+    list-style: none;
+    width: 33%;
+}
+
+.listItem:first-child {
+    width: 66%;
+}
+
+.listItem p {
+    font: var(--legendFont);
+}
+.sectionTitleFont{
+    font-weight: 500;
+}
+.paragraphFont{
+    font-weight: 400;
+}
+
+.microchip{
+    width: 100%;
+    text-align: center;
+}
+
+.localizacao {
+    width: 66%;    
+}
+
+.dono {
+    width: 33%;
+}
+
