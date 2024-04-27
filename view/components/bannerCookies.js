@@ -16,7 +16,7 @@ class cookies extends HTMLElement {
 </head>
 <body>
     <div id="cookie-banner" class="legendFont">
-        <p>Nós usamos cookies para garantir a melhor experiência em nosso site. Ao continuar navegando, você concorda com o uso de cookies.</p>
+        <p>Nós usamos cookies para garantir a melhor experiência em nosso site. Ao continuar navegando, você concorda com o uso de cookies e com nossa <a href="./">política de privacidade<a/>.</p>
         <button class="btn-cookie legendFont">Aceitar</button>
         <button class="btn-cookie legendFont">Recusar</button>
     </div>

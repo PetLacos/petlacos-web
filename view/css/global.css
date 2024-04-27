@@ -19,6 +19,7 @@
     --defaultShadowColor: rgba(0, 0, 0, 0.15);
     --introCardShadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
+    --scrollBarTrackColor: #fff8e149;
 }
 
 
@@ -160,4 +161,8 @@ nav img {
 
 .brownButton:hover {
     transform: scale(1.02);
+}
+
+.textLink {
+    color: var(--pigmentoVerde) ;
 }
