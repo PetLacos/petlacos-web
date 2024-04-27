@@ -1,5 +1,5 @@
 
-class Header extends HTMLElement {
+class privacy extends HTMLElement {
     constructor() {
       super();
     }
@@ -79,4 +79,4 @@ class Header extends HTMLElement {
 }
 }
 
-customElements.define('header-component', Header);
+customElements.define('privacy-component', privacy);
