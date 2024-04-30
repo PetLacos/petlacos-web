@@ -11,11 +11,6 @@ body {
     animation-timing-function: linear;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
 @keyframes backgroundSlide {
     0% {
         background-image: url("../../assets/images/home/home_background/1.jpg");
@@ -101,8 +96,7 @@ body {
 
 nav {
     margin-top: 3rem;
-
-    animation: slideIntroComponents 1.2s ease-in-out 1;
+    animation: slideIntroComponents 1.5s ease-in-out 1;
 }
 
 @keyframes slideIntroComponents {
@@ -160,7 +154,7 @@ nav {
     justify-content: center;
     align-items: center;
 
-    animation: slideIntroComponents 1.2s ease-in-out 1;
+    animation: slideIntroComponents 1.5s ease-in-out 1;
 }
 
 .phraseBox .titleFont>:first-child {
@@ -178,6 +172,7 @@ nav {
     height: fit-content;
     font-weight: bold;
 }
+
 
 /* Background */
 main {
@@ -232,7 +227,12 @@ main .titleFont {
     width: 4rem;
 }
 
-/* Slides dê uma olhada */
+
+/* Dê uma olhada */
+
+.takeALook .titleFont {
+    
+}
 
 .slidesContainer {
     position: relative;

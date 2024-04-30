@@ -12,7 +12,7 @@ class footer extends HTMLElement {
                 <div id="leftColumn">
                     <div id='oneHundred'>
                         <div id="sloganDiv">
-                            <img src='/view/assets/Vertical_-_White.png' id="logoPet"></img>
+                            <img src='/view/assets/logo/vertical_white.png' id="logoPet"></img>
                             <div class="childFooter" id="petLacos">
                                 <p class="legendFont">LaçosPet</p>
                                 <p class="legendFont paragraph">A LaçosPet é uma instituição sem fins lucrativos, voltada principalmente à adoção de pets e suporte às ONGs que fazem esse trabalho</p>
