@@ -3,6 +3,7 @@
 @import url("/view/css/home/animations.css");
 @import url("/view/css/home/sections/takeALook.css");
 @import url("/view/css/home/sections/introduction.css");
+@import url("/view/css/home/sections/ourServices.css");
 
 
 /* Fundo --------------------------------- */
@@ -50,6 +51,7 @@ body {
 
 section {
     margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 
@@ -61,7 +63,7 @@ main {
     background-color: var(--marrom);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    padding: 0rem 15rem;
+    padding: 0rem var(--screenPaddingX);
     padding-top: 2rem;
     padding-bottom: 7rem;
     color: var(--neve);
