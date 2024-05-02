@@ -5,13 +5,12 @@
         <meta name="author" content="PetLaços">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PetLaços - Adote Laços.</title>
-        <link rel="stylesheet" href="view/css/global.css">
         <link rel="stylesheet" href="view/css/home/home.css">
     </head>
     <body>
         <div class="diagonalRect"></div>
-        <header-component></header-component>
         <script src="/view/components/header.js"></script>
+        <header-component></header-component>
         <section class="introduction">
             <div class="ribbonBox">
                 <img class="ribbon" src="view/assets/images/ribbon.svg">
@@ -30,60 +29,86 @@
                 <canvas id="scrollIndicator" width="100" height="100"></canvas>
             </div>
             <section class="takeALook" id="takeALook">
-                <h1 class="titleFont">Dê uma olhada!</h1>
-                <div class="slidesContainer" id="slidesContainer">
-                    <div class="slide" id="slide1">
-                        <div class="slideContent">
-                            <h2 class="titleFont">ONGs Parceiras</h2>
-                            <p class="paragraphFont">
-                                Você deve ter se perguntado: “Mas de onde vêm
-                                todos esses bixinhos?” além das pessoas poderem
-                                doar aqui mesmo, temos parcerias com diversas
-                                ongs cheia de animaiszinhos repletos de amor!
-                                <br><br>
-                                Gostaria de ter sua ONG com a gente? Entre em
-                                contato pelo nosso email: email@email.com.br
-                            </p>
-                            <button class="pinkButton legendFont">conhecer as
-                                ongs</button>
-                        </div>
-                    </div>
-                    <div class="slide" id="slide2">
-                        <div class="slideContent">
-                            <h2 class="titleFont">ONGs Parceiras</h2>
-                            <p class="paragraphFont">
-                                Você deve ter se perguntado: “Mas de onde vêm
-                                todos esses bixinhos?” além das pessoas poderem
-                                doar aqui mesmo, temos parcerias com diversas
-                                ongs cheia de animaiszinhos repletos de amor!
-                                <br><br>
-                                Gostaria de ter sua ONG com a gente? Entre em
-                                contato pelo nosso email: email@email.com.br
-                            </p>
-                            <button class="pinkButton">conhecer as
-                                ongs</button>
-                        </div>
-                    </div>
-                    <div class="slide" id="slide3">
-                        <div class="slideContent">
-                            <h2 class="titleFont">ONGs Parceiras</h2>
-                            <p class="paragraphFont">
-                                Você deve ter se perguntado: “Mas de onde vêm
-                                todos esses bixinhos?” além das pessoas poderem
-                                doar aqui mesmo, temos parcerias com diversas
-                                ongs cheia de animaiszinhos repletos de amor!
-                                <br><br>
-                                Gostaria de ter sua ONG com a gente? Entre em
-                                contato pelo nosso email: email@email.com.br
-                            </p>
-                            <button class="pinkButton">conhecer as
-                                ongs</button>
-                        </div>
-                    </div>
+                <h1 class="titleFont sectionTitle">Dê uma olhada!</h1>
+                <div class="slidePanel">
+                    <img id="leftArrow" src="/view/assets/icons/arrow.svg">
+                    <ul class="slidesContainer" id="slidesContainer">
+                        <li class="slide firstSlide" id="slide1">
+                            <img>
+                            <div class="slideContent">
+                                <h2 class="titleFont">ONGs Parceiras</h2>
+                                <p class="paragraphFont">
+                                    Você deve ter se perguntado: “Mas de
+                                    onde
+                                    vêm
+                                    todos esses bixinhos?” além das pessoas
+                                    poderem
+                                    doar aqui mesmo, temos parcerias com
+                                    diversas
+                                    ongs cheia de animaiszinhos repletos de
+                                    amor!
+                                    <br><br>
+                                    Gostaria de ter sua ONG com a gente?
+                                    Entre
+                                    em
+                                    contato pelo nosso email:
+                                    email@email.com.br
+                                </p>
+                                <button
+                                    class="pinkButton legendFont">conhecer
+                                    as
+                                    ongs</button>
+                            </div>
+                        </li>
+                        <li class="slide secondSlide" id="slide2">
+                            <img>
+                            <div class="slideContent">
+                                <h2 class="titleFont">Mural de Perdidos</h2>
+                                <p class="paragraphFont">
+                                    <!-- Texto dizendo que temos uma seção do site que contém um mural de animais perdidos -->
+                                    Perdeu seu bichinho? Não se preocupe! Aqui
+                                    no PetLaços temos um mural de animais
+                                    perdidos, onde você pode cadastrar o seu pet
+                                    ou ajudar a encontrar um bichinho perdido.
+                                    <br><br> Acesse o mural e veja se encontra o
+                                    seu pet ou algum pet perdido que você possa
+                                    ajudar!
+                                </p>
+                                <button class="pinkButton legendFont">acessar
+                                    mural</button>
+                            </div>
+                        </li>
+                        <li class="slide thirdSlide" id="slide3">
+                            <img>
+                            <div class="slideContent">
+                                <h2 class="titleFont">Adote um Laço!</h2>
+                                <p class="paragraphFont">
+                                    Aqui na PetLaços, você pode adotar um
+                                    bichinho e criar laços que duram para
+                                    sempre! <br><br> Acesse a nossa seção de
+                                    adoção e veja os bichinhos disponíveis para
+                                    adoção. <br><br> Adote um laço e faça um
+                                    novo amigo!
+                                </p>
+                                <button class="pinkButton legendFont">adotar um
+                                    animal</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <img id="rightArrow" src="/view/assets/icons/arrow.svg">
+                </div>
+                <div class="slideDots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div>
             </section>
         </main>
+        <script src="/view/components/footer.js"></script>
+        <footer-component></footer-component>
     </body>
 </html>
+
 <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
 <script src="view/js/home/home.js"></script>
+<script src="view/js/home/carousel.js"></script>

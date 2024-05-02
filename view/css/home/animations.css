@@ -1,0 +1,90 @@
+@keyframes backgroundSlide {
+    0% {
+        background-image: url("../../assets/images/home/home_background/1.jpg");
+    }
+
+    18% {
+        background-image: url("../../assets/images/home/home_background/1.jpg");
+        /* Imagem 1 permanece por 8% da animação */
+    }
+
+    25% {
+        background-image: url("../../assets/images/home/home_background/2.jpg");
+        /* Transição para Imagem 2 */
+    }
+
+    43% {
+        background-image: url("../../assets/images/home/home_background/2.jpg");
+        /* Imagem 2 permanece por 8% da animação */
+    }
+
+    50% {
+        background-image: url("../../assets/images/home/home_background/3.jpg");
+        /* Transição para Imagem 3 */
+    }
+
+    68% {
+        background-image: url("../../assets/images/home/home_background/3.jpg");
+        /* Imagem 3 permanece por 8% da animação */
+    }
+
+    75% {
+        background-image: url("../../assets/images/home/home_background/4.jpg");
+        /* Transição para Imagem 4 */
+    }
+
+    93% {
+        background-image: url("../../assets/images/home/home_background/4.jpg");
+        /* Imagem 4 permanece por 8% da animação */
+    }
+
+    100% {
+        background-image: url("../../assets/images/home/home_background/1.jpg");
+        /* Volta para Imagem 1 */
+    }
+}
+
+@keyframes slideDiagonalRect {
+    0% {
+        left: -50vh;
+    }
+
+    100% {
+        left: -32vh;
+    }
+}
+
+@keyframes raiseUp {
+    0% {
+        position: relative;
+        top: 8rem;
+    }
+
+    90% {
+        position: relative;
+        top: 0rem;
+        /* Change the value to 0rem */
+    }
+
+    100% {
+        position: inherit;
+    }
+}
+
+@keyframes slideIntroComponents {
+    0% {
+        position: relative;
+        left: -5rem;
+        opacity: 0;
+    }
+
+    90% {
+        position: relative;
+        left: 0rem;
+        opacity: 1;
+    }
+
+    100% {
+        position: inherit;
+    }
+}

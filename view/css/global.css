@@ -14,11 +14,17 @@
     --pigmentoVerde: #4CAF50;
     --verdeFloresta: #388E3C;
     --marrom: #3E2723;
-
+    
+    /* Buttons */
     --orangeButtonShadowColor: rgba(196, 117, 0, 0.7);
+    --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
+    
+    --disabledDotColor: rgba(255, 248, 225, 0.5);
+
+    /* Shadows */
     --defaultShadowColor: rgba(0, 0, 0, 0.15);
     --introCardShadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
+    --uiButtonShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 

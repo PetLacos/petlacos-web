@@ -1,4 +1,12 @@
-/* Fundo */
+/* Arquivos relacionados */
+@import url("/view/css/global.css");
+@import url("/view/css/home/animations.css");
+@import url("/view/css/home/sections/takeALook.css");
+@import url("/view/css/home/sections/introduction.css");
+
+
+/* Fundo --------------------------------- */
+
 body {
     background-image: url("../../assets/images/home_background/1.jpg");
     background-size: 100vw;
@@ -9,52 +17,6 @@ body {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-}
-
-@keyframes backgroundSlide {
-    0% {
-        background-image: url("../../assets/images/home/home_background/1.jpg");
-    }
-
-    18% {
-        background-image: url("../../assets/images/home/home_background/1.jpg");
-        /* Imagem 1 permanece por 8% da animação */
-    }
-
-    25% {
-        background-image: url("../../assets/images/home/home_background/2.jpg");
-        /* Transição para Imagem 2 */
-    }
-
-    43% {
-        background-image: url("../../assets/images/home/home_background/2.jpg");
-        /* Imagem 2 permanece por 8% da animação */
-    }
-
-    50% {
-        background-image: url("../../assets/images/home/home_background/3.jpg");
-        /* Transição para Imagem 3 */
-    }
-
-    68% {
-        background-image: url("../../assets/images/home/home_background/3.jpg");
-        /* Imagem 3 permanece por 8% da animação */
-    }
-
-    75% {
-        background-image: url("../../assets/images/home/home_background/4.jpg");
-        /* Transição para Imagem 4 */
-    }
-
-    93% {
-        background-image: url("../../assets/images/home/home_background/4.jpg");
-        /* Imagem 4 permanece por 8% da animação */
-    }
-
-    100% {
-        background-image: url("../../assets/images/home/home_background/1.jpg");
-        /* Volta para Imagem 1 */
-    }
 }
 
 .diagonalRect {
@@ -74,107 +36,25 @@ body {
     animation: slideDiagonalRect 1s ease-in-out 1;
 }
 
-@keyframes slideDiagonalRect {
-    0% {
-        left: -50vh;
-    }
 
-    100% {
-        left: -32vh;
-    }
-}
+/* Classes comuns --------------------------------- */
 
-
-/* Header */
-
-.introduction {
-    padding: 0rem 15rem;
-}
-
-
-/* Conteúdo */
-
-nav {
-    margin-top: 3rem;
-    animation: slideIntroComponents 1.5s ease-in-out 1;
-}
-
-@keyframes slideIntroComponents {
-    0% {
-        position: relative;
-        left: -5rem;
-        opacity: 0;
-    }
-
-    90% {
-        position: relative;
-        left: 0rem;
-        opacity: 1;
-    }
-
-    100% {
-        position: inherit;
-    }
-}
-
-.phraseBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
-    width: 44.25rem;
-    height: 25rem;
-    padding: 2.5rem;
-    border-radius: 1rem;
-    background-color: var(--neve);
-    box-shadow: var(--introCardShadow);
-}
-
-.phraseBox .titleFont {
-    width: 90%;
-    margin: 0rem;
-    margin-right: 10%;
-    text-transform: uppercase;
-}
-
-.phraseBox span {
-    font-weight: bold;
-}
-
-.introduction img {
-    z-index: -1;
-    position: absolute;
-}
-
-.ribbonBox {
-    margin-top: 5.5rem;
-    display: flex;
-    width: fit-content;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    animation: slideIntroComponents 1.5s ease-in-out 1;
-}
-
-.phraseBox .titleFont>:first-child {
-    color: var(--laranja);
-}
-
-.phraseBox .titleFont>* {
-    color: var(--verdePersa);
-}
-
-.phraseBox button {
-    text-transform: uppercase;
-    padding: 1.5rem 2rem;
-    width: fit-content;
+.sectionTitle {
+    margin: 0px;
+    padding: 0px;
     height: fit-content;
-    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+section {
+    margin-top: 2rem;
 }
 
 
-/* Background */
+/* Main --------------------------------- */
+
 main {
     margin-top: 11.5rem;
     width: 100%;
@@ -187,27 +67,6 @@ main {
     color: var(--neve);
 
     animation: raiseUp 1.2s ease-in-out 1;
-}
-
-@keyframes raiseUp {
-    0% {
-        position: relative;
-        top: 8rem;
-    }
-
-    90% {
-        position: relative;
-        top: 0rem;
-        /* Change the value to 0rem */
-    }
-
-    100% {
-        position: inherit;
-    }
-}
-
-main .titleFont {
-    text-align: center;
 }
 
 .scrollIndicatorContainer {
@@ -225,84 +84,4 @@ main .titleFont {
 
 #scrollIndicator {
     width: 4rem;
-}
-
-
-/* Dê uma olhada */
-
-.takeALook .titleFont {
-    
-}
-
-.slidesContainer {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    height: 37rem;
-}
-
-.slidesContainer .slide {
-    width: 61.938rem;
-    height: 37rem;
-    border-radius: 1.5rem;
-}
-
-.slideContent {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    background-color: var(--neve);
-    color: var(--marrom);
-    width: 50%;
-    padding: 2rem;
-    border-radius: 1.5rem;
-}
-
-.slideContent * {
-    margin: 0px;
-}
-
-.slideContent h2 {
-    margin-bottom: 1.5rem;
-}
-
-.slideContent>* {
-    margin-bottom: 1rem;
-}
-
-.slideContent>:last-child {
-    margin-bottom: 0rem;
-    margin-top: 1.5rem;
-}
-
-.slidesContainer #slide1 {
-    position: absolute;
-    z-index: 3;
-    margin-right: 4rem;
-    background-image: url("/view/assets/images/home/slides/ongs.jpg");
-    background-size: cover;
-}
-
-.slidesContainer #slide2 {
-    position: absolute;
-    margin-right: 2rem;
-    z-index: 2;
-    background-image: url("/view/assets/images/home/slides/ongs.jpg");
-    background-size: cover;
-}
-
-.slidesContainer #slide3 {
-    position: absolute;
-    margin-right: 0rem;
-    z-index: 1;
-    background-image: url("/view/assets/images/home/slides/ongs.jpg");
-    background-size: cover;
-}
-
-.slideContent button {
-    margin-left: auto;
-    padding: 1rem;
 }

@@ -1,4 +1,4 @@
-// Elementos
+// Elementos -----------------------------------------------------------------------------------------------
 
 let scrollContainer = document.getElementById("scrollIndicatorContainer");
 
