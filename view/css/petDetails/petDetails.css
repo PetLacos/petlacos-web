@@ -70,20 +70,22 @@ body {
 .listItem {
     list-style: none;
     width: 33.333%;
-    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-around;
 }
 
-.listItem p,
+/* .listItem p,
 .microchip p,
 .localizacao p,
 .dono p {
-    margin-bottom: 8px;
-} 
+    margin-bottom: 8px; 
+}  */
 
-.listItem:first-child {
+.petName {
     width: 66.666%;
 }
-.listItem:first-child h2{
+.petName h2{
 color: var(--verdeFloresta);
 }
 
@@ -92,10 +94,12 @@ color: var(--verdeFloresta);
     text-align: center;
 }
 
-.localizacao {
-    width: 66.666%;
+.localizacao, .dono {
+    width: 50%;
 }
 
-.dono {
-    width: 33.333%;
+.firstBoxInfo, .secondBoxInfo, .thirdBoxInfo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
