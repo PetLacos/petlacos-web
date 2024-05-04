@@ -7,12 +7,13 @@
 @import url("/view/css/home/sections/introduction.css");
 @import url("/view/css/home/sections/ourServices.css");
 @import url("/view/css/home/sections/feedbacks.css");
+@import url("/view/components/home/feedbackCard.css");
 
 
 /* Fundo --------------------------------- */
 
 body {
-    background-image: url("../../assets/images/home_background/1.jpg");
+    background-image: url("/view/assets/images/home/home_background/1.jpg");
     background-size: 100vw;
     background-repeat: no-repeat;
     background-position-x: 24vw;

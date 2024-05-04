@@ -1,9 +1,43 @@
-@import url("/view/css/global.css");
-
 .feedbackCard {
+    display: flex;
+    flex-direction: column;
     padding: 2rem;
+    background-color: var(--branco);
+    width: 29rem;
+    height: fit-content;
+    border-radius: 1.5rem;
+    color: black;
 }
 
 .feedbackCard .sectionSubtitleFont {
     font-weight: bold;
+}
+
+#feedbackBody {
+    height: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    max-lines: 2;
+    overflow: hidden;
+}
+
+#stars {
+    display: flex;
+    justify-content: end;
+}
+
+#stars>* {
+    margin-right: 0.5rem;
+}
+
+#stars>:last-child {
+    margin-right: 0;
+}
+
+.star {
+    content: url("/view/assets/icons/star_inactive.svg");
+}
+
+#stars .active {
+    content: url("/view/assets/icons/star_active.svg") !important;
 }
