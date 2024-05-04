@@ -1,0 +1,9 @@
+@import url("/view/css/global.css");
+
+.feedbackCard {
+    padding: 2rem;
+}
+
+.feedbackCard .sectionSubtitleFont {
+    font-weight: bold;
+}

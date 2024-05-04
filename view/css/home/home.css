@@ -1,9 +1,12 @@
 /* Arquivos relacionados */
 @import url("/view/css/global.css");
+
 @import url("/view/css/home/animations.css");
+
 @import url("/view/css/home/sections/takeALook.css");
 @import url("/view/css/home/sections/introduction.css");
 @import url("/view/css/home/sections/ourServices.css");
+@import url("/view/css/home/sections/feedbacks.css");
 
 
 /* Fundo --------------------------------- */
