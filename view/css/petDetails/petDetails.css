@@ -94,8 +94,12 @@ color: var(--verdeFloresta);
     text-align: center;
 }
 
-.localizacao, .dono {
-    width: 50%;
+.localizacao {
+    width: 66.666%;
+}
+
+.dono {
+    width: 33.333%;
 }
 
 .firstBoxInfo, .secondBoxInfo, .thirdBoxInfo {
