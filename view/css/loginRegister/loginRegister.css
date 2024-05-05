@@ -1,0 +1,99 @@
+@import url(/view/css/global.css);
+
+
+
+body {
+    background-color: var(--marrom);
+}
+
+#main{
+    margin: 6rem 15rem;
+    background-color: var(--rosa);
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+#returnLink {
+    width: 6rem;
+    height: 5rem;
+    background-color: var(--rosa);
+    position: absolute;
+    left: 10rem;
+    border-radius: 1.5rem 0rem 0rem 1.5rem;
+}
+
+#returnLink img { 
+    margin: 1.45rem;
+}
+
+.background-register{
+    width: 1198px;
+    height: 799px;
+    margin-left: 292px;
+    border-radius: 16px;
+}
+
+form {
+    display: flex;
+    width: 760px;
+    height: 799px;
+    padding: 2.69rem 5.31rem;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 16px;
+    background: var(--branco);
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    position: absolute;
+}
+
+form h2 {
+    color: var(--marrom);
+    align-self: center;
+    margin: 0 0 2rem 0;
+}
+
+form p {
+    width: 481.95px;
+    align-self: center;
+    text-align: center;
+    margin: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+form button {
+    display: flex;
+    width: 481.95px;
+    padding: 24px;
+    margin-top: 2rem;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+input {
+    display: flex;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid var(--marrom);
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.greenBelt, .greenBeltTxt {
+    position: absolute;
+    right: 15rem;
+    top: 49.5rem;
+    cursor: pointer;
+}
+
+.greenBeltTxt {
+    color: var(--neve);
+    top: 52.555rem;
+    right: 16.5rem;    
+}
