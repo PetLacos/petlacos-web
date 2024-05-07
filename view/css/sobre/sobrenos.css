@@ -7,20 +7,24 @@ body {
 }
 #somos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 1300px;
-    height: 300px;
+    height: 250px;
 }
 h1 {
     text-align: center;
     color: antiquewhite;
+    font-size: 50px;
 }
 p {
     font-size: 18px;
     color: antiquewhite;
 }
 #imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 300px;
     height: 200px;
 }
@@ -31,16 +35,16 @@ p {
 #valores {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     width: 1300px;
-    height: 800px;
+    height: 600px;
 }
 #figuras {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 1400px;
+    width: 1280px;
     height: 300px;
 }
 figcaption {
@@ -56,9 +60,8 @@ p {
     width: 100%;
     height: 75px;
 }
-img {
-    object-fit: cover;
-    border-radius: 10px;
+#figuras img {
+    border-radius: 15px;
     width: 12rem;
     height: 14rem;
 }
