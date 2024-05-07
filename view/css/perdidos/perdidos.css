@@ -27,6 +27,7 @@ header nav {
     background-color: var(--marrom);
     border-radius: 1rem 1rem 0 0;
     padding: 0rem 15rem;
+    padding-bottom: 7rem;
 }
 
 #content {
