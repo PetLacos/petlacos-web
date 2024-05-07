@@ -18,8 +18,11 @@
     /* Buttons */
     --orangeButtonShadowColor: rgba(196, 117, 0, 0.7);
     --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
-    
     --disabledDotColor: rgba(255, 248, 225, 0.5);
+
+    /* Components */
+    --scrollBarTrackColor: rgba(0, 0, 0, 0.3);
+    --scrollBarThumbColor: rgba(255, 255, 255, 0.3);
 
     /* Shadows */
     --defaultShadowColor: rgba(0, 0, 0, 0.15);

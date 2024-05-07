@@ -29,7 +29,7 @@ scrollContainer.addEventListener(
     "click",
     () => {
         setScrollIconHidden(true);
-        document.getElementById("takeALook").scrollIntoView({ behavior: "smooth", block: "center"});
+        document.getElementById("takeALook").scrollIntoView({ behavior: "smooth", block: "center" });
     }
 );
 
