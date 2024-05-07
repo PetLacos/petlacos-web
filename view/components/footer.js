@@ -20,7 +20,7 @@ class footer extends HTMLElement {
                             <p class="legendFont paragraph">A LaçosPet é uma instituição sem fins lucrativos, voltada principalmente à adoção de pets e suporte às ONGs que fazem esse trabalho</p>
                         </div>
                     </div>
-                    <p id="reserve">© 2024 | LaçosPet. Todos os direitos reservados.</p>
+                    <p id="reserve" class="paragraphFont">© 2024 | LaçosPet. Todos os direitos reservados.</p>
                 </div>
             </div>
     
