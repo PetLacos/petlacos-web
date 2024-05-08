@@ -10,7 +10,7 @@ class FeedbackCard extends HTMLElement {
         this.rating = ``;
 
         for (let index = 0; index < 5; index++) {
-            if (index <= this.stars) {
+            if (index < this.stars) {
                 this.rating += `<img class="star active">`;
             } else {
                 this.rating += `<img class="star">`;
