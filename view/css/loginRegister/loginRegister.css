@@ -13,6 +13,9 @@ body {
     border-radius: 16px;
     overflow: hidden;
     justify-content: space-between;
+    color: var(--marrom);
+    position: relative;
+    max-width: 1664px;
 }
 
 #returnLink {
@@ -35,7 +38,7 @@ body {
     border-radius: 16px;
 }
 
-form {
+#formRegister {
     display: flex;
     width: 760px;
     height: 799px;
@@ -49,13 +52,13 @@ form {
     position: absolute;
 }
 
-form h2 {
+#formRegister h2 {
     color: var(--marrom);
     align-self: center;
     margin: 0 0 2rem 0;
 }
 
-form p {
+#formRegister p {
     width: 481.95px;
     align-self: center;
     text-align: center;
@@ -71,9 +74,11 @@ form button {
     width: 481.95px;
     padding: 24px;
     margin-top: 2rem;
+    margin-bottom: 1rem;
     justify-content: center;
     align-self: center;
     cursor: pointer;
+    background-color: var(--laranja) !important;
 }
 
 input {
@@ -88,12 +93,81 @@ input {
 .greenBelt, .greenBeltTxt {
     position: absolute;
     right: 15rem;
-    top: 49.5rem;
+    top: 42.5rem;
     cursor: pointer;
 }
 
 .greenBeltTxt {
     color: var(--neve);
-    top: 52.555rem;
+    top: 45.555rem;
     right: 16.5rem;    
+}
+
+/* página de login  */
+
+
+.pinkBelt, .pinkBeltTxt {
+    position: absolute;
+    z-index: 3;
+    left: 0rem;
+    top: 620px;
+    cursor: pointer;
+}
+
+.pinkBeltTxt {
+    color: var(--neve);
+    top: 649px;
+    left: 30px;    
+}
+
+#returnLinkGreen {
+    width: 6rem; 
+    height: 5rem;
+    background-color: var(--pigmentoVerde);
+    position: absolute;
+    z-index: 0;
+    left: 10rem;
+    border-radius: 1.5rem 0rem 0rem 1.5rem;
+}
+
+#returnLinkGreen img { 
+    margin: 1.45rem;
+}
+
+.background-login{
+    width: 1198px;
+    height: 799px;
+    margin-right: 500px;
+    border-radius: 16px;
+    object-position: -240px;
+    z-index: 1;
+}
+
+#formLogin {
+    display: flex;
+    width: 760px;
+    height: 799px;
+    padding: 141px 85px;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 16px;
+    background: var(--branco);
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+}
+
+#formLogin h2 {
+    color: var(--marrom);
+    align-self: center;
+    margin: 0 0 2rem 0;
+}
+
+#formLogin p {
+    width: 481.95px;
+    align-self: center;
+    text-align: center;
+    margin: 0;
 }
