@@ -27,7 +27,7 @@ body {
     border-radius: 1.5rem 0rem 0rem 1.5rem;
 }
 
-#returnLink img { 
+#returnLink img {
     margin: 1.45rem;
 }
 
@@ -92,15 +92,15 @@ input {
 
 .greenBelt, .greenBeltTxt {
     position: absolute;
-    right: 15rem;
-    top: 42.5rem;
+    right: 0;
+    top: 620px;
     cursor: pointer;
 }
 
 .greenBeltTxt {
     color: var(--neve);
-    top: 45.555rem;
-    right: 16.5rem;    
+    top: 650px;
+    right: 30px;
 }
 
 /* página de login  */
@@ -114,14 +114,18 @@ input {
     cursor: pointer;
 }
 
+.pinkBelt {
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.32));
+}
+
 .pinkBeltTxt {
     color: var(--neve);
     top: 649px;
-    left: 30px;    
+    left: 30px;
 }
 
 #returnLinkGreen {
-    width: 6rem; 
+    width: 6rem;
     height: 5rem;
     background-color: var(--pigmentoVerde);
     position: absolute;
@@ -130,7 +134,7 @@ input {
     border-radius: 1.5rem 0rem 0rem 1.5rem;
 }
 
-#returnLinkGreen img { 
+#returnLinkGreen img {
     margin: 1.45rem;
 }
 
