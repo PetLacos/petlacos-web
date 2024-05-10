@@ -99,8 +99,12 @@ input {
 
 .greenBeltTxt {
     color: var(--neve);
-    top: 650px;
-    right: 30px;
+    top: 620px;
+    padding: 30px;
+}
+
+span {
+    cursor: pointer;
 }
 
 /* página de login  */
@@ -120,8 +124,8 @@ input {
 
 .pinkBeltTxt {
     color: var(--neve);
-    top: 649px;
-    left: 30px;
+    top: 620px;
+    padding: 30px;
 }
 
 #returnLinkGreen {
