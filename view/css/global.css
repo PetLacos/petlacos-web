@@ -44,6 +44,10 @@ body {
     background-color: var(--rosa);
 }
 
+body {
+    background-color: var(--rosa);
+}
+
 /* Tipografia do Site */
 .displayFont {
     font-family: 'Fredoka', sans-serif;
