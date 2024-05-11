@@ -1,5 +1,5 @@
 
-# Pet-Laços - Projeto de Site de Adoção de Animais <img src="view/assets/Vertical_-_White.png" align="right"></img>
+# Pet-Laços - Projeto de Site de Adoção de Animais <img src="view/assets/logo/vertical_white.png" align="right"></img>
 
 Bem-vindo ao nosso projeto de site de adoção de animais! Este repositório contém os arquivos e recursos para o desenvolvimento do site.
 

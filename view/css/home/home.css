@@ -1,0 +1,94 @@
+/* Arquivos relacionados */
+@import url("/view/css/global.css");
+
+@import url("/view/css/home/animations.css");
+
+@import url("/view/css/home/sections/takeALook.css");
+@import url("/view/css/home/sections/introduction.css");
+@import url("/view/css/home/sections/ourServices.css");
+@import url("/view/css/home/sections/feedbacks.css");
+@import url("/view/css/home/sections/howItWorks.css");
+@import url("/view/components/home/feedbackCard.css");
+
+
+/* Fundo --------------------------------- */
+
+body {
+    background-image: url("/view/assets/images/home/home_background/1.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position-x: 24vw;
+
+    animation-name: backgroundSlide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.diagonalRect {
+    position: absolute;
+    z-index: -2;
+    width: 120vh;
+    top: -3rem;
+    left: -32vh;
+    height: 105vh;
+    transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    box-shadow: 1rem 0rem 1rem var(--defaultShadowColor);
+    background-color: var(--linho);
+
+    animation: slideDiagonalRect 1s ease-in-out 1;
+}
+
+
+/* Classes comuns --------------------------------- */
+
+.sectionTitle {
+    margin: 0px;
+    padding: 0px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+section {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+
+/* Main --------------------------------- */
+
+main {
+    margin-top: 11.5rem;
+    width: 100%;
+    background-color: var(--marrom);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0rem var(--screenPaddingX);
+    padding-top: 2rem;
+    padding-bottom: 7rem;
+    color: var(--neve);
+
+    animation: raiseUp 1.2s ease-in-out 1;
+}
+
+.scrollIndicatorContainer {
+    width: fit-content;
+    margin: auto;
+    margin-top: -0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.scrollIndicatorContainer:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#scrollIndicator {
+    width: 4rem;
+}
