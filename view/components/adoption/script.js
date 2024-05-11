@@ -1,29 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const gallery = document.querySelector(".gallery-ongs");
+  const gallery = document.getElementById("gallery");
+  const prevButton = document.getElementById("prevPage");
+  const nextButton = document.getElementById("nextPage");
+  const currentPageElement = document.getElementById("currentPage");
+  const totalPagesElement = document.getElementById("totalPages");
 
-  // Clone os itens do carrossel e anexe-os ao final
-  gallery.innerHTML += gallery.innerHTML;
+  const itemsPerPage = 4; // Defina o número de itens por página aqui
+  let currentPage = 1;
 
-  // Define a velocidade de rolagem automática (em milissegundos)
-  const scrollSpeed = 3000; // 3 segundos
+  // Função para mostrar itens correspondentes à página atual
+  function showItems() {
+    const items = gallery.getElementsByClassName("gallery-item");
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
 
-  let intervalId;
-
-  function startAutoScroll() {
-    intervalId = setInterval(() => {
-      gallery.scrollLeft += gallery.offsetWidth;
-      if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
-        gallery.scrollLeft = 0;
+    for (let i = 0; i < items.length; i++) {
+      if (i >= start && i < end) {
+        items[i].style.display = "block";
+      } else {
+        items[i].style.display = "none";
       }
-    }, scrollSpeed);
+    }
+
+    currentPageElement.textContent = currentPage;
   }
 
-  function stopAutoScroll() {
-    clearInterval(intervalId);
+  // Função para ir para a página anterior
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      showItems();
+    }
   }
 
-  gallery.addEventListener("mouseenter", stopAutoScroll);
-  gallery.addEventListener("mouseleave", startAutoScroll);
+  // Função para ir para a próxima página
+  function nextPage() {
+    if (
+      currentPage <
+      Math.ceil(
+        gallery.getElementsByClassName("gallery-item").length / itemsPerPage
+      )
+    ) {
+      currentPage++;
+      showItems();
+    }
+  }
 
-  startAutoScroll();
+  prevButton.addEventListener("click", prevPage);
+  nextButton.addEventListener("click", nextPage);
+
+  // Inicialize a exibição dos itens
+  showItems();
+  totalPagesElement.textContent = Math.ceil(
+    gallery.getElementsByClassName("gallery-item").length / itemsPerPage
+  );
 });
