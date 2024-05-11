@@ -88,3 +88,15 @@ a {
     width: 320.87px;
     height: 401.828px;
 }
+
+.greenButton {
+    background: var(--pigmentoVerde);
+    width: 20.75rem;
+    height: 3.06rem;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.5rem; 
+    font-weight: 700;
+    color: var(--branco);
+
+    border-style: none;
+}
