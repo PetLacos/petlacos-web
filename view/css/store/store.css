@@ -1,0 +1,5 @@
+@import url(../global.css);
+
+header{
+    background-color: var(--rosa);
+}

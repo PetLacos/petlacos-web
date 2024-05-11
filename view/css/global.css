@@ -7,14 +7,14 @@
     --laranja: #F57C00;
     --cascaLaranja: #FF9800;
     --joaoCorvino: #FFB74D;
-    --branco: #F5F5F5;
+    --brancoEsfumado: #F5F5F5;
     --neve: #FFF8E1;
     --linho: #D2B48C;
     --verdePersa: #8BC34A;
     --pigmentoVerde: #4CAF50;
     --verdeFloresta: #388E3C;
     --marrom: #3E2723;
-  
+
     --fundoBrancoTransparente: rgba(255, 255, 255, 0.2);
     
     /* Buttons */
@@ -104,7 +104,7 @@ body {
 nav {
     display: flex;
     margin: auto;
-    margin-left: 15rem;
+    margin: 2.5rem 15rem 1.625rem;
     margin-right: 15rem;
     justify-content: space-between;
     align-items: center;
@@ -167,6 +167,7 @@ nav img {
 
 .orangeButton:hover {
     transform: scale(1.02);
+    cursor: pointer;
 }
 
 .brownButton {
