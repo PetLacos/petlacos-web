@@ -1,0 +1,59 @@
+@import url(../global.css);
+
+
+
+#modalPrivacy {
+    box-shadow: var(--introCardShadow);
+    position: fixed;
+    margin: 5rem 15rem 5rem;
+    align-items: center;
+    padding: 1rem 5rem;
+    color: var(--neve);
+    background-color: var(--marrom);
+    border-radius: 1rem;
+}
+
+p {
+    height: 550px;
+    overflow-y: scroll;
+    padding-right: 30px;
+}
+
+p::-webkit-scrollbar{
+    width: 8px;
+
+}
+
+p::-webkit-scrollbar-thumb{
+    background-color: var(--neve);
+    border-radius: 5px;
+
+}
+
+p::-webkit-scrollbar-track{
+    background-color: var(--scrollBarTrackColor);
+    border-radius: 5px;
+}
+
+#paragraphBox{
+    padding-right: 0.35rem;
+    
+}
+
+.paragraphFont {
+    line-height: 5rem;
+}
+
+.underline {
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+#topSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+#exit {
+    align-self: center;
+}
