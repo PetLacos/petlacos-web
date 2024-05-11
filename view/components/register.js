@@ -13,11 +13,11 @@ class register extends HTMLElement {
                         <form id="formRegister" method="get">
                             <h2 class="titleFont">Crie laços com a gente!</h2>
                             <label class="paragraphFont" for="name">Nome:</label>
-                            <input name="name" class="paragraphFont" type="text" placeholder="Seu nome">
+                            <input name="name" class="paragraphFont" type="text" placeholder="Seu nome" required>
                             <label class="paragraphFont" for="email">E-mail:</label>
-                            <input name="email" class="paragraphFont" type="email" placeholder="email@email.com.br">
+                            <input name="email" class="paragraphFont" type="email" placeholder="email@email.com.br" required>
                             <label class="paragraphFont" for="password">Senha:</label>
-                            <input name="pass" class="paragraphFont" type="password" placeholder="Senha">
+                            <input name="pass" class="paragraphFont" type="password" placeholder="Senha" required>
                             <button type="submit" class="orangeButton sectionSubtitleFont"
                                 style="font-weight: 700;">Registre-se</button>
                             <p class="legendFont">Ao me registrar, declaro que li e aceitei os <span class="bold">Termos de
