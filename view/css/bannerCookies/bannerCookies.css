@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     background-color: #333;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
     padding: 10px 20px;
     text-align: center;
   }
@@ -14,7 +14,7 @@
   .btn-cookie {
     background-color: var(--verdePersa);
     border: none;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;

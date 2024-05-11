@@ -2,7 +2,7 @@
 
 footer {
     background-color: #000;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
     display: flex;
     justify-content: space-between;
     padding: 3rem 15rem 1.1rem 15rem;
@@ -55,7 +55,7 @@ footer {
 
 .listFooter {
     text-decoration: none;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
 }
 
 .listFooter:hover{

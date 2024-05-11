@@ -7,7 +7,7 @@
     --laranja: #F57C00;
     --cascaLaranja: #FF9800;
     --joaoCorvino: #FFB74D;
-    --brancoEsfumado: #F5F5F5;
+    --brancoEsfumacado: #F5F5F5;
     --neve: #FFF8E1;
     --linho: #D2B48C;
     --verdePersa: #8BC34A;
@@ -135,7 +135,7 @@ nav .links {
     border-radius: 1.5rem;
     /* Fontes */
     font-weight: bold;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
 }
 
 nav button {
@@ -160,7 +160,7 @@ nav img {
 /* Buttons */
 .orangeButton {
     background-color: var(--cascaLaranja);
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
     border: none;
     transition: transform 0.3s ease-in-out;
     border-radius: 1.5rem;
@@ -174,7 +174,7 @@ nav img {
 
 .brownButton {
     background-color: var(--marrom);
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
     border: none;
     transition: transform 0.3s ease-in-out;
 }

@@ -53,7 +53,7 @@ main {
 }
 body {
     background-color: var(--rosa);
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
 }
 
 button {
@@ -77,5 +77,5 @@ button:hover {
 
 a {
     text-decoration: none;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
 }

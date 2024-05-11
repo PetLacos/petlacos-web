@@ -95,7 +95,7 @@ Utilização:
 <main>
     <!-- Header ⬇ -->
     <header-component></header-component>
-    <script src="/view/components/header.js"></script>
+    <script src="/view/components/global/header.js"></script>
     <!-- Restante do código... -->
 </main>
 ```
@@ -106,7 +106,7 @@ Utilização:
 <main>
     <!-- Header ⬇ -->
     <footer-component></footer-component>
-    <script src="/view/components/footer.js"></script>
+    <script src="/view/components/global/footer.js"></script>
     <!-- Restante do código... -->
 </main>
 ```
