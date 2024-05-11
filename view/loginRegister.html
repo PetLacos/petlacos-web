@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Pet Laços</title>
+</head>
+
+<body>
+    <script src="components/header.js"></script>
+    <header-component></header-component>
+
+    <script src="/view/components/register.js"></script>
+    <register-component></register-component>
+
+    <script src="/view/components/login.js"></script>
+    <login-component></login-component>
+
+    <script src="components/footer.js"></script>
+    <footer-component></footer-component>
+
+    <script>
+        const form = document.querySelector('form');
+        const elementLogin = document.querySelector('login-component');
+        const elementRegister = document.querySelector('register-component');
+        const buttonGreenBelt = document.querySelector('.greenBeltTxt');
+        const buttonPinkBelt = document.querySelector('.pinkBeltTxt');
+
+        elementLogin.style.display = 'none';
+        turnDisplay();
+
+        function turnDisplay() {
+            buttonGreenBelt.addEventListener("click", function () {
+                elementRegister.style.display = 'none';
+                elementLogin.style.display = 'block';
+            });
+
+            buttonPinkBelt.addEventListener("click", function () {
+                elementLogin.style.display = 'none';
+                elementRegister.style.display = 'block';
+            });
+        }
+
+        document.getElementById("formRegister").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const formData = {
+                nome: this.name.value,
+                email: this.email.value,
+                senha: this.pass.value
+            };
+            localStorage.setItem("dadosFormulario", JSON.stringify(formData));
+
+            form.onsubmit = function () {
+                window.location.href = "/view/dashboard.html"
+            }
+        });
+
+        const dadosSalvos = localStorage.getItem("dadosFormulario");
+
+        if (dadosSalvos) {
+            const formData = JSON.parse(dadosSalvos);
+        }
+
+    </script>
+</body>
+
+</html>
