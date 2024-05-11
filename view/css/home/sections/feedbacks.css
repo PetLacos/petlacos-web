@@ -1,0 +1,58 @@
+.feedbacks .titleFont {
+    text-align: center;
+}
+
+.feedbackList {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: row;
+    padding: 3rem 0rem;
+}
+
+.feedbackList>* {
+    margin-right: 1.5rem;
+}
+
+.feedbackList::-webkit-scrollbar {
+    height: 1rem;
+}
+
+.feedbackList::-webkit-scrollbar-track {
+    background-color: var(--scrollBarTrackColor);
+    border-radius: 1rem;
+}
+
+.feedbackList::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 1rem;
+    background-color: var(--scrollBarThumbColor);
+}
+
+.emptyFeedbackCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem dashed var(--neve);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    color: var(--brancoEsfumacado);
+}
+
+.emptyFeedbackCard .stars {
+    display: flex;
+}
+
+.emptyFeedbackCard .sectionSubtitleFont {
+    font-weight: bold;
+}
+
+.emptyFeedbackCard .stars>* {
+    margin-right: 0.5rem;
+}
+
+.emptyFeedbackCard .stars>:last-child {
+    margin-right: 0;
+}

@@ -1,0 +1,81 @@
+@import url(/view/css/global.css);
+
+footer {
+    background-color: #000;
+    color: var(--brancoEsfumacado);
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 15rem 1.1rem 15rem;
+    height: 296px;
+}
+#leftColumn{
+    width: 50%;
+}
+
+#sloganDiv {
+    display: flex;
+}
+
+#oneHundred {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#reserve {
+    display: inline-block;
+    margin: 0;
+    font-size: 17px; 
+}
+
+.legendFont{
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+
+.paragraph {
+    padding-right: 24px;
+    margin: 0;
+}
+
+#rightColumn {
+    width: 50%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#usefullLinks {
+    height: 100%;
+}
+
+#theList {
+    list-style: none;
+    padding: 0;
+}
+
+.listFooter {
+    text-decoration: none;
+    color: var(--brancoEsfumacado);
+}
+
+.listFooter:hover{
+    color: var(--rosa);
+    transition: 3ms;
+    font-size: 1.4rem;
+    transition: 0.55s;
+}
+
+#logoSenac {
+    width: 97px;
+    height: 57px;
+}
+
+#logoPet {
+    width: 97px;
+    height: 84px;
+    margin-right: 24px;
+}
+
