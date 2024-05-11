@@ -25,7 +25,7 @@ body {
     background-color: var(--neve);
     border-radius: 24px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 24px 90px 24px 24px;
+    padding: 24px 70px 24px 20px;
     width: 21.375rem;
     height: 10.69rem;
     display: flex;
@@ -33,24 +33,41 @@ body {
     justify-content: space-between;
 }
 
-#myInfo {
+#selected {
     font-weight: 700;
     color: var(--rosa);
 }
 
-#infoProfile{
+#infoProfile, #myPets{
     width: 67.12rem;
-    height: 18.375rem;
     padding: 2rem 36rem 2rem 2rem;
     border-radius: 1.5rem;
     background-color: var(--neve);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
+}
+#infoProfile {
+    height: 18.375rem;
     flex-direction: column;
     justify-content: space-between;
 }
 
+#myPets {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
 a {
     text-decoration: none;
     color: black;
+}
+#cardsPets{
+    display: flex;
+    flex-wrap: wrap;
+}
+#fatherCards {
+    width: 20.05438rem;
+    height: 25.11425rem;
+    
 }
