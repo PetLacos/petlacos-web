@@ -1,54 +1,40 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     background-color: #3E2723;
 }
+
 #somos {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1300px;
-    height: 300px;
 }
-h1 {
+
+.titleFont {
     text-align: center;
-    color: antiquewhite;
+    color: var(--neve);
 }
-p {
-    font-size: 18px;
-    color: antiquewhite;
+
+.paragraphFont {
+    color: var(--neve);
 }
+
 #imagem {
     width: 300px;
     height: 200px;
 }
-#textoP {
-    width: 1050px;
-    height: 200px;
-}
+
 #valores {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    width: 1300px;
-    height: 800px;
 }
+
 #figuras {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1400px;
-    height: 300px;
 }
-figcaption {
-    color: antiquewhite;
-}
-p {
-    color: antiquewhite;
-}
+
 #faixa {
     position: absolute;
     z-index: -1;
@@ -56,15 +42,14 @@ p {
     width: 100%;
     height: 75px;
 }
-img {
+
+figure img {
     object-fit: cover;
     border-radius: 10px;
     width: 12rem;
     height: 14rem;
 }
-#textoP p {
-    font-size: 25px;
-}
+
 i {
     color: rgb(236, 140, 14);
 }
