@@ -1,0 +1,52 @@
+.ourServices {
+    color: var(--marrom);
+    text-align: center;
+    padding: 3.5rem;
+    background-color: var(--linho);
+    margin-right: calc(var(--screenPaddingX) * -1);
+    margin-left: calc(var(--screenPaddingX) * -1);
+}
+
+.ourServices .card {
+    display: flex;
+    margin: 0rem auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2.5rem;
+    background-color: var(--neve);
+    border-radius: 1.5rem;
+    width: fit-content;
+}
+
+.services {
+    display: flex;
+    flex-wrap: row;
+}
+
+.services>* {
+    margin-right: 9rem;
+}
+
+.services>:last-child {
+    margin-right: 0rem;
+}
+
+.services .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 14rem;
+}
+
+.ourServices .titleFont {
+    margin-bottom: 3rem;
+}
+
+.service .paragraphFont {
+    margin: 1.5rem 0rem;
+}
+
+.service button {
+    margin-top: 1.5rem;
+    width: 100%;
+}
