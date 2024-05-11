@@ -70,6 +70,7 @@ main .sectionSubtitleFont{
     justify-content: space-evenly;
     margin: 1.25rem;
     border-radius: 1rem;
+    align-items: center;
 }
 
 main button {
