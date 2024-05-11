@@ -1,49 +1,108 @@
-body {
-    background: var(--marrom);
-    padding: 0px 240px !important;
+main {
+    background-color: var(--marrom);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 4rem var(--screenPaddingX);
 }
 
 section {
+    margin-bottom: 3rem;
+}
+
+#somos {
     display: flex;
-    margin-top: 50px;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.valores {
-    margin-top: 50px;
-    color: aliceblue;
+#somos .content .titleFont {
+    text-align: start;
+    margin-bottom: 2rem;
 }
 
-.valores h1 {
+#somos img {
+    width: 21.82031rem;
+    height: 22.3125rem;
+    padding: 0rem 1.67363rem 0.00006rem 1.55856rem;
+    margin: 1.5rem;
+}
+
+#valores .titleFont {
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.valores p {
-    padding: 5px;
+#valores>*:not(:first-child):not(:nth-child(2)) {
+    margin-top: 1.5rem;
 }
 
-.equipe {
-    color: aliceblue;
+#nossaEquipe .titleFont {
+    margin-bottom: 3rem;
 }
 
-.equipe h1 {
-    text-align: center;
+#caixaFiguras {
+    display: flex;
+    align-items: center;
 }
 
-.faixacolorida {
-    width: 100%;
-    padding: 30px;
-    margin-top: 50px;
+#faixa {
     position: absolute;
-    background: #eb9e10;
-    z-index: -1;
+    background-color: var(--linho);
+    height: 6rem;
+    width: 100%;
+    margin: 0rem calc(var(--screenPaddingX) * -1);
+    margin-bottom: 10rem;
+}
+
+#nossaEquipe #figuras {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    z-index: 2;
+}
+
+figcaption h3 {
+    color: var(--neve);
+    font-family: 'fredoka' !important;
+    font-weight: 600;
+    text-align: center !important;
+    margin-bottom: 0.5rem;
+}
+
+figcaption p {
+    color: var(--rosa);
+    font-weight: bold;
+    text-align: center !important;
+}
+
+.titleFont {
+    text-align: center;
+    color: var(--neve);
+}
+
+.paragraphFont {
+    color: var(--neve);
+    text-align: justify;
+}
+
+figure img {
+    object-fit: cover;
+    border: 0.4rem solid var(--neve);
+    border-radius: 1.5rem;
+    width: 14rem;
+    height: 18rem;
+    margin-bottom: 1.5rem;
+}
+
+figure {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 i {
-    color: green;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-.figuras {
-    display: flex;
-    justify-content: center;
+    color: rgb(236, 140, 14);
 }
