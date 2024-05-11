@@ -7,28 +7,47 @@
     --laranja: #F57C00;
     --cascaLaranja: #FF9800;
     --joaoCorvino: #FFB74D;
-    --branco: #FFFFFF;
+    --branco: #F5F5F5;
     --neve: #FFF8E1;
     --linho: #D2B48C;
     --verdePersa: #8BC34A;
     --pigmentoVerde: #4CAF50;
     --verdeFloresta: #388E3C;
     --marrom: #3E2723;
+  
     --fundoBrancoTransparente: rgba(255, 255, 255, 0.2);
+    
+    /* Buttons */
     --orangeButtonShadowColor: rgba(196, 117, 0, 0.7);
+    --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
+    --disabledDotColor: rgba(255, 248, 225, 0.5);
+
+    /* Components */
+    --scrollBarTrackColor: rgba(0, 0, 0, 0.3);
+    --scrollBarThumbColor: rgba(255, 255, 255, 0.3);
+
+    /* Shadows */
     --defaultShadowColor: rgba(0, 0, 0, 0.15);
     --introCardShadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
+    --uiButtonShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* Sizes */
+    --screenPaddingX: 15rem;
 }
 
 
 * {
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
+body {
+    background-color: var(--rosa);
+}
+
+body {
+    background-color: var(--rosa);
 }
 
 /* Tipografia do Site */
@@ -85,6 +104,8 @@ body, html {
 nav {
     display: flex;
     margin: auto;
+    margin-left: 15rem;
+    margin-right: 15rem;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
@@ -111,7 +132,7 @@ nav .links {
     background-color: var(--verdePersa);
     border-radius: 1.5rem;
     /* Fontes */
-    font-weight: bold; 
+    font-weight: bold;
     color: var(--branco);
 }
 
@@ -161,8 +182,12 @@ nav img {
 
 .pinkButton {
     background-color: var(--rosa);
-    color: var(--rosa);
+    color: var(--neve);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1.5rem 1rem;
     border: none;
+    border-radius: 1rem;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -170,6 +195,6 @@ nav img {
     transform: scale(1.02);
 }
 
-.pinkButton:active{
-    background-color: #ee959f;
+.pinkButton:active {
+    filter: brightness(1.2);
 }
