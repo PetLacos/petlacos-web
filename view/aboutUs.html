@@ -1,116 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="PetLaços">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós</title>
-    <link rel="stylesheet" href="css/aboutUs/aboutUs.css">
-    <link rel="stylesheet" href="css/global.css">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <img src="assets/logo_padrao.svg" alt="Logo PetLaços" class="navLogo">
-            <p class="sectionSubtitleFont" style="font-weight: medium;">Adote Laços.</p>
-            <div class="links paragraphFont">
-                <a>Home</a>
-                <a>Adotar</a>
-                <a>Sobre</a>
-                <a>Perdidos</a>
-                <a>Produtos</a>
-                <a>Ongs</a>
-            </div>
-            <button class="brownButton paragraphFont">Login</button>
-            <button class="orangeButton paragraphFont">Cadastre-se</button>
-        </nav>
-    </header>
-    <section>
-        <img src="/view/assets/logo/vertical_white.png" alt="Logo Padrão Vertical" width="400">
-        <div>
-            <h1>Quem Somos</h1>
-            <p>Na PetLaços, somos impulsionados pela paixão por ajudar os animais a encontrar lares amorosos. Somos uma
-                organização universitária dedicada a unificar as ONGs de adoção em uma plataforma simplificada,
-                facilitando o processo de adoção para todos. Nossa missão é criar um ambiente onde ONGs e usuários
-                possam cadastrar e encontrar animais para adoção, promovendo a adoção responsável e o bem-estar dos
-                animais. Junte-se a nós nesta jornada de amor e compaixão pelos nossos amigos peludos.</p>
-        </div>
-    </section>
-    <div class="valores">
-        <h1>Nossos Valores</h1>
-        <p>
-            Na PetLaços, acreditamos que todos os animais merecem amor, respeito e cuidado. Nossos valores fundamentais
-            orientam todas as nossas ações e decisões, refletindo nosso compromisso com a causa animal e a adoção
-            responsável.
-        </p>
-
-        <p><i>1. Compromisso com o Bem-Estar Animal:</i> Colocamos o bem-estar dos animais em primeiro lugar em todas as
-            nossas atividades. Trabalhamos incansavelmente para garantir que cada animal receba os cuidados adequados e
-            encontre um lar amoroso.</p>
-
-        <p><i>2. Respeito e Empatia:</i> Valorizamos a vida de cada animal e respeitamos suas necessidades individuais.
-            Nosso trabalho é guiado pela empatia, buscando sempre entender e atender às necessidades dos animais que
-            ajudamos.</p>
-
-        <p><i>3. Transparência e Honestidade:</i> Somos transparentes em todas as nossas ações e comunicações.
-            Valorizamos a honestidade em nossos relacionamentos com parceiros, voluntários e adotantes, garantindo a
-            confiança em nossa organização.</p>
-
-        <p><i>4. Adoção Responsável:</i> Promovemos a adoção responsável, incentivando os adotantes a considerar
-            cuidadosamente suas decisões e a oferecer um lar amoroso e permanente para os animais. <br>
-
-        <p><i>5. Colaboração e Parceria:</i> Reconhecemos a importância da colaboração com ONGs, voluntários e a
-            comunidade em geral. Através de parcerias sólidas, buscamos ampliar nosso impacto e ajudar o maior número
-            possível de animais necessitados.</p>
-
-        <p><i>6. Educação e Conscientização:</i> Comprometemo-nos a educar a comunidade sobre a importância da adoção
-            responsável, da esterilização e da proteção animal. Acreditamos que a conscientização é fundamental para
-            criar um mundo melhor para os animais.</p>
-
-    </div>
-    <div class="equipe">
-        <h1>Nossa Equipe</h1>
-        <div class="figuras">
-            <figure>
-                <img src="assets/cirilo.jpg" alt="foto_Rogério" width="100">
-                <figcaption>
-                    Rogério Monteiro <br>
-                    Desenvolvedor Full Stack
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/cirilo.jpg" alt="foto_Rogério" width="100">
-                <figcaption>
-                    Caio Luppo <br>
-                    Desenvolvedor Mobile & Disigner
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/cirilo.jpg" alt="foto_Rogério" width="100">
-                <figcaption>
-                    Guilherme Henrique <br>
-                    Desenvolvedor Front-End & Disigner
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/ciriM.jpg" alt="foto_Rogério" width="100">
-                <figcaption>
-                    Karini Lima <br>
-                    Project Owner & Desenvolvedora Front-End
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/ciriM.jpg" alt="foto_Rogério" width="100">
-                <figcaption>
-                    Lorena Neves <br>
-                    Desenvolvedora Full Stack
-                </figcaption>
-            </figure>
-            <div class="faixacolorida"></div>
-        </div>
-    </div>
-</body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="PetLaços">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sobre Nós</title>
+        <link rel="stylesheet" href="css/aboutUs/aboutUs.css">
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <header-component></header-component>
+        <script src="components/global/header.js"></script>
+        <main>
+            <section id="somos">
+                <img src="assets/logo/vertical_alternative.svg"
+                    alt="logoLaçosPet">
+                <div class="content">
+                    <h2 class="titleFont">Quem Somos?</h2>
+                    <p class="paragraphFont">Na PetLaços, somos impulsionados
+                        pela paixão por ajudar os
+                        animais a encontrar lares amorosos. Somos uma
+                        organização
+                        universitária dedicada a unificar as ONGs de adoção em
+                        uma
+                        plataforma simplificada, facilitando o processo de
+                        adoção
+                        para todos. Nossa missão é criar um ambiente onde
+                        ONGs
+                        e usuários possam cadastrar e encontrar animais para
+                        adoção,
+                        promovendo a adoção responsável e o bem-estar dos
+                        animais.
+                        Junte-se a nós nesta jornada de amor e compaixão
+                        pelos
+                        nossos amigos peludos.</p>
+                </div>
+            </section>
+            <section id="valores">
+                <h2 class="titleFont">Nossos Valores</h2>
+                <p class="paragraphFont">Na PetLaços, acreditamos que todos os
+                    animais merecem amor,
+                    respeito e cuidado. Nossos valores fundamentais orientam
+                    todas
+                    as nossas ações e decisões, refletindo nosso compromisso com
+                    a
+                    causa animal e a adoção responsável.</p>
+                <p class="paragraphFont"><i><b>1. Compromisso com o Bem-Estar
+                            Animal:</b></i> Colocamos o
+                    bem-estar dos animais em primeiro lugar em todas as nossas
+                    atividades. Trabalhamos incansavelmente para garantir que
+                    cada
+                    animal receba os cuidados adequados e encontre um lar
+                    amoroso.</p>
+                <p class="paragraphFont"><i><b>2. Respeito e Empatia:</b></i>
+                    Valorizamos a vida de cada
+                    animal e respeitamos suas necessidades individuais. Nosso
+                    trabalho é guiado pela empatia, buscando sempre entender e
+                    atender às necessidades dos animais que ajudamos.</p>
+                <p class="paragraphFont"><i><b>3. Transparência e
+                            Honestidade:</b></i> Somos transparentes
+                    em todas as nossas ações e comunicações. Valorizamos a
+                    honestidade em nossos relacionamentos com parceiros,
+                    voluntários
+                    e adotantes, garantindo a confiança em nossa
+                    organização.</p>
+                <p class="paragraphFont"><i><b>4. Adoção Responsável:</b></i>
+                    Promovemos a adoção
+                    responsável, incentivando os adotantes a considerar
+                    cuidadosamente suas decisões e a oferecer um lar amoroso e
+                    permanente para os animais.</p>
+                <p class="paragraphFont"><i><b>5. Colaboração e
+                            Parceria:</b></i> Reconhecemos a
+                    importância da colaboração com ONGs, voluntários e a
+                    comunidade
+                    em geral. Através de parcerias sólidas, buscamos ampliar
+                    nosso
+                    impacto e ajudar o maior número possível de animais
+                    necessitados.</p>
+                <p class="paragraphFont"><i><b>6. Educação e
+                            Conscientização:</b></i> Comprometemo-nos a
+                    educar a comunidade sobre a importância da adoção
+                    responsável,
+                    da esterilização e da proteção animal. Acreditamos que a
+                    conscientização é fundamental para criar um mundo melhor
+                    para os
+                    animais.</p>
+            </section>
+            <section id="nossaEquipe">
+                <h2 class="titleFont">Nossa Equipe</h2>
+                <div id="caixaFiguras">
+                    <div id="figuras">
+                        <figure>
+                            <img src="assets/lello.PNG" alt>
+                            <figcaption>
+                                <h3 class="paragraphFont">Caio Luppo</h3>
+                                <p class="legendFont">Desenvolvedor Front-end &
+                                    Designer</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/lello.PNG" alt>
+                            <figcaption>
+                                <h3 class="paragraphFont">Guilherme H.</h3>
+                                <p class="legendFont">Desenvolvedor Back-end &
+                                    Designer</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/lello.PNG" alt>
+                            <figcaption>
+                                <h3 class="paragraphFont">Kariny Lima</h3>
+                                <p class="legendFont">Project Owner &
+                                    Desenvolvedora Front-end</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/lello.PNG" alt>
+                            <figcaption>
+                                <h3 class="paragraphFont">Rogério
+                                    Monteiro</h3>
+                                <p class="legendFont">Desenvolvedor
+                                    Full Stack</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="assets/lello.PNG" alt>
+                            <figcaption>
+                                <h3 class="paragraphFont">Lorena A. Neves</h3>
+                                <p class="legendFont">Desenvolvedora Full
+                                    Stack</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div id="faixa"></div>
+                </div>
+            </section>
+        </main>
+        <footer-component></footer-component>
+        <script src="components/global/footer.js"></script>
+    </body>
 </html>

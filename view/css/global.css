@@ -106,8 +106,7 @@ body {
 nav {
     display: flex;
     margin: auto;
-    margin: 2.5rem 15rem 1.625rem;
-    margin-right: 15rem;
+    margin: 2.5rem var(--screenPaddingX);
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
