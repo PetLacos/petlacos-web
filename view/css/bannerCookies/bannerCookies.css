@@ -1,0 +1,32 @@
+@import url(../global.css);
+
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: var(--brancoEsfumacado);
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .btn-cookie {
+    background-color: var(--verdePersa);
+    border: none;
+    color: var(--brancoEsfumacado);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn-cookie:hover {
+    background-color: var(--verdeFloresta);
+    transition: 1000ms;
+  }
+  

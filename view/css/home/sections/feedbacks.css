@@ -38,7 +38,7 @@
     border: 0.2rem dashed var(--neve);
     border-radius: 1.5rem;
     padding: 2rem;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
 }
 
 .emptyFeedbackCard .stars {

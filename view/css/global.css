@@ -7,14 +7,16 @@
     --laranja: #F57C00;
     --cascaLaranja: #FF9800;
     --joaoCorvino: #FFB74D;
-    --branco: #F5F5F5;
+    --brancoEsfumacado: #F5F5F5;
     --neve: #FFF8E1;
     --linho: #D2B48C;
     --verdePersa: #8BC34A;
     --pigmentoVerde: #4CAF50;
     --verdeFloresta: #388E3C;
     --marrom: #3E2723;
-    
+
+    --fundoBrancoTransparente: rgba(255, 255, 255, 0.2);
+
     /* Buttons */
     --orangeButtonShadowColor: rgba(196, 117, 0, 0.7);
     --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
@@ -27,6 +29,8 @@
     /* Shadows */
     --defaultShadowColor: rgba(0, 0, 0, 0.15);
     --introCardShadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
+    --scrollBarTrackColor: #fff8e149;
     --uiButtonShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     /* Sizes */
@@ -38,10 +42,6 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
-
-body {
-    background-color: var(--rosa);
 }
 
 body {
@@ -102,8 +102,7 @@ body {
 nav {
     display: flex;
     margin: auto;
-    margin-left: 15rem;
-    margin-right: 15rem;
+    margin: 2.5rem var(--screenPaddingX);
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
@@ -131,7 +130,11 @@ nav .links {
     border-radius: 1.5rem;
     /* Fontes */
     font-weight: bold;
-    color: var(--branco);
+}
+
+nav .links a {
+    text-decoration: none;
+    color: var(--brancoEsfumacado);
 }
 
 nav button {
@@ -156,7 +159,7 @@ nav img {
 /* Buttons */
 .orangeButton {
     background-color: var(--cascaLaranja);
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
     border: none;
     transition: transform 0.3s ease-in-out;
     border-radius: 1.5rem;
@@ -165,17 +168,22 @@ nav img {
 
 .orangeButton:hover {
     transform: scale(1.02);
+    cursor: pointer;
 }
 
 .brownButton {
     background-color: var(--marrom);
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
     border: none;
     transition: transform 0.3s ease-in-out;
 }
 
 .brownButton:hover {
     transform: scale(1.02);
+}
+
+.textLink {
+    color: var(--pigmentoVerde);
 }
 
 .pinkButton {
@@ -194,5 +202,5 @@ nav img {
 }
 
 .pinkButton:active {
-    background-color: #ee959f;
+    filter: brightness(1.2);
 }
