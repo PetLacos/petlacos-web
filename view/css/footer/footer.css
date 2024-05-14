@@ -2,7 +2,7 @@
 
 footer {
     background-color: #000;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
     display: flex;
     justify-content: space-between;
     padding: 3rem 15rem 1.1rem 15rem;
@@ -17,7 +17,7 @@ footer {
 }
 
 #oneHundred {
-    height: 180px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,6 +25,8 @@ footer {
 
 #reserve {
     display: inline-block;
+    margin: 0;
+    font-size: 17px; 
 }
 
 .legendFont{
@@ -39,6 +41,7 @@ footer {
 
 #rightColumn {
     width: 50%;
+    height: 220px;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -55,7 +58,7 @@ footer {
 
 .listFooter {
     text-decoration: none;
-    color: var(--branco);
+    color: var(--brancoEsfumacado);
 }
 
 .listFooter:hover{
@@ -68,10 +71,6 @@ footer {
 #logoSenac {
     width: 97px;
     height: 57px;
-    /* position: relative;
-    left: 80% ; */
-    /* margin-top: 95px; */
-
 }
 
 #logoPet {

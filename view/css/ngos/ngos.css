@@ -1,0 +1,81 @@
+.ngoInformation {
+    display: flex;
+    flex-direction: row;
+    width: 90rem;
+}
+
+
+h1 {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 6rem;
+}
+
+.ngoInformation button {
+    border-radius: 24px;
+    padding: 10px;
+    height: 4,5rem;
+    float: right;
+    background-color: var(--rosa);
+    border: none;
+}
+
+img {
+    width: 29rem;
+    height: 27.125rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px black;
+}
+
+.ngoList{
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ngoList >* {
+    margin-bottom: 96px;
+}
+
+.ngoInformation .content {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+main {
+    background-color: var(--marrom);
+    padding-top: 6rem;
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+}
+body {
+    background-color: var(--rosa);
+    color: var(--brancoEsfumacado);
+}
+
+button {
+    width: 21.375rem;
+    height: 4.501rem;
+}
+
+button:hover {
+    background-color:  palevioletred;
+}
+
+.sectionSubtitleFont {
+    font-size: 2.063rem;
+    color: #FFFFFF;
+    align-items: center;
+}
+
+.paragraphFont {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brancoEsfumacado);
+}

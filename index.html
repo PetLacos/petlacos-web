@@ -5,12 +5,227 @@
         <meta name="author" content="PetLaços">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PetLaços - Adote Laços.</title>
-        <link rel="stylesheet" href="view/css/sobre/sobrenos.css">
-        <link rel="stylesheet" href="view/css/global.css">
+        <link rel="stylesheet" href="view/css/home/home.css">
     </head>
     <body>
-        <header>
-            <iframe class="menu" src="view/components/nav.html" frameborder="0"></iframe>
-        </header>
+        <div class="diagonalRect"></div>
+        <script src="/view/components/global/header.js"></script>
+        <header-component></header-component>
+        <section class="introduction">
+            <div class="ribbonBox">
+                <img class="ribbon" src="view/assets/images/ribbon.svg">
+                <div class="phraseBox">
+                    <h1 class="titleFont">
+                        <span>adote</span> e crie <span>laços</span> que
+                        duram para <span>sempre</span>.
+                    </h1>
+                    <button class="orangeButton sectionSubtitleFont">adote
+                        um laço!</button>
+                </div>
+            </div>
+        </section>
+        <main>
+            <div class="scrollIndicatorContainer" id="scrollIndicatorContainer">
+                <canvas id="scrollIndicator" width="100" height="100"></canvas>
+            </div>
+            <section class="takeALook" id="takeALook">
+                <h1 class="titleFont sectionTitle">Dê uma olhada!</h1>
+                <div class="slidePanel">
+                    <img id="leftArrow" src="/view/assets/icons/arrow.svg">
+                    <ul class="slidesContainer" id="slidesContainer">
+                        <li class="slide firstSlide" id="slide1">
+                            <img>
+                            <div class="slideContent">
+                                <h2 class="titleFont">ONGs Parceiras</h2>
+                                <p class="paragraphFont">
+                                    Você deve ter se perguntado: “Mas de
+                                    onde
+                                    vêm
+                                    todos esses bixinhos?” além das pessoas
+                                    poderem
+                                    doar aqui mesmo, temos parcerias com
+                                    diversas
+                                    ongs cheia de animaiszinhos repletos de
+                                    amor!
+                                    <br><br>
+                                    Gostaria de ter sua ONG com a gente?
+                                    Entre
+                                    em
+                                    contato pelo nosso email:
+                                    email@email.com.br
+                                </p>
+                                <button
+                                    class="pinkButton legendFont">conhecer
+                                    as
+                                    ongs</button>
+                            </div>
+                        </li>
+                        <li class="slide secondSlide" id="slide2">
+                            <img>
+                            <div class="slideContent">
+                                <h2 class="titleFont">Mural de Perdidos</h2>
+                                <p class="paragraphFont">
+                                    <!-- Texto dizendo que temos uma seção do site que contém um mural de animais perdidos -->
+                                    Perdeu seu bichinho? Não se preocupe! Aqui
+                                    no PetLaços temos um mural de animais
+                                    perdidos, onde você pode cadastrar o seu pet
+                                    ou ajudar a encontrar um bichinho perdido.
+                                    <br><br> Acesse o mural e veja se encontra o
+                                    seu pet ou algum pet perdido que você possa
+                                    ajudar!
+                                </p>
+                                <button class="pinkButton legendFont">acessar
+                                    mural</button>
+                            </div>
+                        </li>
+                        <li class="slide thirdSlide" id="slide3">
+                            <img>
+                            <div class="slideContent">
+                                <h2 class="titleFont">Adote um Laço!</h2>
+                                <p class="paragraphFont">
+                                    Aqui na PetLaços, você pode adotar um
+                                    bichinho e criar laços que duram para
+                                    sempre! <br><br> Acesse a nossa seção de
+                                    adoção e veja os bichinhos disponíveis para
+                                    adoção. <br><br> Adote um laço e faça um
+                                    novo amigo!
+                                </p>
+                                <button class="pinkButton legendFont">adotar um
+                                    animal</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <img id="rightArrow" src="/view/assets/icons/arrow.svg">
+                </div>
+                <div class="slideDots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+            <section class="ourServices">
+                <div class="background"></div>
+                <div class="card">
+                    <h2 class="titleFont">Nossos Serviços</h2>
+                    <div class="services">
+                        <div class="service">
+                            <div class="content">
+                                <img src="view/assets/icons/services/lace.svg"
+                                    alt="Laço">
+                                <h4 class="paragraphFont">Adote um laço</h4>
+                                <p class="legendFont">
+                                    Crie uma nova amizade através do nosso mural
+                                    de pets para adoção.
+                                </p>
+                            </div>
+                            <button class="pinkButton legendFont">
+                                adote um laço
+                            </button>
+                        </div>
+                        <div class="service">
+                            <div class="content">
+                                <img src="view/assets/icons/services/donate.svg"
+                                    alt="Laço">
+                                <h4 class="paragraphFont">Doe seu pet</h4>
+                                <p class="legendFont">
+                                    Doe seu bichinho para que ele possa ter um
+                                    novo lar cheio de amor.
+                                </p>
+                            </div>
+                            <button class="pinkButton legendFont">
+                                doar meu pet
+                            </button>
+                        </div>
+                        <div class="service">
+                            <div class="content">
+                                <img src="view/assets/icons/services/find.svg"
+                                    alt="Laço">
+                                <h4 class="paragraphFont">Ache seu bichinho</h4>
+                                <p class="legendFont">
+                                    Veja o mural de perdidos e
+                                    encontre
+                                    seu pet ou ajude a encontrar um.
+                                </p>
+                            </div>
+                            <button class="pinkButton legendFont">
+                                acessar mural
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="feedbacks">
+                <h2 class="titleFont">Feedbacks</h2>
+                <div class="feedbackList">
+                    <feedback-card user="Caio"
+                        message="Home muito ruim, horrorosa."
+                        stars="1"></feedback-card>
+                    <feedback-card user="Kariny"
+                        message="Muito inteligente quem teve a ideia do site!"
+                        stars="5"></feedback-card>
+                    <feedback-card user="Guilherme"
+                        message="Realmente é um dos sites já feitos."
+                        stars="4"></feedback-card>
+                    <feedback-card user="Lorena"
+                        message="Sei lá me jogaram aqui 😔"
+                        stars="2"></feedback-card>
+                    <div class="emptyFeedbackCard">
+                        <p class="sectionSubtitleFont">Nôs de sua impressão!</p>
+                        <div class="stars">
+                            <img src="view/assets/icons/star.svg">
+                            <img src="view/assets/icons/star.svg">
+                            <img src="view/assets/icons/star.svg">
+                            <img src="view/assets/icons/star.svg">
+                            <img src="view/assets/icons/star.svg">
+                        </div>
+                    </div>
+                </div>
+                <script src="/view/components/home/feedbackCard.js"></script>
+            </section>
+            <section class="howItWorks">
+                <div class="container">
+                    <h2 class="titleFont">Como funciona?</h2>
+                    <div class="content">
+                        <div class="leftRow">
+                            <img src="/view/assets/images/home/search.png"
+                                alt="Procurando animal">
+                            <div class="step">
+                                <div class="stepNumber">1</div>
+                                <p class="paragraphFont">Você <b>procura</b>
+                                    alguém bem fofinho pra criar um laço na
+                                    <b>sessão adotar</b>.</p>
+                            </div>
+                        </div>
+                        <div class="rightRow">
+                            <div class="step">
+                                <div class="stepNumber">2</div>
+                                <p class="paragraphFont">Você <b>cria sua
+                                        conta</b> para falar com o dono em
+                                    <b>cadastrar-se</b>.</p>
+                            </div>
+                            <img src="/view/assets/images/home/search.png"
+                                alt="Procurando animal">
+                        </div>
+                        <div class="leftRow">
+                            <img src="/view/assets/images/home/search.png"
+                                alt="Procurando animal">
+                            <div class="step">
+                                <img src="view/assets/images/home/check.svg" alt="Fim" class="checkIcon">
+                                <p class="paragraphFont">Vocês <b>combinam o
+                                        local</b>, você leva sua <b>caixa de
+                                        transporte</b> e diz “oi” pro seu
+                                    bichinho!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="/view/components/global/footer.js"></script>
+        <footer-component></footer-component>
     </body>
 </html>
+
+<script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+<script src="view/js/home/home.js"></script>
+<script src="view/js/home/carousel.js"></script>

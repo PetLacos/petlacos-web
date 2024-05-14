@@ -1,0 +1,80 @@
+.howItWorks {
+    background-color: var(--linho);
+    padding: 3.5rem;
+    padding-left: var(--screenPaddingX);
+    padding-right: var(--screenPaddingX);
+    margin-left: calc(var(--screenPaddingX) * -1);
+    margin-right: calc(var(--screenPaddingX) * -1);
+}
+
+.howItWorks .container {
+    background-color: var(--neve);
+    color: var(--marrom);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftRow {
+    margin-right: auto;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+}
+
+.rightRow {
+    margin-left: auto;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+}
+
+.howItWorks .step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftRow img {
+    margin-right: 5rem;
+}
+
+.rightRow img {
+    margin-left: 5rem;
+}
+
+.leftRow img,
+.rightRow img {
+    height: 50%;
+    width: 50%;
+}
+
+.stepNumber {
+    font-family: "fredoka";
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    font-weight: bold;
+    background-color: var(--cascaLaranja);
+    color: var(--brancoEsfumacado);
+    border-radius: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.step .paragraphFont {
+    text-align: center;
+}
+
+.checkIcon {
+    width: 6rem !important;
+    height: 6rem !important;
+    margin: 0rem !important;
+    margin-bottom: 2.5rem !important;
+}
