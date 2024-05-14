@@ -7,8 +7,8 @@ class register extends HTMLElement {
         this.innerHTML = 
             `
             <link rel="stylesheet" href="/view/css/loginRegister/loginRegister.css">
-                <a href="/index.html id=" id="returnLink"><img src="/view/assets/iconReturn.svg" alt=""></a>
                 <div id="main">
+                    <a href="/index.html id=" id="returnLink"><img src="/view/assets/iconReturn.svg" alt=""></a>
                     <div id="forms">
                         <form id="formRegister" method="get">
                             <h2 class="titleFont">Crie laços com a gente!</h2>

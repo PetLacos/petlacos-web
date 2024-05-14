@@ -16,7 +16,7 @@
     --marrom: #3E2723;
 
     --fundoBrancoTransparente: rgba(255, 255, 255, 0.2);
-    
+
     /* Buttons */
     --orangeButtonShadowColor: rgba(196, 117, 0, 0.7);
     --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
@@ -42,10 +42,6 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
-
-body {
-    background-color: var(--rosa);
 }
 
 body {
@@ -134,6 +130,10 @@ nav .links {
     border-radius: 1.5rem;
     /* Fontes */
     font-weight: bold;
+}
+
+nav .links a {
+    text-decoration: none;
     color: var(--brancoEsfumacado);
 }
 
