@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            margin: 240px;
+            height: 240px;
+            justify-content: space-between;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="meuFormulario">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+        <input type="submit" value="Enviar">
+
+        <div id="dadosSalvos"></div>
+
+    </form>
+    <script>
+        document.getElementById("meuFormulario").addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Coleta os dados do formulário
+            var formData = {
+                nome: this.nome.value,
+                email: this.email.value,
+                mensagem: this.mensagem.value
+            };
+
+            // Salva os dados do formulário no localStorage
+            localStorage.setItem("dadosFormulario", JSON.stringify(formData));
+
+            alert("Formulário enviado e dados salvos localmente!");
+
+            // Você pode redirecionar o usuário para outra página ou fazer qualquer outra ação necessária após o envio do formulário
+        });
+
+        // Verifica se existem dados salvos no localStorage
+        var dadosSalvos = localStorage.getItem("dadosFormulario");
+
+        if (dadosSalvos) {
+            // Se existirem dados salvos, converte-os de volta para um objeto JavaScript
+            var formData = JSON.parse(dadosSalvos);
+
+            // Exibe os dados onde desejar (por exemplo, em algum elemento HTML)
+            document.getElementById("dadosSalvos").innerText = `
+        Nome: ${formData.nome}
+        E-mail: ${formData.email}
+        Mensagem: ${formData.mensagem}
+    `;
+        } else {
+            document.getElementById("dadosSalvos").innerText = "Nenhum dado foi enviado ainda.";
+        }
+
+    </script>
+</body>
+
+</html>
