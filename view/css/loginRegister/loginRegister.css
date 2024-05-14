@@ -3,7 +3,7 @@
 
 
 body {
-    background-color: var(--marrom);
+    background-color: var(--marrom) !important;
 }
 
 #main{
