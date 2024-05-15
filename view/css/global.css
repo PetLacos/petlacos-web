@@ -136,9 +136,8 @@ nav .links {
 nav .links a.active {
     color: var(--brancoEsfumacado);
     font-weight: bold;
-    transform: scale(1.1, 1.1);
     filter: opacity(1);
-    transition: transform 0.3s ease-out;
+    transition: filter 0.3s ease-out;
 }
 
 nav .links a {
@@ -148,9 +147,8 @@ nav .links a {
 }
 
 nav .links a:hover {
-    transform: scale(1.1, 1.1);
     filter: opacity(1);
-    transition: transform 0.2s ease-out;
+    transition: filter 0.2s ease-out;
 }
 
 nav button {
@@ -173,6 +171,10 @@ nav img {
 }
 
 /* Buttons */
+button {
+    cursor: pointer;
+}
+
 .orangeButton {
     background-color: var(--cascaLaranja);
     color: var(--brancoEsfumacado);

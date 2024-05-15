@@ -4,8 +4,8 @@ class Header extends HTMLElement {
 
   constructor() {
     super();
-    this.links = ['Home', 'Adotar', 'Sobre', 'Perdidos', 'Produtos', 'Ongs'];
-    this.linksHrefs = ['index', 'adoption', 'aboutUs', 'lostMural', 'products', 'ngos']
+    this.links = ['Home', 'Adotar', 'Sobre', 'Perdidos', 'Ongs'];
+    this.linksHrefs = ['index', 'adoption', 'aboutUs', 'lostMural', 'ngos']
     this.linksHTML = ``;
     this.pageName = this.getAttribute(Header.attributes[0]);
 
@@ -27,8 +27,8 @@ class Header extends HTMLElement {
         }
       }
     );
-
   }
+
 
   connectedCallback() {
     this.innerHTML = `
@@ -40,8 +40,8 @@ class Header extends HTMLElement {
             <div class="links paragraphFont">
                 ${this.linksHTML}
             </div>
-            <button class="brownButton paragraphFont">Login</button>
-            <button class="orangeButton paragraphFont">Cadastre-se</button>
+            <button id="loginButton" class="brownButton paragraphFont">Login</button>
+            <button id="registerButton" class="orangeButton paragraphFont">Cadastre-se</button>
         </nav>
       </header>
       `;
@@ -49,3 +49,18 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header);
+
+function addLoginRegisterListener() {
+  let loginButton = document.getElementById('loginButton');
+  let registerButton = document.getElementById('registerButton');
+
+  loginButton.addEventListener('click', () => {
+    window.location.href = '/view/loginRegister.html';
+  });
+
+  registerButton.addEventListener('click', () => {
+    window.location.href = '/view/loginRegister.html';
+  });
+}
+
+addLoginRegisterListener();
