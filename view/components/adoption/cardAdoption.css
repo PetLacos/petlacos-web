@@ -1,0 +1,73 @@
+
+  
+  ul {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  ul li {
+    list-style: none;
+    margin-top: 1.5rem;
+    padding: 0.3rem;
+    font-family: "League Spartan", sans-serif;
+    font-size: 0.8rem;
+    color: var(--neve);
+  }
+  
+  .description {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    background-color: rgba(0, 0, 1, 0.925);
+    flex-direction: row;
+    border-radius: 15px;
+    height: 100px;
+    justify-content: center;
+  }
+  
+  .description h1 {
+    position: absolute;
+    z-index: 1;
+    margin-top: -25px;
+    align-items: center;
+    color: var(--verdeFloresta);
+    background-color: var(--branco);
+    border-radius: 16px;
+    width: 200px;
+    padding: 7px;
+  }
+  
+  #animal-one {
+    background-image: url("../../assets/Rectangle\ 17\ \(1\).png");
+  }
+  
+  .gallery-item {
+    color: var(--branco);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+    height: 407px;
+    width: 325px;
+    background-image: url("../../assets/Card\ \(3\).png");
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+    box-shadow: 0px 4px 24px rgba(0, 0, 1, 0.267);
+    transition: all 0.4s ease-in-out;
+    flex: 0 0 auto;
+  }
+  
+  .div-gallery-adoption {
+    margin-bottom: 241px;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.1);
+    visibility: visible;
+  }
+  
+  
