@@ -128,13 +128,29 @@ nav .links {
     justify-content: space-between;
     background-color: var(--verdePersa);
     border-radius: 1.5rem;
+
     /* Fontes */
+    font-weight: 500;
+}
+
+nav .links a.active {
+    color: var(--brancoEsfumacado);
     font-weight: bold;
+    transform: scale(1.1, 1.1);
+    filter: opacity(1);
+    transition: transform 0.3s ease-out;
 }
 
 nav .links a {
     text-decoration: none;
     color: var(--brancoEsfumacado);
+    filter: opacity(0.75);
+}
+
+nav .links a:hover {
+    transform: scale(1.1, 1.1);
+    filter: opacity(1);
+    transition: transform 0.2s ease-out;
 }
 
 nav button {
