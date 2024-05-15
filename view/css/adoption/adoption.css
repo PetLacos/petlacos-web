@@ -3,12 +3,8 @@
   padding: 0;
 }
 
-body {
+main {
   background-color: var(--marrom);
-}
-
-.header-nav {
-  background-color: var(--rosa);
 }
 
 section {
@@ -68,6 +64,7 @@ select {
   background-color: var(--neve);
   width: 80vw !important;
   border-radius: 15px;
+  padding: 32px;
 }
 
 ul {
@@ -83,6 +80,7 @@ ul li {
   padding: 0.3rem;
   font-family: "League Spartan", sans-serif;
   font-size: 0.8rem;
+  color: var(--neve);
 }
 
 .description {
@@ -151,8 +149,8 @@ ul li {
   flex-direction: column;
   margin: 10px 10px 10px 10px;
   border-radius: 15px;
-  height: 300px;
-  width: 250px;
+  height: 407px;
+  width: 325px;
   background-image: url("../../assets/Card\ \(3\).png");
   background-size: cover;
   background-position: center;
@@ -162,47 +160,50 @@ ul li {
   flex: 0 0 auto;
 }
 
+.div-gallery-adoption {
+  margin-bottom: 241px;
+}
+
 .gallery-item:hover {
   transform: scale(1.1);
   visibility: visible;
 }
 
-
-  @media screen and (max-width: 360px) {
-    body {
-      background-color: var(--azul);
-    }
-
-    .div-search {
-      flex-direction: column;
-      height: auto;
-      margin-top: 20px;
-    }
-
-    input {
-      width: 100%;
-      margin: 10px 0;
-    }
-
-    select {
-      width: 100%;
-      margin: 10px 0;
-    }
-
-    .div-gallery-adoption-emphasis,
-    .div-gallery-adoption {
-      width: 100% !important;
-    }
-
-    .gallery,
-    .gallery-ongs {
-      height: auto;
-      overflow-x: auto !important;
-      overflow-y: hidden !important;
-    }
-
-    .gallery-item {
-      width: 100%;
-      margin: 10px 0;
-    }
+@media screen and (max-width: 360px) {
+  body {
+    background-color: var(--azul);
   }
+
+  .div-search {
+    flex-direction: column;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  select {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .div-gallery-adoption-emphasis,
+  .div-gallery-adoption {
+    width: 100% !important;
+  }
+
+  .gallery,
+  .gallery-ongs {
+    height: auto;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  .gallery-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
