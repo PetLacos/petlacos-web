@@ -1,73 +1,81 @@
+@import url(/view/css/global.css);
 
-  
-  ul {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  ul li {
-    list-style: none;
-    margin-top: 1.5rem;
-    padding: 0.3rem;
-    font-family: "League Spartan", sans-serif;
-    font-size: 0.8rem;
-    color: var(--neve);
-  }
-  
-  .description {
+.petCard {
     position: relative;
-    justify-content: space-between;
-    display: flex;
-    background-color: rgba(0, 0, 1, 0.925);
-    flex-direction: row;
-    border-radius: 15px;
-    height: 100px;
-    justify-content: center;
-  }
-  
-  .description h1 {
-    position: absolute;
-    z-index: 1;
-    margin-top: -25px;
-    align-items: center;
-    color: var(--verdeFloresta);
-    background-color: var(--branco);
-    border-radius: 16px;
-    width: 200px;
-    padding: 7px;
-  }
-  
-  #animal-one {
-    background-image: url("../../assets/Rectangle\ 17\ \(1\).png");
-  }
-  
-  .gallery-item {
-    color: var(--branco);
-    text-align: center;
     display: flex;
     flex-direction: column;
-    margin: 10px 10px 10px 10px;
-    border-radius: 15px;
-    height: 407px;
-    width: 325px;
-    background-image: url("../../assets/Card\ \(3\).png");
-    background-size: cover;
-    background-position: center;
-    justify-content: flex-end;
-    box-shadow: 0px 4px 24px rgba(0, 0, 1, 0.267);
-    transition: all 0.4s ease-in-out;
-    flex: 0 0 auto;
-  }
-  
-  .div-gallery-adoption {
-    margin-bottom: 241px;
-  }
-  
-  .gallery-item:hover {
-    transform: scale(1.1);
-    visibility: visible;
-  }
-  
-  
+    justify-content: end;
+    align-items: center;
+
+    width: 20.313rem;
+    height: 25.438rem;
+
+    overflow: hidden;
+
+    border-radius: 1rem;
+}
+
+.petCard img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.petCard .description {
+    position: relative;
+
+    width: 100%;
+
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: var(--brancoEsfumacado);
+}
+
+.petCard .list {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.petCard .list > * {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+.petCard .list > * >*:not(:last-child) {
+    margin-bottom: 0.25rem;
+}
+
+.petCard .list >:first-child {
+    padding-right: 0.25rem;
+}
+
+.petCard .list >:last-child {
+    padding-left: 0.25rem;
+}
+
+.petCard .description #name {
+    position: absolute;
+    padding: 0.5rem;
+    margin-top: -1rem;
+    left: 10%;
+    right: 10%;
+    border-radius: 1rem;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--verdeFloresta);
+    font-family: "fredoka";
+    background-color: var(--brancoEsfumacado);
+}

@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="/view/components/adoption/cardAdoption.js" type="text/javascript" defer></script>
-    <link rel="stylesheet" href="cardAdoption.css">
-    
-</head>
-<body>
-<card-adoption></card-adoption>
+<link rel="stylesheet" href="/view/components/adoption/cardAdoption.css">
+<div class="petCard" id="animal-one">
+    <div class="description">
+        <h1 id="name" class="legendFont">NERINHO LINDO</h1>
+        <div class="list">
+            <ul class="description-ul legendFont">
+                <li id="age">Idade: 2 anos</li>
+                <li>Sexo: Macho</li>
+            </ul>
+            <ul class="legendFont">
+                <li>Conduta: Sociável</li>
+                <li>Castrado: Não</li>
+            </ul>
+        </div>
+    </div>
+    <img src="/view/assets/neroPet.png" alt>
+</div>
 
-</body>
-</html>
+<pet-card name="pitoco" age="1 ano" sex="macho" 
+castrated="sim" behavior="arisco" imageSrc="/view/assets/Rectangle 17 (1).png" ></pet-card>
+<script src="cardAdoption.js"></script>
