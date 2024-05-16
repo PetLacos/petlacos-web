@@ -1,0 +1,52 @@
+@import url(/view/css/petDetails/petDetails.css);
+
+#photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    background-color: var(--cinzaInput);
+}
+
+
+.imageX {
+    background-color: var(--brancoEsfumacado);
+    width: 448px;
+    height: 96px;
+    padding: 2rem;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: var(--uiButtonShadow);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+} 
+
+#insertImage {
+    display: none;
+}
+
+#sectionContact{
+    display: block;
+}
+
+input, select {
+    width: 20.6875rem;
+    height: 3.5625rem; 
+    border-radius: 0.5rem;
+}
+
+textarea {
+    width: 87rem;
+    height: 5.25rem; 
+    border-radius: 1rem;
+}
+
+.contactButton {
+    width: 87rem;
+    height: 4.5rem; 
+    border-radius: 1rem;
+    background: var(--Verde-floresta, #388E3C);
+    box-shadow:var(--uiButtonShadow)
+}
