@@ -1,5 +1,5 @@
 
-# Pet-Laços - Projeto de Site de Adoção de Animais <img src="view/assets/Vertical_-_White.png" align="right"></img>
+# Pet-Laços - Projeto de Site de Adoção de Animais <img src="view/assets/logo/vertical_white.png" align="right"></img>
 
 Bem-vindo ao nosso projeto de site de adoção de animais! Este repositório contém os arquivos e recursos para o desenvolvimento do site.
 
@@ -19,6 +19,7 @@ Bem-vindo ao nosso projeto de site de adoção de animais! Este repositório con
   - [Git \& GitHub](#git--github)
     - [Download do projeto](#download-do-projeto)
     - [Atualização do projeto](#atualização-do-projeto)
+    - [Resolvendo conflitos (VSCode)](#resolvendo-conflitos-vscode)
     - [Subindo a branch](#subindo-a-branch)
 
 
@@ -95,7 +96,7 @@ Utilização:
 <main>
     <!-- Header ⬇ -->
     <header-component></header-component>
-    <script src="/view/components/header.js"></script>
+    <script src="/view/components/global/header.js"></script>
     <!-- Restante do código... -->
 </main>
 ```
@@ -106,7 +107,7 @@ Utilização:
 <main>
     <!-- Header ⬇ -->
     <footer-component></footer-component>
-    <script src="/view/components/footer.js"></script>
+    <script src="/view/components/global/footer.js"></script>
     <!-- Restante do código... -->
 </main>
 ```
@@ -145,6 +146,28 @@ Antes de começar suas modificações do dia, é necessário que atualize o proj
    git merge main
    ```
 Dessa maneira, agora você pode seguir com as modificações na sua branch.
+
+### Resolvendo conflitos (VSCode)
+
+Ao realizar o merge, é comum ocorrerem conflitos ao mesclar as alterações. O VSCode oferece uma maneira fácil de resolver esses conflitos. Siga as etapas abaixo:
+
+1. Abra o VSCode e navegue até o diretório do seu projeto.
+2. Certifique-se de que você está na branch correta usando o comando `git branch`.
+3. Use o comando `git pull origin main` para atualizar sua branch com as alterações mais recentes da branch principal.
+4. Abra o arquivo que possui conflitos no VSCode.
+5. Os trechos de código com conflitos serão marcados com `<<<<<<< HEAD`, `=======`, e `>>>>>>> branch-name`. 
+   - O trecho entre `<<<<<<< HEAD` e `=======` representa as alterações na sua branch atual.
+   - O trecho entre `=======` e `>>>>>>> branch-name` representa as alterações na outra branch.
+6. Analise as alterações em cada trecho e decida qual versão do código você deseja manter.
+7. Edite o arquivo para resolver os conflitos, removendo as marcações `<<<<<<< HEAD`, `=======`, e `>>>>>>> branch-name` e fazendo as alterações necessárias.
+8. Após resolver todos os conflitos, salve o arquivo.
+9. Use o comando `git add <file>` para adicionar o arquivo modificado à área de preparação.
+10. Use o comando `git commit -m "Resolva conflitos"` para criar um novo commit com as alterações resolvidas.
+11. Use o comando `git push origin branch-name` para enviar as alterações para o repositório remoto.
+
+Certifique-se de que todos os membros da equipe revisem as alterações antes de mesclar a branch.
+
+Lembre-se de que resolver conflitos pode ser um processo complexo e é importante entender as alterações em cada trecho de código para tomar decisões adequadas.
 
 ### Subindo a branch
 Para subir sua branch para o projeto, precisamos que todos estejam de acordo com as modificações. Para isso, é necessário a criação de um **PULL REQUEST**, onde poderemos avaliar o código e fazer sugestões.

@@ -1,0 +1,110 @@
+.howItWorks {
+    background-color: var(--linho);
+    padding: 3.5rem;
+    padding-bottom: 10rem;
+    padding-left: var(--screenPaddingX);
+    padding-right: var(--screenPaddingX);
+    margin-left: calc(var(--screenPaddingX) * -1);
+    margin-right: calc(var(--screenPaddingX) * -1);
+    height: auto;
+    margin-bottom: 0rem;
+}
+
+.howItWorks .container {
+    background-color: var(--neve);
+    color: var(--marrom);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    margin: auto;
+    margin-top: 0rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.howItWorks .content>:first-child {
+    margin-top: 3rem;
+}
+
+.howItWorks .content>*:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+
+.leftRow {
+    margin-left: auto;
+    /* width: 75%; */
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.rightRow {
+    margin-right: auto;
+    /* width: 75%; */
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.rightRow .paws {
+    transform: scaleX(-1);
+}
+
+.howItWorks .step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+}
+
+.paws {
+    width: 20% !important;
+    height: 20% !important;
+    margin: 0rem !important;
+    margin-right: 0rem !important;
+    /* margin-top: 5rem !important; */
+}
+
+.leftRow img {
+    margin-right: 2rem;
+}
+
+.rightRow img {
+    margin-left: 2rem;
+}
+
+.leftRow img,
+.rightRow img {
+    height: 30%;
+    width: 30%;
+}
+
+.stepNumber {
+    font-family: "fredoka";
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    font-weight: bold;
+    background-color: var(--cascaLaranja);
+    color: var(--brancoEsfumacado);
+    border-radius: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.step .paragraphFont {
+    text-align: center;
+}
+
+.checkIcon {
+    width: 6rem !important;
+    height: 6rem !important;
+    margin: 0rem !important;
+    margin-bottom: 2.5rem !important;
+}

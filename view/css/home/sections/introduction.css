@@ -1,0 +1,66 @@
+
+
+.introduction {
+    padding: 0rem 15rem;
+}
+
+nav {
+    margin-top: 3rem;
+    animation: slideIntroComponents 1.5s ease-in-out 1;
+}
+
+.phraseBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 44.25rem;
+    height: 25rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background-color: var(--neve);
+    box-shadow: var(--introCardShadow);
+}
+
+.phraseBox .titleFont {
+    width: 90%;
+    margin: 0rem;
+    margin-right: 10%;
+    text-transform: uppercase;
+}
+
+.phraseBox span {
+    font-weight: bold;
+}
+
+.introduction img {
+    z-index: -1;
+    position: absolute;
+}
+
+.ribbonBox {
+    margin-top: 5.5rem;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: slideIntroComponents 1.5s ease-in-out 1;
+}
+
+.phraseBox .titleFont>:first-child {
+    color: var(--laranja);
+}
+
+.phraseBox .titleFont>* {
+    color: var(--verdePersa);
+}
+
+.phraseBox button {
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bold;
+}
