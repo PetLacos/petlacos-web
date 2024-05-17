@@ -37,6 +37,18 @@
     --screenPaddingX: 15rem;
 }
 
+@media screen and (min-width: 1910px) {
+    :root {
+        --screenPaddingX: 15rem !important;
+    }
+}
+
+@media screen and (min-width: 1430px) {
+    :root {
+        --screenPaddingX: 10rem !important;
+    }
+}
+
 
 * {
     box-sizing: border-box;
