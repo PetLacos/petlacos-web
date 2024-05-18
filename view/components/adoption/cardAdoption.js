@@ -18,6 +18,7 @@ class CardAdoption extends HTMLElement {
     this.innerHTML = `
       <link rel="stylesheet" href="/view/components/adoption/cardAdoption.css">
       <div class="petCard" id="animal-one">
+          <img src="${this.imageSrc}" alt>
           <div class="description">
               <h1 id="name" class="legendFont">${this.name}</h1>
               <div class="list">
@@ -31,7 +32,6 @@ class CardAdoption extends HTMLElement {
                   </ul>
               </div>
           </div>
-          <img src="${this.imageSrc}" alt>
       </div>
     `;
   }

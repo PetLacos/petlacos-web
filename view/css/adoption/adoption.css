@@ -1,4 +1,9 @@
+@import url("lists.css");
+
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 3rem var(--screenPaddingX);
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;

@@ -1,0 +1,77 @@
+.listBox {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--neve);
+    border-radius: 1.5rem;
+
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.listBox .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listBox .header #buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.listBox .header h2 {
+    font-family: 'Fredoka' !important;
+    font-weight: 600;
+
+}
+
+.listBox .header #buttons h4 {
+    margin: 0px !important;
+    margin-bottom: 0.25rem !important;
+    padding: 0px !important;
+    filter: opacity(0.45);
+    font-family: 'Fredoka' !important;
+}
+
+.listBox .header #buttons h3 {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-family: 'Fredoka' !important;
+}
+
+.listBox .header #buttons button {
+    background: none;
+    border: none;
+}
+
+.listBox .header #buttons button img {
+    width: 2rem;
+    height: 2rem;
+
+    filter: drop-shadow(0px 1.5px 1px rgba(83, 83, 83, 0.25));
+}
+
+.listBox .header #buttons button img.disabled {
+    filter: brightness(0.5) opacity(0.5);
+}
+
+.listBox .header #buttons button img.disabled:active {
+    filter: brightness(0.5) opacity(0.5);
+}
+
+.listBox .header #buttons button img:active {
+    filter: drop-shadow(0px 0px 0px transparent) brightness(0.9);
+}
+
+.listBox .header #buttons #previousButton {
+    transform: scaleX(-1);
+}
+
+.petList {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+}
