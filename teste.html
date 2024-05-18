@@ -1,68 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        form{
-            display: flex;
-            flex-direction: column;
-            margin: 240px;
-            height: 240px;
-            justify-content: space-between;
-        }
-    </style>
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário com Local Storage</title>
 </head>
-
 <body>
-    <form id="meuFormulario">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-        <input type="submit" value="Enviar">
+  <h2>Formulário com Local Storage</h2>
+  <form id="form">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <button type="submit">Salvar</button>
+  </form>
+  <ul id="lista"></ul>
 
-        <div id="dadosSalvos"></div>
+  <script>
+    // Função para salvar os dados no localStorage
+    function salvarDados() {
+      const nome = document.getElementById('nome').value;
+      let lista = JSON.parse(localStorage.getItem('dados')) || [];
+      lista.push({ nome });
+      localStorage.setItem('dados', JSON.stringify(lista));
+      exibirDados();
+      document.getElementById('nome').value = ''; // Limpa o campo de entrada depois de salvar
+    }
 
-    </form>
-    <script>
-        document.getElementById("meuFormulario").addEventListener("submit", function (event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
-
-            // Coleta os dados do formulário
-            var formData = {
-                nome: this.nome.value,
-                email: this.email.value,
-                mensagem: this.mensagem.value
-            };
-
-            // Salva os dados do formulário no localStorage
-            localStorage.setItem("dadosFormulario", JSON.stringify(formData));
-
-            alert("Formulário enviado e dados salvos localmente!");
-
-            // Você pode redirecionar o usuário para outra página ou fazer qualquer outra ação necessária após o envio do formulário
+    // Função para exibir os dados salvos
+    function exibirDados() {
+      const lista = JSON.parse(localStorage.getItem('dados')) || [];
+      const listaElement = document.getElementById('lista');
+      listaElement.innerHTML = '';
+      lista.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = item.nome;
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Excluir';
+        deleteButton.addEventListener('click', () => {
+          lista.splice(index, 1);
+          localStorage.setItem('dados', JSON.stringify(lista));
+          exibirDados();
         });
+        li.appendChild(deleteButton);
+        listaElement.appendChild(li);
+      });
+    }
 
-        // Verifica se existem dados salvos no localStorage
-        var dadosSalvos = localStorage.getItem("dadosFormulario");
+    // Chamada inicial para exibir os dados ao carregar a página
+    exibirDados();
 
-        if (dadosSalvos) {
-            // Se existirem dados salvos, converte-os de volta para um objeto JavaScript
-            var formData = JSON.parse(dadosSalvos);
-
-            // Exibe os dados onde desejar (por exemplo, em algum elemento HTML)
-            document.getElementById("dadosSalvos").innerText = `
-        Nome: ${formData.nome}
-        E-mail: ${formData.email}
-        Mensagem: ${formData.mensagem}
-    `;
-        } else {
-            document.getElementById("dadosSalvos").innerText = "Nenhum dado foi enviado ainda.";
-        }
-
-    </script>
+    // Adiciona um listener para o evento de envio do formulário
+    document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Previne o comportamento padrão de envio do formulário
+      salvarDados();
+    });
+  </script>
 </body>
-
 </html>
