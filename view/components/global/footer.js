@@ -5,7 +5,6 @@ class footer extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-            <link <link rel="stylesheet" href="/view/css/global.css">
             <link rel="stylesheet" href="/view/css/footer/footer.css">
             
             <footer id="fatherFooter"> 

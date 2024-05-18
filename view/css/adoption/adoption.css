@@ -1,209 +1,46 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 main {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem; 
+  padding: 3rem var(--screenPaddingX);
+
   background-color: var(--marrom);
 }
 
-section {
+#searchBox {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  
+  padding: 1rem;
+  border-radius: 1rem;
 
-.div-search {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 80vw;
-  height: 8vh;
   background-color: var(--neve);
-  margin-top: 10px;
-  border-radius: 15px;
 }
 
-.title-emphasis {
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px;
-  align-content: flex-start;
+#searchInput {
+  padding: 0.5rem 1rem;
+  border: var(--inputBorderColor) 1px solid;
+  border-radius: 1rem;
+
+  height: 100%;
+
+  background-color: var(--brancoEsfumacado);
 }
 
-.div-search .legendFont {
-  font-weight: bold !important;
+#searchInput:focus {
+  
 }
 
-input {
-  width: 50%;
-  height: 6vh;
-  border-radius: 15px;
+#searchButton img {
+  width: 1rem;
+}
+
+#searchButton {
+  background-color: var(--rosa);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
   border: none;
-  padding-left: 10px;
-  margin: 0 10px;
-  box-shadow: 0px 4px 24px rgba(0, 0, 1, 0.267);
+
 }
 
-select {
-  border-radius: 15px !important;
-  border: 2px solid #afafaf;
-  height: 40px;
-  width: 150px;
-}
-
-.div-gallery-adoption-emphasis,
-.div-gallery-adoption {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  background-color: var(--neve);
-  width: 80vw !important;
-  border-radius: 15px;
-  padding: 32px;
-}
-
-ul {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-ul li {
-  list-style: none;
-  margin-top: 1.5rem;
-  padding: 0.3rem;
-  font-family: "League Spartan", sans-serif;
-  font-size: 0.8rem;
-  color: var(--neve);
-}
-
-.description {
-  position: relative;
-  justify-content: space-between;
-  display: flex;
-  background-color: rgba(0, 0, 1, 0.925);
-  flex-direction: row;
-  border-radius: 15px;
-  height: 100px;
-  justify-content: center;
-}
-
-.description h1 {
-  position: absolute;
-  z-index: 1;
-  margin-top: -25px;
-  align-items: center;
-  color: var(--verdeFloresta);
-  background-color: var(--branco);
-  border-radius: 16px;
-  width: 200px;
-  padding: 7px;
-}
-
-#animal-one {
-  background-image: url("../../assets/Rectangle\ 17\ \(1\).png");
-}
-
-#animal-two {
-  background-image: url("../../assets/Rectangle\ 17\ \(2\).png");
-}
-
-#animal-three {
-  background-image: url("../../assets/Rectangle\ 17\ \(3\).png");
-}
-
-#animal-four {
-  background-image: url("../../assets/Rectangle\ 17\ \(4\).png");
-}
-
-.gallery {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100vw;
-  height: 70%;
-  margin-top: 20px;
-}
-
-.gallery-ongs {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100vw;
-  height: 70%;
-  margin-top: 20px;
-}
-
-.gallery-item {
-  color: var(--branco);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin: 10px 10px 10px 10px;
-  border-radius: 15px;
-  height: 407px;
-  width: 325px;
-  background-image: url("../../assets/Card\ \(3\).png");
-  background-size: cover;
-  background-position: center;
-  justify-content: flex-end;
-  box-shadow: 0px 4px 24px rgba(0, 0, 1, 0.267);
-  transition: all 0.4s ease-in-out;
-  flex: 0 0 auto;
-}
-
-.div-gallery-adoption {
-  margin-bottom: 241px;
-}
-
-.gallery-item:hover {
-  transform: scale(1.1);
-  visibility: visible;
-}
-
-@media screen and (max-width: 360px) {
-  body {
-    background-color: var(--azul);
-  }
-
-  .div-search {
-    flex-direction: column;
-    height: auto;
-    margin-top: 20px;
-  }
-
-  input {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  select {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .div-gallery-adoption-emphasis,
-  .div-gallery-adoption {
-    width: 100% !important;
-  }
-
-  .gallery,
-  .gallery-ongs {
-    height: auto;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-  }
-
-  .gallery-item {
-    width: 100%;
-    margin: 10px 0;
-  }
+#searchButton:active {
+  filter: brightness(1.2);
 }

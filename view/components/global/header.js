@@ -32,7 +32,6 @@ class Header extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <link rel="stylesheet" href="/view/css/global.css">
       <header class="menu">
         <nav>
             <img src="/view/assets/logo/logo_padrao.svg" alt="Logo PetLaços" class="navLogo">
