@@ -41,6 +41,13 @@ document.onscroll = () => {
     }
 };
 
+document.getElementById("createLace").addEventListener(
+    "click",
+    () => {
+        window.location.href = "/view/adoption.html";
+    }
+);
+
 
 // Inicialização -------------------------------------------------------------------------------------------
 instanceScrollIcon();

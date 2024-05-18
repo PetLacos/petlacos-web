@@ -38,7 +38,6 @@
     --screenPaddingX: 15rem;
 }
 
-
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -90,6 +89,8 @@ body {
 .legendFont {
     line-height: 1.25;
     letter-spacing: 0.5;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Menu de Navegação */
@@ -129,13 +130,27 @@ nav .links {
     justify-content: space-between;
     background-color: var(--verdePersa);
     border-radius: 1.5rem;
+
     /* Fontes */
+    font-weight: 500;
+}
+
+nav .links a.active {
+    color: var(--brancoEsfumacado);
     font-weight: bold;
+    filter: opacity(1);
+    transition: filter 0.3s ease-out;
 }
 
 nav .links a {
     text-decoration: none;
     color: var(--brancoEsfumacado);
+    filter: opacity(0.75);
+}
+
+nav .links a:hover {
+    filter: opacity(1);
+    transition: filter 0.2s ease-out;
 }
 
 nav button {
@@ -158,6 +173,10 @@ nav img {
 }
 
 /* Buttons */
+button {
+    cursor: pointer;
+}
+
 .orangeButton {
     background-color: var(--cascaLaranja);
     color: var(--brancoEsfumacado);
