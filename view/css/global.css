@@ -16,7 +16,7 @@
     --marrom: #3E2723;
 
     --fundoBrancoTransparente: rgba(255, 255, 255, 0.2);
-    
+
     /* Buttons */
     --orangeButtonShadowColor: rgba(196, 117, 0, 0.7);
     --orangeButtonShadow: 0px 0px 8px var(--orangeButtonShadowColor);
@@ -41,10 +41,6 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
-
-body {
-    background-color: var(--rosa);
 }
 
 body {
@@ -107,8 +103,7 @@ body {
 nav {
     display: flex;
     margin: auto;
-    margin: 2.5rem 15rem 1.625rem;
-    margin-right: 15rem;
+    margin: 2.5rem var(--screenPaddingX);
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
@@ -134,9 +129,27 @@ nav .links {
     justify-content: space-between;
     background-color: var(--verdePersa);
     border-radius: 1.5rem;
+
     /* Fontes */
-    font-weight: bold;
+    font-weight: 500;
+}
+
+nav .links a.active {
     color: var(--brancoEsfumacado);
+    font-weight: bold;
+    filter: opacity(1);
+    transition: filter 0.3s ease-out;
+}
+
+nav .links a {
+    text-decoration: none;
+    color: var(--brancoEsfumacado);
+    filter: opacity(0.75);
+}
+
+nav .links a:hover {
+    filter: opacity(1);
+    transition: filter 0.2s ease-out;
 }
 
 nav button {
@@ -159,6 +172,10 @@ nav img {
 }
 
 /* Buttons */
+button {
+    cursor: pointer;
+}
+
 .orangeButton {
     background-color: var(--cascaLaranja);
     color: var(--brancoEsfumacado);
