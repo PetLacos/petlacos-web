@@ -17,7 +17,7 @@ class CardAdoption extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <link rel="stylesheet" href="/view/components/adoption/cardAdoption.css">
-      <div class="petCard" id="animal-one">
+      <div class="petCard">
           <img src="${this.imageSrc}" alt>
           <div class="description">
               <h1 id="name" class="legendFont">${this.name}</h1>

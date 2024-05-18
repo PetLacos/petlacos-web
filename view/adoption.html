@@ -36,80 +36,7 @@
           <img src="/view/assets/icons/search.png" alt="Procurar">
         </button>
       </div>
-      <section id="ourPets">
-        <div class="listBox">
-          <div class="header">
-            <h2 class="sectionSubtitleFont">Nossos bichinhos:</h2>
-            <div id="buttons">
-              <button id="previousButton">
-                <img class="disabled" src="/view/assets/icons/disabledArrow.svg" alt="Página anterior">
-              </button>
-              <h4 id="previousIndex" class="previousIndex legendFont">-</h4>
-              <h3 id="pageIndex" class="pageIndex sectionSubtitleFont">1</h3>
-              <h4 id="nextIndex" class="nextIndex legendFont">2</h4>
-              <button id="nextButton">
-                <img src="/view/assets/icons/listArrow.svg" alt="Próxima página">
-              </button>
-            </div>
-          </div>
-          <div class="petList petRow">
-            <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-          </div>
-          <div class="petList petRow">
-            <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-          </div>
-          <div class="petList petRow">
-            <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-          </div>
-          <div class="petList petRow">
-            <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-              <pet-card name="pitoco" age="1 ano" sex="macho"
-              castrated="sim" behavior="arisco"
-              imageSrc="/view/assets/pitoco.png"></pet-card>
-          </div>
-        </div>
-      </section>
+      <pet-list title="Nossos bichinhos" listType="nossos" lines="4"/>
     </main>
     <footer-component></footer-component>
   </body>
@@ -118,3 +45,4 @@
 <script src="/view/components/global/header.js"></script>
 <script src="/view/components/global/footer.js"></script>
 <script src="/view/components/adoption/cardAdoption.js"></script>
+<script src="/view/components/adoption/list/petList.js"></script>

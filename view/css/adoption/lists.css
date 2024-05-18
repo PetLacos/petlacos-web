@@ -71,7 +71,7 @@
 
 .petList {
     display: flex;
-    width: 100%;
-    gap: 1rem;
     justify-content: space-between;
+    width: 100%;
+    gap: 1.5rem;
 }
