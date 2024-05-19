@@ -64,7 +64,6 @@ function buscaCep(cep) {
             let estado = data.uf;
             let cidade = data.localidade;
             let bairro = data.bairro;
-            console.log(estado, cidade);
 
             localizacao.textContent = `${bairro}, ${cidade} - ${estado}`;
             if (estado == undefined || cidade == undefined) {
@@ -95,6 +94,7 @@ cepInput.addEventListener("input", function () {
 });
 
 form.addEventListener('submit', function (e) {
-    // campoVazio();
+    e.preventDefault();
+    campoVazio();
     salvarLocal();
 });
