@@ -1,5 +1,5 @@
 /// Retorna o objeto do pet
-export function petObject(
+function petObject(
     name,
     ownerName,
     age,
@@ -13,7 +13,7 @@ export function petObject(
     cepInput,
     localizacao,
     description,
-    imageSrc,
+    imgData,
 ) {
     return {
         name: name,
@@ -29,13 +29,27 @@ export function petObject(
         cepInput: cepInput,
         localizacao: localizacao,
         description: description,
-        imageSrc: imageSrc,
+        imgData: imgData,
     };
 }
 
 /// Pet from json
-export function petFromString(string) {
+function petFromString(string) {
     const json = JSON.parse(string);
-    return petObject(json.name, json.age, json.sex, json.behavior, json.castrated, json.imageSrc);
+    return petObject(
+        json.name,
+        json.ownerName,
+        json.age,
+        json.gender,
+        json.specie,
+        json.race,
+        json.castrated,
+        json.size,
+        json.behavior,
+        json.microchip,
+        json.cepInput,
+        json.localizacao,
+        json.description,
+        json.imgData,
+    );
 }
-
