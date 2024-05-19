@@ -37,6 +37,13 @@
 
 }
 
+.pic_img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 #insertImage {
     display: none;
 }

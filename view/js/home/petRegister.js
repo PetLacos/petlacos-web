@@ -80,6 +80,6 @@ cepInput.addEventListener("input", function() {
 });
 
 form.addEventListener('submit', function(e) {
-    // campoVazio();
+    campoVazio();
     salvarLocal();
 });
