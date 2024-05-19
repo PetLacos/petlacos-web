@@ -14,7 +14,6 @@ const description = document.querySelector("#description");
 const form = document.querySelector('form');
 
 function salvarLocal() {
-    campoVazio();
 
     const formCadastroPet = {
         petName: petName.value,
@@ -44,8 +43,7 @@ function campoVazio() {
     for (let campo of campos) {
         if (campo.value.trim() === '') {
             alert('Por favor, preencha todos os campos.');
-        } else {
-            return; 
+            return;
         }
     }
 }
@@ -81,6 +79,7 @@ cepInput.addEventListener("input", function() {
     }
 });
 
-form.addEventListener('submit', function() {
+form.addEventListener('submit', function(e) {
+    // campoVazio();
     salvarLocal();
 });
