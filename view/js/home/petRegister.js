@@ -50,6 +50,7 @@ function campoVazio() {
 
 
 function buscaCep(cep) {
+    cep = cep.replace(/\D/g, '');
     let url = `https://viacep.com.br/ws/${cep}/json/`;
 
     fetch(url)
@@ -62,8 +63,10 @@ function buscaCep(cep) {
         .then(data => {
             let estado = data.uf;
             let cidade = data.localidade;
+            let bairro = data.bairro;
+            console.log(estado, cidade);
 
-            localizacao.textContent = `${cidade}, ${estado}`;
+            localizacao.textContent = `${bairro}, ${cidade} - ${estado}`;
             if (estado == undefined || cidade == undefined) {
                 localizacao.textContent = `CEP não encontrado`;
             }
@@ -73,13 +76,25 @@ function buscaCep(cep) {
         });
 }
 
-cepInput.addEventListener("input", function() {
-    if (cepInput.value.length === 8) {
+const handleZipCode = (event) => {
+    let input = event.target
+    input.value = zipCodeMask(input.value)
+}
+
+const zipCodeMask = (value) => {
+    if (!value) return ""
+    value = value.replace(/\D/g, '')
+    value = value.replace(/(\d{5})(\d)/, '$1-$2')
+    return value
+}
+
+cepInput.addEventListener("input", function () {
+    if (cepInput.value.length === 9) {
         buscaCep(cepInput.value);
     }
 });
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
     // campoVazio();
     salvarLocal();
 });
