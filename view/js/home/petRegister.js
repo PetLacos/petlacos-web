@@ -1,3 +1,5 @@
+import { petObject, petFromString } from "../../../model/pet";
+
 const petName = document.querySelector("#petName");
 const ownerName = document.querySelector("#ownerName");
 const years = document.querySelector("#years");
@@ -15,25 +17,31 @@ const form = document.querySelector('form');
 
 function salvarLocal() {
 
-    const formCadastroPet = {
-        petName: petName.value,
-        ownerName: ownerName.value,
-        years: years.value,
-        gender: gender.value,
-        species: species.value,
-        race: race.value,
-        castrated: castrated.value,
-        size: size.value,
-        behavior: behavior.value,
-        microchip: microchip.value,
-        cepInput: cepInput.value,
-        localizacao: localizacao.textContent,
-        description: description.value
-    };
+    const petObjectData = petObject(
+        petName.value,
+        ownerName.value,
+        years.value,
+        gender.value,
+        species.value,
+        race.value,
+        castrated.value,
+        size.value,
+        behavior.value,
+        microchip.value,
+        cepInput.value,
+        localizacao.textContent,
+        description.value,
+        // src da imagem,
+    );
 
-    let dadosJSON = JSON.stringify(formCadastroPet);
+    let dadosJSON = JSON.stringify(petObjectData);
 
-    localStorage.setItem('formCadastroPet', dadosJSON);
+    let list = localStorage.getItem('petList');
+    if (list === null || list === undefined) {
+        list = [];
+    }
+    list.push(dadosJSON);
+    localStorage.setItem('petList', list);
 
     alert('Dados salvos no storage!!');
 }
@@ -47,7 +55,6 @@ function campoVazio() {
         }
     }
 }
-
 
 function buscaCep(cep) {
     cep = cep.replace(/\D/g, '');
