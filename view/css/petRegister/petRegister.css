@@ -37,11 +37,22 @@
 
 }
 
+.imagePreview {
+    position: relative;
+    overflow: hidden;
+}
+
 .pic_img {
+    position: absolute;
+    z-index: 1 !important;
     object-fit: cover;
     height: 100%;
     width: 100%;
     overflow: hidden;
+}
+
+.imagePreview * {
+    z-index: 2;
 }
 
 #insertImage {
@@ -92,6 +103,7 @@ textarea {
 .secondBoxInfo {
     justify-content: space-between;
 }
+
 .petName,
 .petOwner {
     width: 13.25rem;

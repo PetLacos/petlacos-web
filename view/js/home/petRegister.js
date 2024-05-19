@@ -1,4 +1,58 @@
-import { petObject, petFromString } from "../../../model/pet";
+/// Retorna o objeto do pet
+function petObject(
+    name,
+    ownerName,
+    age,
+    gender,
+    specie,
+    race,
+    castrated,
+    size,
+    behavior,
+    microchip,
+    cepInput,
+    localizacao,
+    description,
+    imgData,
+) {
+    return {
+        name: name,
+        ownerName: ownerName,
+        age: age,
+        gender: gender,
+        specie: specie,
+        race: race,
+        castrated: castrated,
+        size: size,
+        behavior: behavior,
+        microchip: microchip,
+        cepInput: cepInput,
+        localizacao: localizacao,
+        description: description,
+        imgData: imgData,
+    };
+}
+
+/// Pet from json
+function petFromString(string) {
+    const json = JSON.parse(string);
+    return petObject(
+        json.name,
+        json.ownerName,
+        json.age,
+        json.gender,
+        json.specie,
+        json.race,
+        json.castrated,
+        json.size,
+        json.behavior,
+        json.microchip,
+        json.cepInput,
+        json.localizacao,
+        json.description,
+        json.imgData,
+    );
+}
 
 const petName = document.querySelector("#petName");
 const ownerName = document.querySelector("#ownerName");
@@ -14,8 +68,17 @@ const cepInput = document.querySelector("#cep");
 const localizacao = document.querySelector("#localizacao");
 const description = document.querySelector("#description");
 const form = document.querySelector('form');
+// Imagem
+const inputFileSelect = document.querySelector('#insertImage');
+const insertImageButton = document.querySelector('#insertImageButton');
+const ondeApareceAFoto = document.querySelector('.imagePreview');
+
+console.log('petRegister.js loaded');
+
 
 function salvarLocal() {
+    let imgTag = document.querySelector('.pic_img');
+    let imgData = getBase64Image(imgTag);
 
     const petObjectData = petObject(
         petName.value,
@@ -31,7 +94,7 @@ function salvarLocal() {
         cepInput.value,
         localizacao.textContent,
         description.value,
-        // src da imagem,
+        `data:image/png;base64,${imgData}`,
     );
 
     let dadosJSON = JSON.stringify(petObjectData);
@@ -105,3 +168,44 @@ form.addEventListener('submit', function (e) {
     campoVazio();
     salvarLocal();
 });
+
+// ----------------- Imagem -----------------
+
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+
+inputFileSelect.addEventListener('change', function (e) {
+    const inputTarget = e.target;
+    const file = inputTarget.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.addEventListener('load', function (e) {
+            const readerTarget = e.target;
+
+            const img = document.createElement('img');
+            img.src = readerTarget.result;
+            img.classList.add('pic_img');
+            insertImageButton.style.filter = 'opacity(0.5)';
+            insertImageButton.innerHTML = 'Alterar Foto';
+
+            ondeApareceAFoto.appendChild(img)
+
+        })
+
+        reader.readAsDataURL(file);
+    } else {
+        ondeApareceAFoto.innerHTML = 'Sem imagem selecionada';
+    }
+})
