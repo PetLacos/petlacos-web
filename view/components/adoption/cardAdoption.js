@@ -1,6 +1,6 @@
 class CardAdoption extends HTMLElement {
 
-  static attributes = ["name", "age", "sex", "behavior", "castrated", "imageSrc"];
+  static attributes = ["name", "age", "sex", "behavior", "castrated", "imageSrc", "location"];
 
   constructor() {
     super();
@@ -11,14 +11,15 @@ class CardAdoption extends HTMLElement {
     this.behavior = this.getAttribute(CardAdoption.attributes[3]);
     this.castrated = this.getAttribute(CardAdoption.attributes[4]);
     this.imageSrc = this.getAttribute(CardAdoption.attributes[5]);
+    this.location = this.getAttribute(CardAdoption.attributes[6]);
 
   }
 
   connectedCallback() {
+    // <img src="${this.imageSrc}" alt>
     this.innerHTML = `
       <link rel="stylesheet" href="/view/components/adoption/cardAdoption.css">
-      <div class="petCard">
-          <img src="${this.imageSrc}" alt>
+      <div class="petCard" style="background-image: url(${this.imageSrc})">
           <div class="description">
               <h1 id="name" class="legendFont">${this.name}</h1>
               <div class="list">
@@ -31,6 +32,7 @@ class CardAdoption extends HTMLElement {
                       <li>Castrado: ${this.castrated}</li>
                   </ul>
               </div>
+              <p class="legendFont">${this.location}</p>
           </div>
       </div>
     `;

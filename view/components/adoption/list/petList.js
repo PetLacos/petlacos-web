@@ -14,6 +14,8 @@ class PetList extends HTMLElement {
         this.pages = [];
         this.setPages();
 
+        console.log(this.pets);
+
         this.pageIndex = 1;
         this.previousPage = this.getPreviousPageIndex();
         this.nextPage = this.getNextPageIndex();
@@ -41,21 +43,63 @@ class PetList extends HTMLElement {
         let list = [
             {
                 name: "Lin",
-                age: "1 mês",
-                sex: "Fêmea",
-                behavior: "Mansa",
+                ownerName: "Caio Luppo",
+                age: "1 meses",
+                gender: "Fêmea",
+                specie: "Gato",
+                race: "Vira-lata",
                 castrated: "Não",
-                imageSrc: "/view/assets/images/adoption/pets/lin.jpeg"
+                size: "Pequeno",
+                behavior: "Dócil",
+                microchip: "Não",
+                cepInput: "05170-240",
+                localizacao: "Vila Boaçava, São Paulo - SP",
+                description: "Lin é uma gatinha muito dócil e brincalhona. Ela adora brincar com bolinhas de papel e caixas de papelão. Ela é muito carinhosa e adora um colo. Ela é muito sapeca e adora brincar com outros gatos",
+                imgData: "/view/assets/images/adoption/pets/lin.jpeg"
+            },
+            {
+                name: "Arthur",
+                ownerName: "Lorena",
+                age: "4 anos",
+                gender: "Macho",
+                specie: "Gato",
+                race: "Sem Raça Definida",
+                castrated: "Sim",
+                size: "Pequeno",
+                behavior: "Zen",
+                microchip: "Não",
+                cepInput: "02018070",
+                localizacao: "Santana, São Paulo - SP",
+                description: "Gatinho muito dorminhoco!",
+                imgData: "/view/assets/images/adoption/pets/arthur.jpg"
+            },
+            {
+                name: "Hisui",
+                ownerName: "Lorena",
+                age: "7 anos",
+                gender: "Fêmea",
+                specie: "Gato",
+                race: "Sem Raça Definida",
+                castrated: "Sim",
+                size: "Pequeno",
+                behavior: "Introvertida",
+                microchip: "Não",
+                cepInput: "02018070",
+                localizacao: "Santana, São Paulo - SP",
+                description: "Antissocial até se acostumar!",
+                imgData: "/view/assets/images/adoption/pets/hisui.jpg"
             },
         ];
-        if (list === null) {
-            return [];
+        let listStorage = localStorage.getItem(listKey);
+        if (!listStorage) {
+            return list;
         }
-        return list;//JSON.parse(list);
+        list.push.apply(list, JSON.parse(listStorage));
+        return list;
     }
 
     getCardsList() {
-        let cards = ``;
+        let cards = [];
         let list = ``;
         let page = this.pages[this.pageIndex - 1];
         if (page != undefined) {
@@ -65,37 +109,22 @@ class PetList extends HTMLElement {
                     <pet-card
                         name="${pet.name}"
                         age="${pet.age}"
-                        sex="${pet.sex}"
+                        sex="${pet.gender}"
                         behavior="${pet.behavior}"
                         castrated="${pet.castrated}"
-                        imageSrc="${pet.imageSrc}"                        
+                        imageSrc="${pet.imgData}"
+                        location="${pet.localizacao}"                    
                     ></pet-card>\n
                 `;
-                    if (index % 4 == 0 && index != 0) {
-                        list += `
-                        <div class="petList">
-                            ${cards}
-                        </div>\n
-                        `;
-                        cards = ``;
-                    } else if (index == page.length) {
-                        list += `
-                        <div class="petList">
-                            ${cards}
-                            <div style="width: 100%">
-                            </div>
-                        </div>\n
-                        `;
-                    } else if (index == page.length - 1) {
-                        cards += card;
-                        list += `
-                        <div class="petList">
-                            ${cards}
-                        </div>\n
-                        `;
-                        return list;
+                    cards.push(card);
+                    if (cards.length == 4) {
+                        list += `<div class="petList">${cards.join("")}</div>`;
+                        cards = [];
+                    } else if (index + 1 == page.length) {
+                        list += `<div class="petList">${cards.join("")}
+                        <div style="width: 48%;"></div>
+                        </div>`;
                     }
-                    cards += card;
                 }
             );
         }
@@ -105,15 +134,14 @@ class PetList extends HTMLElement {
     setPages() {
         var page = [];
         this.pets.forEach((pet, index) => {
+            page.push(pet);
             if (page.length == 4 * this.lines) {
                 this.pages.push(page);
                 page = [];
-            } else if (index == this.pets.length - 1) {
-                page.push(pet);
-                this.pages.push(page);
-                return;
             }
-            page.push(pet);
+            if (index == this.pets.length - 1) {
+                this.pages.push(page);
+            }
         });
     }
 

@@ -75,7 +75,6 @@ const ondeApareceAFoto = document.querySelector('.imagePreview');
 
 console.log('petRegister.js loaded');
 
-
 function salvarLocal() {
     let imgTag = document.querySelector('.pic_img');
     let imgData = getBase64Image(imgTag);
@@ -97,14 +96,15 @@ function salvarLocal() {
         `data:image/png;base64,${imgData}`,
     );
 
-    let dadosJSON = JSON.stringify(petObjectData);
+    let dadosJSON = petObjectData;
 
-    let list = localStorage.getItem('petList');
-    if (list === null || list === undefined) {
+    let list = JSON.parse(localStorage.getItem('petList'));
+    if (!list) {
         list = [];
     }
     list.push(dadosJSON);
-    localStorage.setItem('petList', list);
+    localStorage.setItem('petList', JSON.stringify(list));
+    console.log(list);
 
     alert('Dados salvos no storage!!');
 }
@@ -173,11 +173,11 @@ form.addEventListener('submit', function (e) {
 
 function getBase64Image(img) {
     var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-
     var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
     var dataURL = canvas.toDataURL("image/png");
 
