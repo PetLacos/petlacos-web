@@ -2,6 +2,7 @@
 function petObject(
     name,
     ownerName,
+    ownerNumber,
     age,
     gender,
     specie,
@@ -18,6 +19,7 @@ function petObject(
     return {
         name: name,
         ownerName: ownerName,
+        ownerNumber: ownerNumber,
         age: age,
         gender: gender,
         specie: specie,
@@ -39,6 +41,7 @@ function petFromString(string) {
     return petObject(
         json.name,
         json.ownerName,
+        json.ownerNumber,
         json.age,
         json.gender,
         json.specie,
@@ -56,6 +59,7 @@ function petFromString(string) {
 
 const petName = document.querySelector("#petName");
 const ownerName = document.querySelector("#ownerName");
+const ownerNumber = document.querySelector("#ownerNumber");
 const years = document.querySelector("#years");
 const gender = document.querySelector("#gender");
 const species = document.querySelector("#species");
@@ -82,6 +86,7 @@ function salvarLocal() {
     const petObjectData = petObject(
         petName.value,
         ownerName.value,
+        ownerNumber.value,
         years.value,
         gender.value,
         species.value,
@@ -143,6 +148,21 @@ function buscaCep(cep) {
         .catch(error => {
             console.error(error.message);
         });
+}
+
+// ----------------- Máscaras -----------------
+
+const handleTelephone = (event) => {
+    let input = event.target
+    input.value = telephoneMask(input.value)
+}
+
+const telephoneMask = (value) => {
+    if (!value) return ""
+    value = value.replace(/\D/g, '')
+    value = value.replace(/(\d{2})(\d)/, '($1) $2')
+    value = value.replace(/(\d{5})(\d)/, '$1-$2')
+    return value
 }
 
 const handleZipCode = (event) => {
