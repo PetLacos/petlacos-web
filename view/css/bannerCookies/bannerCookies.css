@@ -1,6 +1,6 @@
 @import url(../global.css);
 
-#cookie-banner {
+#cookieBanner {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -9,9 +9,11 @@
     color: var(--brancoEsfumacado);
     padding: 10px 20px;
     text-align: center;
+    margin-bottom: 0;
+    z-index: 10;
   }
   
-  .btn-cookie {
+  .btnCookie {
     background-color: var(--verdePersa);
     border: none;
     color: var(--brancoEsfumacado);
@@ -25,8 +27,11 @@
     border-radius: 5px;
   }
   
-  .btn-cookie:hover {
+  .btnCookie:hover {
     background-color: var(--verdeFloresta);
     transition: 1000ms;
   }
   
+  .textLink, #exit {
+    cursor: pointer;
+  }
