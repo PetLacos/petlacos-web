@@ -1,7 +1,5 @@
 @import url(/view/css/global.css);
 
-
-
 body {
     background-color: var(--marrom) !important;
 }
@@ -133,7 +131,6 @@ span {
     height: 5rem;
     background-color: var(--pigmentoVerde);
     position: absolute;
-    z-index: 0;
     left: 10rem;
     border-radius: 1.5rem 0rem 0rem 1.5rem;
 }

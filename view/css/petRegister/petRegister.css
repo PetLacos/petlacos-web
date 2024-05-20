@@ -1,0 +1,134 @@
+@import url(/view/css/petDetails/petDetails.css);
+
+#photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    background-color: var(--cinzaInput);
+}
+
+#backgroundMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    height: 57.3rem;
+    max-width: 1440px;
+}
+
+.imageX {
+    background-color: var(--brancoEsfumacado);
+    width: 448px;
+    height: 96px;
+    padding: 2rem;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: var(--uiButtonShadow);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imagePreview {
+    position: relative;
+    overflow: hidden;
+}
+
+.pic_img {
+    position: absolute;
+    z-index: 1 !important;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imagePreview * {
+    z-index: 2;
+}
+
+#insertImage {
+    display: none;
+}
+
+#sectionContact {
+    display: block;
+}
+
+#cep {
+    appearance: none;
+}
+
+input,
+select,
+textarea {
+    width: 13.25rem;
+    height: 3.5625rem;
+    border-radius: 0.5rem;
+    font-size: 21px;
+    border: 1px solid var(--CinzaInput, #AFAFAF);
+    background: var(--brancoEsfumado, #F5F5F5);
+    padding: 1rem;
+}
+
+textarea {
+    margin-bottom: 1.5rem;
+}
+
+textarea {
+    width: 87rem;
+    height: 5.25rem;
+    border-radius: 1rem;
+}
+
+.contactButton {
+    width: 87rem;
+    height: 4.5rem;
+    border-radius: 1rem;
+    background: var(--Verde-floresta, #388E3C);
+    box-shadow: var(--uiButtonShadow);
+    color: var(--brancoEsfumacado);
+    text-transform: uppercase;
+}
+
+.firstBoxInfo,
+.secondBoxInfo {
+    justify-content: space-between;
+}
+
+.petName,
+.petOwner {
+    width: 13.25rem;
+}
+
+.comporMicro {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sizeAdjust {
+    width: 13.25rem;
+}
+
+.microchip {
+    width: 28rem;
+}
+
+.fourthBoxInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.endereco {
+    width: 28rem;
+}
