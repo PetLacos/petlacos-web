@@ -14,6 +14,8 @@ class PetList extends HTMLElement {
         this.pages = [];
         this.setPages();
 
+        console.log(this.pets);
+
         this.pageIndex = 1;
         this.previousPage = this.getPreviousPageIndex();
         this.nextPage = this.getNextPageIndex();
@@ -38,64 +40,34 @@ class PetList extends HTMLElement {
     }
 
     petList() {
-        let list = [
-            {
-                name: "Lin",
-                age: "1 mês",
-                sex: "Fêmea",
-                behavior: "Mansa",
-                castrated: "Não",
-                imageSrc: "/view/assets/images/adoption/pets/lin.jpeg"
-            },
-        ];
-        if (list === null) {
-            return [];
+        let list = [];
+        let listStorage = localStorage.getItem(listKey);
+        if (!listStorage) {
+            return list;
         }
-        return list;//JSON.parse(list);
+        list.push.apply(list, JSON.parse(listStorage));
+        return list;
     }
 
     getCardsList() {
-        let cards = ``;
+        let cards = [];
         let list = ``;
         let page = this.pages[this.pageIndex - 1];
         if (page != undefined) {
             page.forEach(
                 (pet, index, _) => {
                     let card = `
-                    <pet-card
-                        name="${pet.name}"
-                        age="${pet.age}"
-                        sex="${pet.sex}"
-                        behavior="${pet.behavior}"
-                        castrated="${pet.castrated}"
-                        imageSrc="${pet.imageSrc}"                        
-                    ></pet-card>\n
+                    <pet-card pet='${JSON.stringify(pet)}'></pet-card>\n
                 `;
-                    if (index % 4 == 0 && index != 0) {
-                        list += `
-                        <div class="petList">
-                            ${cards}
-                        </div>\n
-                        `;
-                        cards = ``;
-                    } else if (index == page.length) {
-                        list += `
-                        <div class="petList">
-                            ${cards}
-                            <div style="width: 100%">
-                            </div>
-                        </div>\n
-                        `;
-                    } else if (index == page.length - 1) {
-                        cards += card;
-                        list += `
-                        <div class="petList">
-                            ${cards}
-                        </div>\n
-                        `;
-                        return list;
+                    cards.push(card);
+                    if (cards.length == 4) {
+                        list += `<div class="petList">${cards.join("")}</div>`;
+                        cards = [];
+                    } else if (index + 1 == page.length) {
+                        list += `<div class="petList">${cards.join("")}
+                        <div style="width: 48%;"></div>
+                        </div>`;
                     }
-                    cards += card;
                 }
             );
         }
@@ -105,15 +77,14 @@ class PetList extends HTMLElement {
     setPages() {
         var page = [];
         this.pets.forEach((pet, index) => {
+            page.push(pet);
             if (page.length == 4 * this.lines) {
                 this.pages.push(page);
                 page = [];
-            } else if (index == this.pets.length - 1) {
-                page.push(pet);
-                this.pages.push(page);
-                return;
             }
-            page.push(pet);
+            if (index == this.pets.length - 1) {
+                this.pages.push(page);
+            }
         });
     }
 

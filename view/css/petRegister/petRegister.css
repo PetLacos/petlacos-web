@@ -15,7 +15,7 @@
 }
 
 #main {
-    height: 57.3rem;
+    height: fit-content;
     max-width: 1440px;
 }
 
@@ -53,6 +53,11 @@
 
 .imagePreview * {
     z-index: 2;
+}
+
+.endereco {
+    width: fit-content;
+    margin-left: 0.9rem;
 }
 
 #insertImage {
@@ -110,8 +115,10 @@ textarea {
 }
 
 .comporMicro {
-    flex-direction: row;
+    display: flex;
+    flex-direction: row !important;
     justify-content: space-between;
+    flex-wrap: nowrap !important;
 }
 
 .sizeAdjust {
@@ -119,16 +126,13 @@ textarea {
 }
 
 .microchip {
-    width: 28rem;
+    width: 100%;
+    margin-left: 0.42rem;
 }
 
 .fourthBoxInfo {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-.endereco {
-    width: 28rem;
+    justify-content: start;
 }

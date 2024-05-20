@@ -82,6 +82,7 @@ function handleRegister() {
             localStorage.setItem('loggedUser', JSON.stringify(registeredUser));
 
             alert('Usuário cadastrado com sucesso!');
+            window.location.href = '/view/dashboard.html';
         }
 
     });
