@@ -1,13 +1,21 @@
 @import url(../global.css);
 
-
+#modalPrivacyBox {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
 
 #modalPrivacy {
     box-shadow: var(--introCardShadow);
     position: fixed;
+    top: 0;
     margin: 5rem 15rem 5rem;
     align-items: center;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     color: var(--neve);
     background-color: var(--marrom);
     border-radius: 1rem;
@@ -39,7 +47,7 @@
 
 #paragraphBox{
     padding-right: 0.35rem;
-    
+    margin-top: 1rem;
 }
 
 #paragraphBox .paragraphFont {

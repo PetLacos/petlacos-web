@@ -15,6 +15,7 @@ class cookies extends HTMLElement {
             <button id="bntDecline" class="btnCookie legendFont">Recusar</button>
         </div>
         
+        <div id="modalPrivacyBox">
         <div id="modalPrivacy">
         
             <div id="topSection">
@@ -86,7 +87,7 @@ class cookies extends HTMLElement {
                     <span class="paragraphFont">Contato</span><br>
                     Se você tiver alguma dúvida ou preocupação sobre nossa Política de Privacidade, entre em contato conosco
                     através
-                    do seguinte endereço de e-mail: [Inserir e-mail de contato].<br>
+                    do seguinte endereço de e-mail: contato@petlacos.com.<br>
         
                     Obrigado por confiar em nós com suas informações pessoais. Estamos comprometidos em proteger sua privacidade
                     e
@@ -94,6 +95,7 @@ class cookies extends HTMLElement {
                 </p>
             </div>
         </div> 
+        </div>
  `;
     }
 };
@@ -111,7 +113,7 @@ bntDecline.addEventListener('click', function () {
     cookieBanner.style.display = 'none';
 })
 
-modalPrivacy = document.querySelector('#modalPrivacy');
+modalPrivacy = document.querySelector('#modalPrivacyBox');
 textLink = document.querySelector('.textLink');
 
 modalPrivacy.style.display = 'none';
@@ -119,5 +121,5 @@ textLink.addEventListener('click', function () {
     modalPrivacy.style.display = 'block';
 })
 
-exit.addEventListener('click', function () {modalPrivacy.style.display = 'none';})
+exit.addEventListener('click', function () { modalPrivacy.style.display = 'none'; })
 

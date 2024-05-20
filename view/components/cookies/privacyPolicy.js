@@ -69,7 +69,7 @@ class privacy extends HTMLElement {
 
             <span class="paragraphFont">Contato</span><br>
             Se você tiver alguma dúvida ou preocupação sobre nossa Política de Privacidade, entre em contato conosco através
-            do seguinte endereço de e-mail: [Inserir e-mail de contato].<br>
+            do seguinte endereço de e-mail: contato@petlacos.com.<br>
 
             Obrigado por confiar em nós com suas informações pessoais. Estamos comprometidos em proteger sua privacidade e
             manter a confiança que você deposita em nós.<br>
