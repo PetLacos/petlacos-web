@@ -23,6 +23,10 @@
     border: solid 0.5rem var(--neve);
 }
 
+#modalPrivacy h1 {
+    margin-bottom: 1rem;
+}
+
 #paragraphBox p {
     height: 550px;
     overflow-y: scroll;
