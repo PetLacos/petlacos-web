@@ -105,7 +105,7 @@ function salvarLocal() {
     }
     if (shouldReturn) return;
 
-    let userEmail = user.email;
+    let userEmail = user.email.replace("@", '').replace(".", '');
 
     const petObjectData = petObject(
         guidGenerator(),

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/view/css/dashboard/dashboard.css">
+        <title>Dashboard | Pet Laços</title>
+    </head>
+
+    <body>
+        <header-component pageName="none"></header-component>
+        <main>
+            <h2 id="hello" class="titleFont">Olá,</h2>
+            <div id="profileMyInfo">
+                <div id="profile">
+                    <h2 class="sectionSubtitleFont">Perfil</h2>
+                    <a href="/view/dashboard.html">
+                        <p class="paragraphFont" id="selected">Minhas
+                            informações</p>
+                    </a>
+                    <a href="/view/myPets.html">
+                        <p class="paragraphFont">Animais cadastrados</p>
+                    </a>
+                </div>
+                <div id="infoProfile">
+                    <h2 class="titleFont">Minhas Informações</h2>
+                    <div>
+                        <p id="name" class="paragraphFont"><b>Nome:</b></p>
+                    </div>
+                    <div>
+                        <p id="email" class="paragraphFont"><b>E-mail:</b></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer-component></footer-component>
+    </body>
+
+</html>
+<script src="/view/components/global/header.js"></script>
+<script src="/view/components/global/footer.js"></script>
+
+<script>
+    const user = JSON.parse(localStorage.getItem('loggedUser'));
+    document.getElementById('name').innerHTML = `<b>Nome:</b> ${user.name}`;
+    document.getElementById('email').innerHTML = `<b>E-mail:</b> ${user.email}`;
+    document.getElementById('hello').innerHTML = `Olá, ${user.name.split(' ')[0]}!`;
+</script>

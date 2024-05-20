@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/view/css/dashboard/myPets.css">
+        <title>Dashboard | Pet Laços</title>
+    </head>
+    <body>
+        <header-component pageName="none"></header-component>
+        <main>
+            <h2 id="hello" class="titleFont">Olá, Usuário!</h2>
+            <div id="profileMyInfo">
+                <div id="profile">
+                    <h2 class="sectionSubtitleFont">Perfil</h2>
+                    <a href="/view/dashboard.html">
+                        <p class="paragraphFont">Minhas informações</p>
+                    </a>
+                    <a href="/view/meusPets.html">
+                        <p class="paragraphFont" id="selected">Animais
+                            cadastrados</p>
+                    </a>
+                </div>
+                <div id="myPets">
+                    <div id="header">
+                        <h2 class="sectionSubtitleFont">Animais Cadastrados</h2>
+                        <button class="greenButton paragraphFont"
+                            onclick="window.location.href = '/view/petRegister.html'">Cadastrar
+                            novo
+                            animal</button>
+                    </div>
+                    <my-pets></my-pets>
+                </div>
+            </div>
+        </main>
+        <footer-component></footer-component>
+    </body>
+</html>
+<script src="/view/components/global/header.js"></script>
+<script src="/view/components/global/footer.js"></script>
+<script src="/view/components/adoption/cardAdoption.js"></script>
+<script src="/view/components/adoption/list/petList.js"></script>
+<script src="/view/components/dashboard/myPetsList.js"></script>
+
+<script>
+    const hello = document.getElementById("hello");
+
+    const user = JSON.parse(localStorage.getItem("loggedUser"));
+    hello.innerHTML = `Olá, ${user.name.split(" ")[0]}!`;
+
+</script>

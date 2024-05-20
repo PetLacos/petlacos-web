@@ -1,0 +1,74 @@
+@import url(dashboard.css);
+
+#myPets {
+    border-radius: 1.5rem;
+    background-color: var(--neve);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#myPets #header {
+    display: flex;
+    align-items: center;
+}
+
+#myPets #header h2 {
+    flex: 3;
+}
+
+#myPets #header button {
+    color: var(--brancoEsfumacado);
+    flex: 2;
+}
+
+#previousButton {
+    transform: scaleX(-1);
+}
+
+#previousButton, #nextButton {
+    background: none;
+    border: none;
+    width: fit-content;
+}
+
+#previousButton img, #nextButton img{
+    width: 2rem;
+    filter: drop-shadow(0px 4px 0.25px rgba(0, 0, 0, 0.25));
+}
+
+#previousButton img:active, #nextButton img:active {
+    filter: brightness(0.9);
+}
+
+.myPetList {
+    margin-top: 2rem;
+}
+
+#petListFather {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.disabled {
+    filter: brightness(0.75) !important;
+    cursor: initial;
+}
+
+.petList {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+#listHeader {
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+}
