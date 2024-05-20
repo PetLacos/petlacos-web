@@ -1,18 +1,55 @@
 /// Retorna o objeto do pet
-export function petObject(name, age, sex, behavior, castrated, imageSrc) {
+function petObject(
+    name,
+    ownerName,
+    age,
+    gender,
+    specie,
+    race,
+    castrated,
+    size,
+    behavior,
+    microchip,
+    cepInput,
+    localizacao,
+    description,
+    imgData,
+) {
     return {
         name: name,
+        ownerName: ownerName,
         age: age,
-        sex: sex,
-        behavior: behavior,
+        gender: gender,
+        specie: specie,
+        race: race,
         castrated: castrated,
-        imageSrc: imageSrc,
+        size: size,
+        behavior: behavior,
+        microchip: microchip,
+        cepInput: cepInput,
+        localizacao: localizacao,
+        description: description,
+        imgData: imgData,
     };
 }
 
 /// Pet from json
-export function petFromString(string) {
+function petFromString(string) {
     const json = JSON.parse(string);
-    return petObject(json.name, json.age, json.sex, json.behavior, json.castrated, json.imageSrc);
+    return petObject(
+        json.name,
+        json.ownerName,
+        json.age,
+        json.gender,
+        json.specie,
+        json.race,
+        json.castrated,
+        json.size,
+        json.behavior,
+        json.microchip,
+        json.cepInput,
+        json.localizacao,
+        json.description,
+        json.imgData,
+    );
 }
-
