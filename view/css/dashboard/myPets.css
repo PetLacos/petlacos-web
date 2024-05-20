@@ -49,9 +49,22 @@
     margin-top: 2rem;
 }
 
+#petListFather {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
 .disabled {
     filter: brightness(0.75) !important;
     cursor: initial;
+}
+
+.petList {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
 }
 
 #listHeader {

@@ -32,18 +32,18 @@ class MyPets extends HTMLElement {
 
     petList() {
         let list = [];
-        let listStorage = localStorage.getItem("petList");
-        let userEmail = JSON.parse(localStorage.getItem("loggedUser")).email;
-        console.log(userEmail);
-        console.log(listStorage);
+        let listStorage = JSON.parse(localStorage.getItem("petList"));
+        let userEmail = JSON.parse(localStorage.getItem("loggedUser")).email.replace("@", "").replace(".", "");
         if (!listStorage) {
             return list;
         }
-        JSON.parse(listStorage).forEach((pet) => {
-            if (pet.owner == userEmail) {
-                list.push(pet);
+        listStorage.forEach(
+            (pet) => {
+                if (pet.userEmail == userEmail) {
+                    list.push(pet);
+                }
             }
-        });
+        );
         return list;
     }
 
@@ -51,19 +51,18 @@ class MyPets extends HTMLElement {
         let cards = [];
         let list = ``;
         let page = this.pages[this.pageIndex - 1];
-        if (page != undefined) {
+        if (page) {
             page.forEach(
                 (pet, index, _) => {
                     let card = `
                     <pet-card pet='${JSON.stringify(pet)}'></pet-card>\n
                 `;
                     cards.push(card);
-                    if (cards.length == 4) {
+                    if (cards.length == 2) {
                         list += `<div class="petList">${cards.join("")}</div>`;
                         cards = [];
                     } else if (index + 1 == page.length) {
                         list += `<div class="petList">${cards.join("")}
-                        <div style="width: 48%;"></div>
                         </div>`;
                     }
                 }
@@ -74,10 +73,11 @@ class MyPets extends HTMLElement {
 
     setPages() {
         let page = [];
+        console.log("PETS", this.pets);
         this.pets.forEach(
             (pet, index, _) => {
                 page.push(pet);
-                if (page.length == 4 * this.lines) {
+                if (page.length == 2 * this.lines) {
                     this.pages.push(page);
                     page = [];
                 }
@@ -86,6 +86,7 @@ class MyPets extends HTMLElement {
                 }
             }
         );
+        console.log("PAGES", this.pages);
     }
 
     configureButtons() {
@@ -159,7 +160,8 @@ class MyPets extends HTMLElement {
                         alt="voltar">
                 </button>
             </div>
-            <div id="petList">
+            <div id="petListFather">
+                ${this.cards}
             </div>
         </div>`;
         this.configureButtons();
