@@ -1,0 +1,98 @@
+@import url("lists.css");
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem var(--screenPaddingX);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+
+  background-color: var(--marrom);
+}
+
+#searchBox {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--neve);
+}
+
+#searchBox>* {
+  margin-right: 1rem !important;
+}
+
+#searchBox>:last-child {
+  margin-right: 0 !important;
+}
+
+#searchButton {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--rosa);
+  border: none;
+}
+
+#searchButton:active {
+  filter: brightness(1.2);
+}
+
+#searchButton img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#searchInput {
+  width: 100%;
+  border: var(--inputBorder);
+  background-color: var(--brancoEsfumacado);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0rem;
+}
+
+#searchInput:focus {
+  outline-color: var(--rosa);
+}
+
+select {
+  border: var(--inputBorder);
+  background-color: transparent;
+  appearance: none;
+  border-radius: 1rem;
+  padding: 1rem !important;
+  padding-right: 3rem !important;
+  margin: 0rem !important;
+}
+
+select:focus {
+  outline-color: var(--rosa);
+}
+
+select option {
+  color: rebeccapurple;
+  padding: 1rem !important;
+}
+
+.selectBox {
+  display: flex;
+  position: relative;
+  background-color: var(--brancoEsfumacado);
+}
+
+.inputArrow {
+  width: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 45%;
+}
+
+#searchBox label {
+  font-weight: bold;
+  margin: auto 0;
+}
+
+.placeHolder {
+  color: rgba(0, 0, 0, 0.5);
+}
