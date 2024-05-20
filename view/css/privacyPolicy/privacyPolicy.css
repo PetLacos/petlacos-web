@@ -11,26 +11,28 @@
     color: var(--neve);
     background-color: var(--marrom);
     border-radius: 1rem;
+    z-index: 10;
+    border: solid 0.5rem var(--neve);
 }
 
-p {
+#paragraphBox p {
     height: 550px;
     overflow-y: scroll;
     padding-right: 30px;
 }
 
-p::-webkit-scrollbar{
+#paragraphBox p::-webkit-scrollbar{
     width: 8px;
 
 }
 
-p::-webkit-scrollbar-thumb{
+#paragraphBox p::-webkit-scrollbar-thumb{
     background-color: var(--neve);
     border-radius: 5px;
 
 }
 
-p::-webkit-scrollbar-track{
+#paragraphBox p::-webkit-scrollbar-track{
     background-color: var(--scrollBarTrackColor);
     border-radius: 5px;
 }
@@ -40,7 +42,7 @@ p::-webkit-scrollbar-track{
     
 }
 
-.paragraphFont {
+#paragraphBox .paragraphFont {
     line-height: 5rem;
 }
 
