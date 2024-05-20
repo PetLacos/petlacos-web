@@ -40,56 +40,7 @@ class PetList extends HTMLElement {
     }
 
     petList() {
-        let list = [
-            {
-                name: "Lin",
-                ownerName: "Caio Luppo",
-                age: "1 meses",
-                gender: "Fêmea",
-                specie: "Gato",
-                race: "Vira-lata",
-                castrated: "Não",
-                size: "Pequeno",
-                behavior: "Dócil",
-                microchip: "Não",
-                cepInput: "05170-240",
-                location: "Vila Boaçava, São Paulo - SP",
-                description: "Lin é uma gatinha muito dócil e brincalhona. Ela adora brincar com bolinhas de papel e caixas de papelão. Ela é muito carinhosa e adora um colo. Ela é muito sapeca e adora brincar com outros gatos!",
-                imgData: "/view/assets/images/adoption/pets/lin.jpeg"
-            },
-            {
-                name: "Arthur",
-                ownerName: "Lorena",
-                age: "4 anos",
-                gender: "Macho",
-                specie: "Gato",
-                race: "Sem Raça Definida",
-                castrated: "Sim",
-                size: "Pequeno",
-                behavior: "Zen",
-                microchip: "Não",
-                cepInput: "02018070",
-                location: "Santana, São Paulo - SP",
-                description: "Gatinho muito dorminhoco!",
-                imgData: "/view/assets/images/adoption/pets/arthur.jpg"
-            },
-            {
-                name: "Hisui",
-                ownerName: "Lorena",
-                age: "7 anos",
-                gender: "Fêmea",
-                specie: "Gato",
-                race: "Sem Raça Definida",
-                castrated: "Sim",
-                size: "Pequeno",
-                behavior: "Introvertida",
-                microchip: "Não",
-                cepInput: "02018070",
-                location: "Santana, São Paulo - SP",
-                description: "Antissocial até se acostumar!",
-                imgData: "/view/assets/images/adoption/pets/hisui.jpg"
-            },
-        ];
+        let list = [];
         let listStorage = localStorage.getItem(listKey);
         if (!listStorage) {
             return list;

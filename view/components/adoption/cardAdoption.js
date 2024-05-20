@@ -8,7 +8,7 @@ class CardAdoption extends HTMLElement {
     this.pet = JSON.parse(this.getAttribute("pet"));
 
     this.addEventListener("click", () => {
-      window.location.href = `/view/petDetails.html?pet=${JSON.stringify(this.pet)}`;
+      window.location.href = `/view/petDetails.html?pet=${JSON.stringify(this.pet.uid)}`;
     });
   }
 

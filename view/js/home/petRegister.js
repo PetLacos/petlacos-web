@@ -1,5 +1,6 @@
 /// Retorna o objeto do pet
 function petObject(
+    uid,
     name,
     ownerName,
     ownerNumber,
@@ -17,6 +18,7 @@ function petObject(
     imgData,
 ) {
     return {
+        uid: uid,
         name: name,
         ownerName: ownerName,
         ownerNumber: ownerNumber,
@@ -39,6 +41,7 @@ function petObject(
 function petFromString(string) {
     const json = JSON.parse(string);
     return petObject(
+        json.uid,
         json.name,
         json.ownerName,
         json.ownerNumber,
@@ -79,11 +82,19 @@ const ondeApareceAFoto = document.querySelector('.imagePreview');
 
 console.log('petRegister.js loaded');
 
+function guidGenerator() {
+    var S4 = function() {
+       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+    };
+    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+}
+
 function salvarLocal() {
     let imgTag = document.querySelector('.pic_img');
     let imgData = getBase64Image(imgTag);
 
     const petObjectData = petObject(
+        guidGenerator(),
         petName.value,
         ownerName.value,
         ownerNumber.value,
@@ -187,6 +198,8 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     campoVazio();
     salvarLocal();
+    // go to dashboard
+    window.location.href = '/view/dashboard.html?myPets=true';
 });
 
 // ----------------- Imagem -----------------
