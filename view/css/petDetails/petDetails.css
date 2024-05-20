@@ -69,6 +69,7 @@ body {
     width: 684px;
     height: 623px;
     margin: 25.5px;
+    text-transform: capitalize;
 }
 
 .contactButton {
