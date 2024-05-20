@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,17 +8,20 @@
 </head>
 
 <body>
+    <!-- <script src="/view/components/global/header.js"></script>
+    <header-component></header-component> -->
+
     <script src="/view/components/singIn/register.js"></script>
     <register-component></register-component>
 
     <script src="/view/components/singIn/login.js"></script>
     <login-component></login-component>
 
-    <script src="components/global/footer.js"></script>
-    <footer-component></footer-component>
+    <!-- <script src="components/global/footer.js"></script>
+    <footer-component></footer-component> -->
 
     <script>
-        const form = document.querySelector('form');
+        const form = document.querySelector('#formLogin');
         const elementLogin = document.querySelector('login-component');
         const elementRegister = document.querySelector('register-component');
         const buttonGreenBelt = document.querySelector('.greenBeltTxt');
@@ -38,28 +41,6 @@
                 elementRegister.style.display = 'block';
             });
         }
-
-        document.getElementById("formRegister").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const formData = {
-                nome: this.name.value,
-                email: this.email.value,
-                senha: this.pass.value
-            };
-            localStorage.setItem("dadosFormulario", JSON.stringify(formData));
-
-            form.onsubmit = function () {
-                window.location.href = "/view/dashboard.html"
-            }
-        });
-
-        const dadosSalvos = localStorage.getItem("dadosFormulario");
-
-        if (dadosSalvos) {
-            const formData = JSON.parse(dadosSalvos);
-        }
-
     </script>
 </body>
 

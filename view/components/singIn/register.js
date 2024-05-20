@@ -1,6 +1,9 @@
-class register extends HTMLElement {
+class Register extends HTMLElement {
     constructor() {
         super();
+        document.addEventListener('DOMContentLoaded', function () {
+            this.enviaLocalStorage();
+        });
     }
 
     connectedCallback() {
@@ -9,15 +12,16 @@ class register extends HTMLElement {
             <link rel="stylesheet" href="/view/css/loginRegister/loginRegister.css">
                 <a href="/index.html id=" id="returnLink"><img src="/view/assets/iconReturn.svg" alt=""></a>
                 <div id="main">
+                    <a href="/index.html id=" id="returnLink"><img src="/view/assets/iconReturn.svg" alt=""></a>
                     <div id="forms">
                         <form id="formRegister" method="get">
                             <h2 class="titleFont">Crie laços com a gente!</h2>
                             <label class="paragraphFont" for="name">Nome:</label>
-                            <input name="name" class="paragraphFont" type="text" placeholder="Seu nome" required>
+                            <input class="paragraphFont" id="name" type="text" placeholder="Seu nome">
                             <label class="paragraphFont" for="email">E-mail:</label>
-                            <input name="email" class="paragraphFont" type="email" placeholder="email@email.com.br" required>
+                            <input class="paragraphFont" id="email" type="email" placeholder="email@email.com.br">
                             <label class="paragraphFont" for="password">Senha:</label>
-                            <input name="pass" class="paragraphFont" type="password" placeholder="Senha" required>
+                            <input class="paragraphFont" id="senha" type="password" placeholder="Senha">
                             <button type="submit" class="orangeButton sectionSubtitleFont"
                                 style="font-weight: 700;">Registre-se</button>
                             <p class="legendFont">Ao me registrar, declaro que li e aceitei os <span class="bold">Termos de
@@ -29,7 +33,38 @@ class register extends HTMLElement {
                     <div class="greenBeltTxt sectionSubtitleFont" style="font-weight: 700;">Fazer Login</div>
                 </div>
             </body>`;
+        
     }
+    
+    enviaLocalStorage() {
+        const name = document.querySelector('#name');
+        const email = document.querySelector('#email');
+        const senha = document.querySelector('#senha');
+        const form = document.querySelector('#formRegister')
+    
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            const users = {
+                name: name.value,
+                email: email.value,
+                senha: senha.value
+            };
+    
+            localStorage.setItem("users", JSON.stringify(users));
+    
+            window.location.href = "/view/dashboard.html";
+        });
+    
+        const dadosSalvos = localStorage.getItem("users");
+    
+        if (dadosSalvos) {
+            const dados = JSON.parse(dadosSalvos);
+        }
+    }
+
+    
 }
 
-customElements.define('register-component', register)
+customElements.define('register-component', Register);
+
