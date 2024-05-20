@@ -12,7 +12,7 @@ function petObject(
     behavior,
     microchip,
     cepInput,
-    localizacao,
+    location,
     description,
     imgData,
 ) {
@@ -29,7 +29,7 @@ function petObject(
         behavior: behavior,
         microchip: microchip,
         cepInput: cepInput,
-        localizacao: localizacao,
+        location: location,
         description: description,
         imgData: imgData,
     };
@@ -51,7 +51,7 @@ function petFromString(string) {
         json.behavior,
         json.microchip,
         json.cepInput,
-        json.localizacao,
+        json.location,
         json.description,
         json.imgData,
     );

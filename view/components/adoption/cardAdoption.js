@@ -1,38 +1,34 @@
 class CardAdoption extends HTMLElement {
 
-  static attributes = ["name", "age", "sex", "behavior", "castrated", "imageSrc", "location"];
+  static attributes = ["pet"];
 
   constructor() {
     super();
 
-    this.name = this.getAttribute(CardAdoption.attributes[0]);
-    this.age = this.getAttribute(CardAdoption.attributes[1]);
-    this.sex = this.getAttribute(CardAdoption.attributes[2]);
-    this.behavior = this.getAttribute(CardAdoption.attributes[3]);
-    this.castrated = this.getAttribute(CardAdoption.attributes[4]);
-    this.imageSrc = this.getAttribute(CardAdoption.attributes[5]);
-    this.location = this.getAttribute(CardAdoption.attributes[6]);
+    this.pet = JSON.parse(this.getAttribute("pet"));
 
+    this.addEventListener("click", () => {
+      window.location.href = `/view/petDetails.html?pet=${JSON.stringify(this.pet)}`;
+    });
   }
 
   connectedCallback() {
-    // <img src="${this.imageSrc}" alt>
     this.innerHTML = `
       <link rel="stylesheet" href="/view/components/adoption/cardAdoption.css">
-      <div class="petCard" style="background-image: url(${this.imageSrc})">
+      <div class="petCard" style="background-image: url(${this.pet.imgData})">
           <div class="description">
-              <h1 id="name" class="legendFont">${this.name}</h1>
+              <h1 id="name" class="legendFont">${this.pet.name}</h1>
               <div class="list">
                   <ul class="description-ul legendFont">
-                      <li id="age">Idade: ${this.age}</li>
-                      <li>Sexo: ${this.sex}</li>
+                      <li id="age">Idade: ${this.pet.age}</li>
+                      <li>Sexo: ${this.pet.gender}</li>
                   </ul>
                   <ul class="legendFont">
-                      <li>Conduta: ${this.behavior}</li>
-                      <li>Castrado: ${this.castrated}</li>
+                      <li>Conduta: ${this.pet.behavior}</li>
+                      <li>Castrado: ${this.pet.castrated}</li>
                   </ul>
               </div>
-              <p class="legendFont">${this.location}</p>
+              <p class="legendFont">${this.pet.location}</p>
           </div>
       </div>
     `;

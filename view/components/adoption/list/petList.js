@@ -53,8 +53,8 @@ class PetList extends HTMLElement {
                 behavior: "Dócil",
                 microchip: "Não",
                 cepInput: "05170-240",
-                localizacao: "Vila Boaçava, São Paulo - SP",
-                description: "Lin é uma gatinha muito dócil e brincalhona. Ela adora brincar com bolinhas de papel e caixas de papelão. Ela é muito carinhosa e adora um colo. Ela é muito sapeca e adora brincar com outros gatos",
+                location: "Vila Boaçava, São Paulo - SP",
+                description: "Lin é uma gatinha muito dócil e brincalhona. Ela adora brincar com bolinhas de papel e caixas de papelão. Ela é muito carinhosa e adora um colo. Ela é muito sapeca e adora brincar com outros gatos!",
                 imgData: "/view/assets/images/adoption/pets/lin.jpeg"
             },
             {
@@ -69,7 +69,7 @@ class PetList extends HTMLElement {
                 behavior: "Zen",
                 microchip: "Não",
                 cepInput: "02018070",
-                localizacao: "Santana, São Paulo - SP",
+                location: "Santana, São Paulo - SP",
                 description: "Gatinho muito dorminhoco!",
                 imgData: "/view/assets/images/adoption/pets/arthur.jpg"
             },
@@ -85,7 +85,7 @@ class PetList extends HTMLElement {
                 behavior: "Introvertida",
                 microchip: "Não",
                 cepInput: "02018070",
-                localizacao: "Santana, São Paulo - SP",
+                location: "Santana, São Paulo - SP",
                 description: "Antissocial até se acostumar!",
                 imgData: "/view/assets/images/adoption/pets/hisui.jpg"
             },
@@ -106,15 +106,7 @@ class PetList extends HTMLElement {
             page.forEach(
                 (pet, index, _) => {
                     let card = `
-                    <pet-card
-                        name="${pet.name}"
-                        age="${pet.age}"
-                        sex="${pet.gender}"
-                        behavior="${pet.behavior}"
-                        castrated="${pet.castrated}"
-                        imageSrc="${pet.imgData}"
-                        location="${pet.localizacao}"                    
-                    ></pet-card>\n
+                    <pet-card pet='${JSON.stringify(pet)}'></pet-card>\n
                 `;
                     cards.push(card);
                     if (cards.length == 4) {
