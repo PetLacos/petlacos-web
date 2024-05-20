@@ -64,7 +64,7 @@
 .petList {
     display: flex;
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #listHeader {

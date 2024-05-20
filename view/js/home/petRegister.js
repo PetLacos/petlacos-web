@@ -138,7 +138,7 @@ function salvarLocal() {
     console.log(list);
 
     alert('Dados salvos no storage!!');
-    window.location.href = '/view/dashboard.html?myPets=true';
+    window.location.href = '/view/myPets.html';
 }
 
 function campoVazio() {
