@@ -1,66 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login | Pet Laços</title>
+    </head>
+    <body>
+        <register-component></register-component>
+        <login-component></login-component>
+        <footer-component></footer-component>
+    </body>
+</html>
+<script src="/view/components/singIn/register.js"></script>
+<script src="/view/components/singIn/login.js"></script>
+<script src="components/global/footer.js"></script>
+<script>
+    const form = document.querySelector('#formLogin');
+    const elementLogin = document.querySelector('login-component');
+    const elementRegister = document.querySelector('register-component');
+    const buttonGreenBelt = document.querySelector('.greenBeltTxt');
+    const buttonPinkBelt = document.querySelector('.pinkBeltTxt');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Pet Laços</title>
-</head>
+    elementLogin.style.display = 'none';
+    turnDisplay();
+    handleLogin();
+    handleRegister();
 
-<body>
-    <script src="/view/components/singIn/register.js"></script>
-    <register-component></register-component>
-
-    <script src="/view/components/singIn/login.js"></script>
-    <login-component></login-component>
-
-    <script src="components/global/footer.js"></script>
-    <footer-component></footer-component>
-
-    <script>
-        const form = document.querySelector('form');
-        const elementLogin = document.querySelector('login-component');
-        const elementRegister = document.querySelector('register-component');
-        const buttonGreenBelt = document.querySelector('.greenBeltTxt');
-        const buttonPinkBelt = document.querySelector('.pinkBeltTxt');
-
-        elementLogin.style.display = 'none';
-        turnDisplay();
-
-        function turnDisplay() {
-            buttonGreenBelt.addEventListener("click", function () {
-                elementRegister.style.display = 'none';
-                elementLogin.style.display = 'block';
-            });
-
-            buttonPinkBelt.addEventListener("click", function () {
-                elementLogin.style.display = 'none';
-                elementRegister.style.display = 'block';
-            });
+    function turnDisplay() {
+        window.$_GET = new URLSearchParams(location.search);
+        if ($_GET.get('login') === 'true') {
+            elementRegister.style.display = 'none';
+            elementLogin.style.display = 'block';
+        } else {
+            elementLogin.style.display = 'none';
+            elementRegister.style.display = 'block';
         }
 
-        document.getElementById("formRegister").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const formData = {
-                nome: this.name.value,
-                email: this.email.value,
-                senha: this.pass.value
-            };
-            localStorage.setItem("dadosFormulario", JSON.stringify(formData));
-
-            form.onsubmit = function () {
-                window.location.href = "/view/dashboard.html"
-            }
+        buttonGreenBelt.addEventListener("click", function () {
+            elementRegister.style.display = 'none';
+            elementLogin.style.display = 'block';
         });
 
-        const dadosSalvos = localStorage.getItem("dadosFormulario");
-
-        if (dadosSalvos) {
-            const formData = JSON.parse(dadosSalvos);
-        }
-
-    </script>
-</body>
-
-</html>
+        buttonPinkBelt.addEventListener("click", function () {
+            elementLogin.style.display = 'none';
+            elementRegister.style.display = 'block';
+        });
+    }
+</script>

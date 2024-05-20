@@ -15,11 +15,11 @@
             <form id="formRegister" method="get">
                 <h2 class="titleFont">Crie laços com a gente!</h2>
                 <label class="paragraphFont" for="name">Nome:</label>
-                <input class="paragraphFont" type="text" placeholder="Seu nome">
+                <input class="paragraphFont" id="name" type="text" placeholder="Seu nome">
                 <label class="paragraphFont" for="email">E-mail:</label>
-                <input class="paragraphFont" type="email" placeholder="email@email.com.br">
+                <input class="paragraphFont" id="email" type="email" placeholder="email@email.com.br">
                 <label class="paragraphFont" for="password">Senha:</label>
-                <input class="paragraphFont" type="password" placeholder="Senha">
+                <input class="paragraphFont" id="senha" type="password" placeholder="Senha">
                 <button type="submit" class="orangeButton sectionSubtitleFont"
                     style="font-weight: 700;">Registre-se</button>
                 <p class="legendFont">Ao me registrar, declaro que li e aceitei os <span class="bold">Termos de
@@ -30,6 +30,39 @@
         <img class="greenBelt" src="/view/assets/greenBelt.svg" alt="greenBelt">
         <div class="greenBeltTxt sectionSubtitleFont" style="font-weight: 700;">Fazer Login</div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            enviaLocalStorage();
+        });
+
+        function enviaLocalStorage() {
+            const name = document.querySelector('#name');
+            const email = document.querySelector('#email');
+            const senha = document.querySelector('#senha');
+            const form = document.querySelector('#formRegister')
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const formData = {
+                    name: name.value,
+                    email: email.value,
+                    senha: senha.value
+                };
+
+                localStorage.setItem("formData", JSON.stringify(formData));
+
+                window.location.href = "/view/dashboard.html";
+            });
+
+            const dadosSalvos = localStorage.getItem("formData");
+
+            if (dadosSalvos) {
+                const dados = JSON.parse(dadosSalvos);
+            }
+        }
+    </script>
 </body>
 
 </html>
