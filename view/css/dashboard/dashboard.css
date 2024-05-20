@@ -5,15 +5,15 @@
     padding: 0;
 }
 
-body {
+main {
     background-color: var(--marrom);
-    margin: 240px;
+    padding: 3rem var(--screenPaddingX);
 }
 
 #hello {
     text-align: center;
-    color: var(--branco);
-    margin: 4rem 0 3rem;
+    color: var(--neve);
+    margin-bottom: 2rem;
 }
 
 #profileMyInfo {
@@ -25,9 +25,10 @@ body {
     background-color: var(--neve);
     border-radius: 24px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 24px 70px 24px 20px;
-    width: 21.375rem;
-    height: 10.69rem;
+    padding: 1.5rem;
+    margin-right: 2rem;
+    width: 50%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,8 +39,7 @@ body {
     color: var(--rosa);
 }
 
-#infoProfile,
-#myPets {
+#infoProfile {
     width: 67.12rem;
     border-radius: 1.5rem;
     background-color: var(--neve);
@@ -48,16 +48,15 @@ body {
 }
 
 #infoProfile {
-    height: 18.375rem;
+    height: fit-content;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 36rem 2rem 2rem;
+    padding: 2rem;
 }
 
-#myPets {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 30px;
+#infoProfile h2 {
+    margin-bottom: 1rem;
 }
 
 a {
