@@ -43,9 +43,11 @@
 
 .emptyFeedbackCard .stars {
     display: flex;
+    margin-top: 1rem;
 }
 
 .emptyFeedbackCard .sectionSubtitleFont {
+    text-align: center;
     font-weight: bold;
 }
 
