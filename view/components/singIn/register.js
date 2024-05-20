@@ -7,7 +7,7 @@ class Register extends HTMLElement {
         this.innerHTML =
             `
             <link rel="stylesheet" href="/view/css/loginRegister/loginRegister.css">
-                <a href="/index.html id=" id="returnLink"><img src="/view/assets/iconReturn.svg" alt=""></a>
+                <a href="/index.html" id="returnLink"><img src="/view/assets/iconReturn.svg" alt=""></a>
                 <div id="main">
                     <a href="/index.html id=" id="returnLink"><img src="/view/assets/iconReturn.svg" alt=""></a>
                     <div id="forms">

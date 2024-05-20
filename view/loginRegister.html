@@ -27,6 +27,15 @@
     handleRegister();
 
     function turnDisplay() {
+        window.$_GET = new URLSearchParams(location.search);
+        if ($_GET.get('login') === 'true') {
+            elementRegister.style.display = 'none';
+            elementLogin.style.display = 'block';
+        } else {
+            elementLogin.style.display = 'none';
+            elementRegister.style.display = 'block';
+        }
+
         buttonGreenBelt.addEventListener("click", function () {
             elementRegister.style.display = 'none';
             elementLogin.style.display = 'block';

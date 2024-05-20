@@ -55,7 +55,7 @@ function addLoginRegisterListener() {
   let registerButton = document.getElementById('registerButton');
 
   loginButton.addEventListener('click', () => {
-    window.location.href = '/view/loginRegister.html';
+    window.location.href = '/view/loginRegister.html?login=true';
   });
 
   registerButton.addEventListener('click', () => {

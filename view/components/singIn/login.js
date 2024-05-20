@@ -7,8 +7,8 @@ class Login extends HTMLElement {
         this.innerHTML =
             `
             <link rel="stylesheet" href="/view/css/loginRegister/loginRegister.css">
+            <a href="/index.html" id="returnLinkGreen"><img src="/view/assets/iconReturn.svg" alt=""></a>
             <div id="main">
-                <a href="/index.html id=" id="returnLinkGreen"><img src="/view/assets/iconReturn.svg" alt=""></a>
                 <div id="forms">
                     <form id="formLogin" method="get">
                         <h2 class="titleFont">Bem-vindo(a) de volta!</h2>
