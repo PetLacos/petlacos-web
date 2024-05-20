@@ -1,7 +1,10 @@
 /// Retorna o objeto do pet
 function petObject(
+    uid,
+    userEmail,
     name,
     ownerName,
+    ownerNumber,
     age,
     gender,
     specie,
@@ -11,13 +14,16 @@ function petObject(
     behavior,
     microchip,
     cepInput,
-    localizacao,
+    location,
     description,
     imgData,
 ) {
     return {
+        uid: uid,
+        userEmail: userEmail,
         name: name,
         ownerName: ownerName,
+        ownerNumber: ownerNumber,
         age: age,
         gender: gender,
         specie: specie,
@@ -27,7 +33,7 @@ function petObject(
         behavior: behavior,
         microchip: microchip,
         cepInput: cepInput,
-        localizacao: localizacao,
+        location: location,
         description: description,
         imgData: imgData,
     };
@@ -37,8 +43,11 @@ function petObject(
 function petFromString(string) {
     const json = JSON.parse(string);
     return petObject(
+        json.uid,
+        json.userEmail,
         json.name,
         json.ownerName,
+        json.ownerNumber,
         json.age,
         json.gender,
         json.specie,
@@ -48,7 +57,7 @@ function petFromString(string) {
         json.behavior,
         json.microchip,
         json.cepInput,
-        json.localizacao,
+        json.location,
         json.description,
         json.imgData,
     );
@@ -56,6 +65,7 @@ function petFromString(string) {
 
 const petName = document.querySelector("#petName");
 const ownerName = document.querySelector("#ownerName");
+const ownerNumber = document.querySelector("#ownerNumber");
 const years = document.querySelector("#years");
 const gender = document.querySelector("#gender");
 const species = document.querySelector("#species");
@@ -75,14 +85,34 @@ const ondeApareceAFoto = document.querySelector('.imagePreview');
 
 console.log('petRegister.js loaded');
 
+function guidGenerator() {
+    var S4 = function() {
+       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+    };
+    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+}
 
 function salvarLocal() {
     let imgTag = document.querySelector('.pic_img');
     let imgData = getBase64Image(imgTag);
 
+    let user = JSON.parse(localStorage.getItem('loggedUser'));
+    var shouldReturn = false;
+    if (!user) {
+        alert('Usuário não logado');
+        window.location.href = '/view/loginRegister.html?login=true';
+        shouldReturn = true;
+    }
+    if (shouldReturn) return;
+
+    let userEmail = user.email;
+
     const petObjectData = petObject(
+        guidGenerator(),
+        userEmail,
         petName.value,
         ownerName.value,
+        ownerNumber.value,
         years.value,
         gender.value,
         species.value,
@@ -97,16 +127,18 @@ function salvarLocal() {
         `data:image/png;base64,${imgData}`,
     );
 
-    let dadosJSON = JSON.stringify(petObjectData);
+    let dadosJSON = petObjectData;
 
-    let list = localStorage.getItem('petList');
-    if (list === null || list === undefined) {
+    let list = JSON.parse(localStorage.getItem('petList'));
+    if (!list) {
         list = [];
     }
     list.push(dadosJSON);
-    localStorage.setItem('petList', list);
+    localStorage.setItem('petList', JSON.stringify(list));
+    console.log(list);
 
     alert('Dados salvos no storage!!');
+    window.location.href = '/view/dashboard.html?myPets=true';
 }
 
 function campoVazio() {
@@ -145,6 +177,21 @@ function buscaCep(cep) {
         });
 }
 
+// ----------------- Máscaras -----------------
+
+const handleTelephone = (event) => {
+    let input = event.target
+    input.value = telephoneMask(input.value)
+}
+
+const telephoneMask = (value) => {
+    if (!value) return ""
+    value = value.replace(/\D/g, '')
+    value = value.replace(/(\d{2})(\d)/, '($1) $2')
+    value = value.replace(/(\d{5})(\d)/, '$1-$2')
+    return value
+}
+
 const handleZipCode = (event) => {
     let input = event.target
     input.value = zipCodeMask(input.value)
@@ -173,11 +220,11 @@ form.addEventListener('submit', function (e) {
 
 function getBase64Image(img) {
     var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-
     var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
     var dataURL = canvas.toDataURL("image/png");
 
@@ -193,8 +240,10 @@ inputFileSelect.addEventListener('change', function (e) {
 
         reader.addEventListener('load', function (e) {
             const readerTarget = e.target;
-
-            const img = document.createElement('img');
+            var img = document.querySelector('.pic_img');
+            if (!img) {
+                img = document.createElement('img');
+            }
             img.src = readerTarget.result;
             img.classList.add('pic_img');
             insertImageButton.style.filter = 'opacity(0.5)';
