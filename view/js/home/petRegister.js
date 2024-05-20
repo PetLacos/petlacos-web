@@ -1,6 +1,7 @@
 /// Retorna o objeto do pet
 function petObject(
     uid,
+    userEmail,
     name,
     ownerName,
     ownerNumber,
@@ -19,6 +20,7 @@ function petObject(
 ) {
     return {
         uid: uid,
+        userEmail: userEmail,
         name: name,
         ownerName: ownerName,
         ownerNumber: ownerNumber,
@@ -42,6 +44,7 @@ function petFromString(string) {
     const json = JSON.parse(string);
     return petObject(
         json.uid,
+        json.userEmail,
         json.name,
         json.ownerName,
         json.ownerNumber,
@@ -93,8 +96,20 @@ function salvarLocal() {
     let imgTag = document.querySelector('.pic_img');
     let imgData = getBase64Image(imgTag);
 
+    let user = JSON.parse(localStorage.getItem('loggedUser'));
+    var shouldReturn = false;
+    if (!user) {
+        alert('Usuário não logado');
+        window.location.href = '/view/loginRegister.html?login=true';
+        shouldReturn = true;
+    }
+    if (shouldReturn) return;
+
+    let userEmail = user.email;
+
     const petObjectData = petObject(
         guidGenerator(),
+        userEmail,
         petName.value,
         ownerName.value,
         ownerNumber.value,
@@ -123,6 +138,7 @@ function salvarLocal() {
     console.log(list);
 
     alert('Dados salvos no storage!!');
+    window.location.href = '/view/dashboard.html?myPets=true';
 }
 
 function campoVazio() {
@@ -198,8 +214,6 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     campoVazio();
     salvarLocal();
-    // go to dashboard
-    window.location.href = '/view/dashboard.html?myPets=true';
 });
 
 // ----------------- Imagem -----------------
@@ -226,8 +240,10 @@ inputFileSelect.addEventListener('change', function (e) {
 
         reader.addEventListener('load', function (e) {
             const readerTarget = e.target;
-
-            const img = document.createElement('img');
+            var img = document.querySelector('.pic_img');
+            if (!img) {
+                img = document.createElement('img');
+            }
             img.src = readerTarget.result;
             img.classList.add('pic_img');
             insertImageButton.style.filter = 'opacity(0.5)';
