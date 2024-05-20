@@ -45,7 +45,6 @@ main p {
 .buttonContainer button {
     background-color: var(--rosa);
     border-radius: 16px;
-    margin: 1.5rem;
     text-transform: none;
     padding: 1rem 1.5rem;
 }
@@ -53,6 +52,8 @@ main p {
 .buttonContainer {
     width: 70%;
     display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
     justify-content: center;
 }
 
