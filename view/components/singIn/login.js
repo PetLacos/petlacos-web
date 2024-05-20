@@ -4,7 +4,7 @@ class Login extends HTMLElement {
     }
 
     connectedCallback() {
-        this.innerHTML = 
+        this.innerHTML =
             `
             <link rel="stylesheet" href="/view/css/loginRegister/loginRegister.css">
             <div id="main">
@@ -13,9 +13,9 @@ class Login extends HTMLElement {
                     <form id="formLogin" method="get">
                         <h2 class="titleFont">Bem-vindo(a) de volta!</h2>
                         <label class="paragraphFont" for="email">E-mail:</label>
-                        <input class="paragraphFont" id="email" type="email" placeholder="email@email.com.br">
+                        <input class="paragraphFont" id="loginEmail" type="email" placeholder="email@email.com.br">
                         <label class="paragraphFont" for="password">Senha:</label>
-                        <input class="paragraphFont" id="senha" type="password" placeholder="Senha">
+                        <input class="paragraphFont" id="loginSenha" type="password" placeholder="Senha">
                         <button type="submit" class="orangeButton sectionSubtitleFont"
                             style="font-weight: 700;">Fazer Login</button>
                     </form>
@@ -30,31 +30,31 @@ class Login extends HTMLElement {
 
 customElements.define('login-component', Login);
 
-document.addEventListener('DOMContentLoaded', function() {
-    enviaLocalStorage();
-});
+function handleLogin() {
+    const loginForm = document.getElementById("formLogin");
+    const loginEmail = document.querySelector("#loginEmail");
+    const loginSenha = document.querySelector("#loginSenha");
 
-function enviaLocalStorage(){
-    const email = document.querySelector('#email');
-    const senha = document.querySelector('#senha');
-    const form = document.querySelector('#formLogin')
-
-    form.addEventListener("submit", function (e) {
+    loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const user = {
-            email: email.value,
-            senha: senha.value
-        };
+        let usuarios = JSON.parse(localStorage.getItem("users"));
 
-        localStorage.setItem("user", JSON.stringify(user));
+        if (!usuarios) {
+            alert("Dados incorretos!");
+            return;
+        }
 
-        window.location.href = "/view/dashboard.html";
+        var logged = false;
+
+        usuarios.forEach((usuario) => {
+            if (usuario.email === loginEmail.value && usuario.password === loginSenha.value) {
+                window.location.href = "/view/dashboard.html";
+                logged = true;
+            }
+        });
+
+        if (!logged) alert("Dados incorretos!");
     });
 
-    const dadosSalvos = localStorage.getItem("user");
-
-    if (dadosSalvos) {
-        const dados = JSON.parse(dadosSalvos);
-    }
 }
